@@ -19,6 +19,7 @@ namespace Helpdesk.UserControls
             monthLabel.Text = DateTime.Now.ToString("MMMM");
             dayOfMonthLabel.Text = DateTime.Now.ToString("dd");
             dayOfWeekLabel.Text = DateTime.Now.ToString("dddd");
+            YearLabel.Text = DateTime.Now.ToString("yyyy");
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -47,6 +48,7 @@ namespace Helpdesk.UserControls
             monthLabel.Text = DateTime.Now.ToString("MMMM");
             dayOfMonthLabel.Text = DateTime.Now.ToString("dd");
             dayOfWeekLabel.Text = DateTime.Now.ToString("dddd");
+            YearLabel.Text = DateTime.Now.ToString("yyyy");
         }
     }
 }

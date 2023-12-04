@@ -42,6 +42,7 @@
             dayOfWeekLabel = new Label();
             monthLabel = new Label();
             pictureBox6 = new PictureBox();
+            YearLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -149,8 +150,9 @@
             // dayOfWeekLabel
             // 
             dayOfWeekLabel.AutoSize = true;
+            dayOfWeekLabel.BackColor = Color.White;
             dayOfWeekLabel.Font = new Font("Segoe UI", 7.8F, FontStyle.Italic, GraphicsUnit.Point);
-            dayOfWeekLabel.Location = new Point(549, 525);
+            dayOfWeekLabel.Location = new Point(549, 509);
             dayOfWeekLabel.Name = "dayOfWeekLabel";
             dayOfWeekLabel.Size = new Size(41, 17);
             dayOfWeekLabel.TabIndex = 9;
@@ -177,11 +179,23 @@
             pictureBox6.TabIndex = 10;
             pictureBox6.TabStop = false;
             // 
+            // YearLabel
+            // 
+            YearLabel.AutoSize = true;
+            YearLabel.BackColor = Color.White;
+            YearLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            YearLabel.Location = new Point(539, 526);
+            YearLabel.Name = "YearLabel";
+            YearLabel.Size = new Size(66, 28);
+            YearLabel.TabIndex = 11;
+            YearLabel.Text = "label2";
+            // 
             // UserControlDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(239, 240, 242);
+            Controls.Add(YearLabel);
             Controls.Add(pictureBox6);
             Controls.Add(dayOfWeekLabel);
             Controls.Add(dayOfMonthLabel);
@@ -220,5 +234,6 @@
         private Label dayOfWeekLabel;
         private Label monthLabel;
         private PictureBox pictureBox6;
+        private Label YearLabel;
     }
 }
