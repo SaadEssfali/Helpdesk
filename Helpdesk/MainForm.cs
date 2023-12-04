@@ -13,10 +13,12 @@ namespace Helpdesk
 {
     public partial class MainForm : Form
     {
+        UserControlDashboard dashboard = new UserControlDashboard();
+        UserControlEmploye employe = new UserControlEmploye();
         public MainForm()
         {
             InitializeComponent();
-            UserControlDashboard dashboard = new UserControlDashboard();
+           
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(dashboard);
             dashboard.Dock = DockStyle.Fill;
@@ -38,6 +40,9 @@ namespace Helpdesk
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             techniciensButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(dashboard);
+            dashboard.Dock = DockStyle.Fill;
 
         }
 
@@ -69,6 +74,10 @@ namespace Helpdesk
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             NotificationButton.BackColor= ColorTranslator.FromHtml("#004AAD");
+
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(employe);
+            dashboard.Dock = DockStyle.Fill;
 
         }
 
