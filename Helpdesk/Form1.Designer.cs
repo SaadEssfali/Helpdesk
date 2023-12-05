@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
-            button1 = new Button();
+            LoginButton = new Button();
             label2 = new Label();
             username = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtPass = new TextBox();
+            txtUser = new TextBox();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             pictureBox2 = new PictureBox();
@@ -46,11 +46,11 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 74, 173);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(LoginButton);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(username);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtPass);
+            panel1.Controls.Add(txtUser);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Left;
@@ -61,20 +61,21 @@
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
-            // button1
+            // LoginButton
             // 
-            button1.BackColor = Color.Black;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = SystemColors.ActiveBorder;
-            button1.FlatAppearance.MouseOverBackColor = SystemColors.ActiveCaption;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.ControlLight;
-            button1.Location = new Point(36, 350);
-            button1.Name = "button1";
-            button1.Size = new Size(225, 51);
-            button1.TabIndex = 6;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
+            LoginButton.BackColor = Color.Black;
+            LoginButton.FlatAppearance.BorderSize = 0;
+            LoginButton.FlatAppearance.MouseDownBackColor = SystemColors.ActiveBorder;
+            LoginButton.FlatAppearance.MouseOverBackColor = SystemColors.ActiveCaption;
+            LoginButton.FlatStyle = FlatStyle.Flat;
+            LoginButton.ForeColor = SystemColors.ControlLight;
+            LoginButton.Location = new Point(36, 350);
+            LoginButton.Name = "LoginButton";
+            LoginButton.Size = new Size(225, 51);
+            LoginButton.TabIndex = 6;
+            LoginButton.Text = "Login";
+            LoginButton.UseVisualStyleBackColor = false;
+            LoginButton.Click += LoginButton_Click;
             // 
             // label2
             // 
@@ -98,27 +99,27 @@
             username.TabIndex = 4;
             username.Text = "Username";
             // 
-            // textBox2
+            // txtPass
             // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.ForeColor = SystemColors.Desktop;
-            textBox2.Location = new Point(37, 281);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(225, 30);
-            textBox2.TabIndex = 3;
+            txtPass.BorderStyle = BorderStyle.FixedSingle;
+            txtPass.ForeColor = SystemColors.Desktop;
+            txtPass.Location = new Point(37, 281);
+            txtPass.Multiline = true;
+            txtPass.Name = "txtPass";
+            txtPass.PasswordChar = '*';
+            txtPass.Size = new Size(225, 30);
+            txtPass.TabIndex = 3;
             // 
-            // textBox1
+            // txtUser
             // 
-            textBox1.BackColor = SystemColors.Window;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Arial Narrow", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(36, 202);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(225, 30);
-            textBox1.TabIndex = 2;
+            txtUser.BackColor = SystemColors.Window;
+            txtUser.BorderStyle = BorderStyle.FixedSingle;
+            txtUser.Font = new Font("Arial Narrow", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            txtUser.Location = new Point(36, 202);
+            txtUser.Multiline = true;
+            txtUser.Name = "txtUser";
+            txtUser.Size = new Size(225, 30);
+            txtUser.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -177,10 +178,10 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Label username;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtPass;
+        private TextBox txtUser;
         private Label label2;
         private PictureBox pictureBox2;
-        private Button button1;
+        private Button LoginButton;
     }
 }

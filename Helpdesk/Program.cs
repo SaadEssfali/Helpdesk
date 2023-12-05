@@ -1,3 +1,5 @@
+using System.Data.SqlClient;
+
 namespace Helpdesk
 {
     internal static class Program
@@ -12,7 +14,14 @@ namespace Helpdesk
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
-            Application.Run(new MainForm());
+            
+
+        }
+        public static SqlConnection GetConnection()
+        {    
+            string strCnx = @"server=.\SQLEXPRESS;database=helpdesk_db;Integrated Security=true";
+            SqlConnection cnx = new SqlConnection(strCnx);
+            return cnx;
         }
     }
 }
