@@ -15,14 +15,16 @@ namespace Helpdesk
     {
         UserControlDashboard dashboard = new UserControlDashboard();
         UserControlEmploye employe = new UserControlEmploye();
+        UserControlTechniciens techniciens = new UserControlTechniciens();
+        UserControlCreateticket cre =new UserControlCreateticket();
         public MainForm()
         {
             InitializeComponent();
-           
+            //intialisation du form par dashbord(Control)
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(dashboard);
             dashboard.Dock = DockStyle.Fill;
-           
+
 
         }
 
@@ -33,13 +35,14 @@ namespace Helpdesk
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            //changelent de color lors du click sur button 
             dashboardButton.BackColor = Color.Black;
             NotificationButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             employeButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             techniciensButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+            //changer le panel vers dashbord(control)
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(dashboard);
             dashboard.Dock = DockStyle.Fill;
@@ -64,6 +67,9 @@ namespace Helpdesk
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             NotificationButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(techniciens);
+            dashboard.Dock = DockStyle.Fill;
         }
 
         private void employeButton_Click(object sender, EventArgs e)
@@ -73,8 +79,8 @@ namespace Helpdesk
             techniciensButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
-            NotificationButton.BackColor= ColorTranslator.FromHtml("#004AAD");
-
+            NotificationButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+            //changement de panel vers employee(Control)
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(employe);
             dashboard.Dock = DockStyle.Fill;
@@ -89,6 +95,10 @@ namespace Helpdesk
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             NotificationButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             employeButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(cre);
+            dashboard.Dock = DockStyle.Fill;
         }
 
         private void HistoryButton_Click(object sender, EventArgs e)
@@ -112,6 +122,11 @@ namespace Helpdesk
         }
 
         private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
