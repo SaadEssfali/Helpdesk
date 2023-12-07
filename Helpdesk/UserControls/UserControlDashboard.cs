@@ -20,7 +20,14 @@ namespace Helpdesk.UserControls
             dayOfMonthLabel.Text = DateTime.Now.ToString("dd");
             dayOfWeekLabel.Text = DateTime.Now.ToString("dddd");
             YearLabel.Text = DateTime.Now.ToString("yyyy");
-            dashID.Text=Employe.id.ToString();
+            dashID.Text = Employe.id.ToString();
+            nticket.Text = ticket.TicketID.ToString();
+            statuticket.Text = ticket.Statut;
+            if (ticket.Statut.ToUpper() == "OPEN")
+            {
+                statuticket.ForeColor = Color.Green;
+            }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -30,6 +37,9 @@ namespace Helpdesk.UserControls
 
         private void UserControlDashboard_Load(object sender, EventArgs e)
         {
+
+            
+
 
         }
 
@@ -58,6 +68,21 @@ namespace Helpdesk.UserControls
         }
 
         private void dashID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picVotreID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dashID_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nticket_Click(object sender, EventArgs e)
         {
 
         }

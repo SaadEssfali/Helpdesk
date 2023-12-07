@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlDashboard));
-            pictureBox1 = new PictureBox();
+            picnticket = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
@@ -41,28 +41,30 @@
             dayOfMonthLabel = new Label();
             dayOfWeekLabel = new Label();
             monthLabel = new Label();
-            pictureBox6 = new PictureBox();
+            picVotreID = new PictureBox();
             YearLabel = new Label();
             dashID = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            nticket = new Label();
+            statuticket = new Label();
+            ((System.ComponentModel.ISupportInitialize)picnticket).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picVotreID).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // picnticket
             // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(126, 179);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(246, 114);
-            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            picnticket.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            picnticket.Image = (Image)resources.GetObject("picnticket.Image");
+            picnticket.Location = new Point(126, 179);
+            picnticket.Margin = new Padding(3, 4, 3, 4);
+            picnticket.Name = "picnticket";
+            picnticket.Size = new Size(246, 114);
+            picnticket.SizeMode = PictureBoxSizeMode.AutoSize;
+            picnticket.TabIndex = 0;
+            picnticket.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -171,15 +173,16 @@
             monthLabel.TabIndex = 7;
             monthLabel.Text = "label2";
             // 
-            // pictureBox6
+            // picVotreID
             // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(406, 38);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(246, 114);
-            pictureBox6.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox6.TabIndex = 10;
-            pictureBox6.TabStop = false;
+            picVotreID.Image = (Image)resources.GetObject("picVotreID.Image");
+            picVotreID.Location = new Point(406, 38);
+            picVotreID.Name = "picVotreID";
+            picVotreID.Size = new Size(246, 114);
+            picVotreID.SizeMode = PictureBoxSizeMode.CenterImage;
+            picVotreID.TabIndex = 10;
+            picVotreID.TabStop = false;
+            picVotreID.Click += picVotreID_Click;
             // 
             // YearLabel
             // 
@@ -195,22 +198,44 @@
             // dashID
             // 
             dashID.AutoSize = true;
-            dashID.Font = new Font("Segoe UI Symbol", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            dashID.Location = new Point(539, 90);
+            dashID.BackColor = Color.Transparent;
+            dashID.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            dashID.ForeColor = SystemColors.ActiveCaptionText;
+            dashID.Location = new Point(510, 79);
             dashID.Name = "dashID";
-            dashID.Size = new Size(65, 25);
+            dashID.Size = new Size(113, 46);
             dashID.TabIndex = 12;
             dashID.Text = "label2";
-            dashID.Click += dashID_Click;
+            dashID.Click += dashID_Click_1;
+            // 
+            // nticket
+            // 
+            nticket.AutoSize = true;
+            nticket.Location = new Point(252, 228);
+            nticket.Name = "nticket";
+            nticket.Size = new Size(50, 20);
+            nticket.TabIndex = 13;
+            nticket.Text = "label2";
+            nticket.Click += nticket_Click;
+            // 
+            // statuticket
+            // 
+            statuticket.AutoSize = true;
+            statuticket.Location = new Point(212, 261);
+            statuticket.Name = "statuticket";
+            statuticket.Size = new Size(50, 20);
+            statuticket.TabIndex = 14;
+            statuticket.Text = "label3";
             // 
             // UserControlDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(239, 240, 242);
+            Controls.Add(statuticket);
+            Controls.Add(nticket);
             Controls.Add(dashID);
             Controls.Add(YearLabel);
-            Controls.Add(pictureBox6);
             Controls.Add(dayOfWeekLabel);
             Controls.Add(dayOfMonthLabel);
             Controls.Add(monthLabel);
@@ -220,23 +245,24 @@
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            Controls.Add(picnticket);
+            Controls.Add(picVotreID);
             Name = "UserControlDashboard";
             Size = new Size(800, 583);
             Load += UserControlDashboard_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picnticket).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picVotreID).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox picnticket;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
@@ -247,8 +273,10 @@
         private Label dayOfMonthLabel;
         private Label dayOfWeekLabel;
         private Label monthLabel;
-        private PictureBox pictureBox6;
+        private PictureBox picVotreID;
         private Label YearLabel;
         private Label dashID;
+        private Label nticket;
+        private Label statuticket;
     }
 }

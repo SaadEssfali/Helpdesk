@@ -65,6 +65,12 @@ namespace Helpdesk
 
             if (isValid)
             {
+                adapter = new SqlDataAdapter("select * from Ticket t Inner join Employe e on t.EmployeID=e.ID where UserName = @username and MotDePasse = @password order by DateOuverture DESC ", cnx);
+                adapter.SelectCommand.Parameters.AddWithValue("@username", txtUser.Text);
+                adapter.SelectCommand.Parameters.AddWithValue("@password", txtPass.Text);
+                adapter.Fill(ds, "ticket");
+                ticket.TicketID = (int)ds.Tables["ticket"].Rows[0]["TicketID"];
+                ticket.Statut=(string)ds.Tables["ticket"].Rows[0]["statut"];
 
 
                 MainForm = new MainForm();
@@ -113,6 +119,10 @@ namespace Helpdesk
                 numbureau = (string)ds.Tables["valid"].Rows[0]["NumBureau"];
                 numtel = (string)ds.Tables["valid"].Rows[0]["NumTel"];
                 etage = (int)ds.Tables["valid"].Rows[0]["Etage"];
+               
+
+
+
             }
             else
             {
