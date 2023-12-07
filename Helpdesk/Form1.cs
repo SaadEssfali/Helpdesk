@@ -14,11 +14,9 @@ namespace Helpdesk
         public static DataSet ds;
         public static SqlDataAdapter adapter;
         SqlCommand cmd;
-<<<<<<< HEAD
         MainForm MainForm = new MainForm();
         TechnicienForm TechnicienForm = new TechnicienForm();
-=======
->>>>>>> 1371d8257de0f827aa30fa65dec7eae6476d5b81
+
         public Form1()
         {
             InitializeComponent();
@@ -57,7 +55,7 @@ namespace Helpdesk
             }
 
             //a l aide de fonction
-<<<<<<< HEAD
+
             if (IsValidEmploye(txtUser, txtPass))
             {
               
@@ -71,15 +69,7 @@ namespace Helpdesk
                 this.Hide();
                 
             }
-=======
-            if (IsValidUser(txtUser, txtPass))
-            {
-              
-                MainForm MainForm = new MainForm(); 
-                MainForm.Show();
-                this.Hide(); 
-            }
->>>>>>> 1371d8257de0f827aa30fa65dec7eae6476d5b81
+
             else
             {
                 
@@ -88,11 +78,9 @@ namespace Helpdesk
         }
 
 
-<<<<<<< HEAD
+
         public static bool IsValidEmploye(TextBox txtUser,TextBox txtPass) {
-=======
-        public static bool IsValidUser(TextBox txtUser,TextBox txtPass) {
->>>>>>> 1371d8257de0f827aa30fa65dec7eae6476d5b81
+
             cnx = Program.GetConnection();
             cnx.Open();
             int Count = 0;
@@ -116,7 +104,7 @@ namespace Helpdesk
             
 
         }
-<<<<<<< HEAD
+
         public static bool isValidTechnicien(TextBox txtUser,TextBox txtPass)
 
         {
@@ -135,7 +123,6 @@ namespace Helpdesk
             }
             return Count==1;
         }
-=======
->>>>>>> 1371d8257de0f827aa30fa65dec7eae6476d5b81
+
     }
 }
