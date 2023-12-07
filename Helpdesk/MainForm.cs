@@ -14,9 +14,7 @@ namespace Helpdesk
     public partial class MainForm : Form
 
     {
-        private string nom;
-        private string prenom, departement, service, numtel, numbureau;
-        private int etage;
+        
         UserControlDashboard dashboard = new UserControlDashboard();
         UserControlEmploye employe;
         UserControlTechniciens techniciens = new UserControlTechniciens();

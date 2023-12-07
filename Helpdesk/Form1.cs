@@ -61,7 +61,7 @@ namespace Helpdesk
             }
 
             //a l aide de fonction
-            (bool isValid,Employe.id, Employe.nom, Employe.prenom, Employe.departement, Employe.service, Employe.numtel, Employe.numbureau, Employe.etage) = IsValidEmploye(txtUser, txtPass);
+            (bool isValid,Employe.id, Employe.nom, Employe.prenom, Employe.departement, Employe.service, Employe.numbureau, Employe.numtel, Employe.etage) = IsValidEmploye(txtUser, txtPass);
 
             if (isValid)
             {
