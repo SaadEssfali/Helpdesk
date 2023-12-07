@@ -50,5 +50,10 @@ namespace Helpdesk.UserControls
             dayOfWeekLabel.Text = DateTime.Now.ToString("dddd");
             YearLabel.Text = DateTime.Now.ToString("yyyy");
         }
+
+        private void dayOfMonthLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

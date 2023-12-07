@@ -12,21 +12,30 @@ using System.Windows.Forms;
 namespace Helpdesk
 {
     public partial class MainForm : Form
+
     {
+        private string nom;
+        private string prenom;
         UserControlDashboard dashboard = new UserControlDashboard();
-        UserControlEmploye employe = new UserControlEmploye();
+        UserControlEmploye employe;
         UserControlTechniciens techniciens = new UserControlTechniciens();
         UserControlCreateticket cre =new UserControlCreateticket();
-        public MainForm()
+       
+        public MainForm(string nom, string prenom)
         {
             InitializeComponent();
             //intialisation du form par dashbord(Control)
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(dashboard);
             dashboard.Dock = DockStyle.Fill;
+            this.nom = nom;
+            this.prenom = prenom;
 
 
         }
+        
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -80,6 +89,7 @@ namespace Helpdesk
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             NotificationButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+            employe= new UserControlEmploye(nom, prenom);
             //changement de panel vers employee(Control)
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(employe);

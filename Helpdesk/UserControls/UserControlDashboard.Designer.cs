@@ -146,6 +146,7 @@
             dayOfMonthLabel.TabIndex = 8;
             dayOfMonthLabel.Text = "label2";
             dayOfMonthLabel.TextAlign = ContentAlignment.MiddleRight;
+            dayOfMonthLabel.Click += dayOfMonthLabel_Click;
             // 
             // dayOfWeekLabel
             // 
