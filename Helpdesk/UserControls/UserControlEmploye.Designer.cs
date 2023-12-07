@@ -32,6 +32,11 @@
             Id_card = new PictureBox();
             Nom = new Label();
             Prnm = new Label();
+            Departement = new Label();
+            sevice = new Label();
+            netage = new Label();
+            nbureau = new Label();
+            ntel = new Label();
             ((System.ComponentModel.ISupportInitialize)Id_card).BeginInit();
             SuspendLayout();
             // 
@@ -69,11 +74,61 @@
             Prnm.Text = "Prénom";
             Prnm.Click += label2_Click;
             // 
+            // departement
+            // 
+            Departement.AutoSize = false;
+            Departement.Location = new Point(320, 285);
+            Departement.Name = "departement";
+            Departement.Size = new Size(50, 20);
+            Departement.TabIndex = 3;
+            Departement.Text = "label1";
+            // 
+            // sevice
+            // 
+            sevice.AutoSize = true;
+            sevice.Location = new Point(267, 331);
+            sevice.Name = "sevice";
+            sevice.Size = new Size(50, 20);
+            sevice.TabIndex = 4;
+            sevice.Text = "label2";
+            // 
+            // etage
+            // 
+            netage.AutoSize = true;
+            netage.Location = new Point(252, 375);
+            netage.Name = "etage";
+            netage.Size = new Size(50, 20);
+            netage.TabIndex = 5;
+            netage.Text = "label3";
+            // 
+            // nbureau
+            // 
+            nbureau.AutoSize = true;
+            nbureau.Location = new Point(294, 415);
+            nbureau.Name = "nbureau";
+            nbureau.Size = new Size(50, 20);
+            nbureau.TabIndex = 6;
+            nbureau.Text = "label4";
+            // 
+            // ntel
+            // 
+            ntel.AutoSize = true;
+            ntel.Location = new Point(267, 461);
+            ntel.Name = "ntel";
+            ntel.Size = new Size(50, 20);
+            ntel.TabIndex = 7;
+            ntel.Text = "label5";
+            // 
             // UserControlEmploye
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(239, 240, 242);
+            Controls.Add(ntel);
+            Controls.Add(nbureau);
+            Controls.Add(netage);
+            Controls.Add(sevice);
+            Controls.Add(Departement);
             Controls.Add(Prnm);
             Controls.Add(Nom);
             Controls.Add(Id_card);
@@ -90,5 +145,10 @@
         private PictureBox Id_card;
         private Label Nom;
         private Label Prnm;
+        private Label Departement;
+        private Label sevice;
+        private Label netage;
+        private Label nbureau;
+        private Label ntel;
     }
 }

@@ -15,7 +15,8 @@ namespace Helpdesk
 
     {
         private string nom;
-        private string prenom;
+        private string prenom, departement, service, numtel, numbureau;
+        private int etage;
         UserControlDashboard dashboard = new UserControlDashboard();
         UserControlEmploye employe;
         UserControlTechniciens techniciens = new UserControlTechniciens();
@@ -30,6 +31,11 @@ namespace Helpdesk
             dashboard.Dock = DockStyle.Fill;
             this.nom = nom;
             this.prenom = prenom;
+            this.departement = departement;
+            this.service = service;
+            this.numtel = numtel;
+            this.numbureau = numbureau;
+            this.etage = etage;
 
 
         }
@@ -89,7 +95,7 @@ namespace Helpdesk
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             NotificationButton.BackColor = ColorTranslator.FromHtml("#004AAD");
-            employe= new UserControlEmploye(nom, prenom);
+            employe= new UserControlEmploye(nom, prenom,departement, service, numtel, numbureau,etage);
             //changement de panel vers employee(Control)
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(employe);

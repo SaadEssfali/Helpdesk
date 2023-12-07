@@ -15,16 +15,31 @@ namespace Helpdesk.UserControls
     public partial class UserControlEmploye : UserControl
     {
         private string nom;
-        private string prenom;
+        private string prenom, departement, service, numtel, numbureau;
+        private int etage;
 
-        public UserControlEmploye(string nom, string prenom)
+        public UserControlEmploye(string nom, string prenom, string departement, string service, string numbureau, string numtel, int etage)
         {
             InitializeComponent();
             this.nom = nom;
             this.prenom = prenom;
+            this.departement = departement;
+            this.service = service;
+            this.numtel = numtel;
+            this.numbureau= numbureau;
+            this.etage = etage;
+          
+            
+
 
             Nom.Text = nom;
             Prnm.Text = prenom;
+            Departement.Text = departement;
+            sevice.Text = service;
+            ntel.Text = numtel;
+            nbureau.Text = numbureau;
+            netage.Text = etage.ToString();
+
 
 
 
@@ -43,7 +58,7 @@ namespace Helpdesk.UserControls
 
         private void UserControlEmploye_Load(object sender, EventArgs e)
         {
-            Nom.Parent = Id_card; 
+            Nom.Parent = Id_card;
             Prnm.Parent = Id_card;
             Nom.BackColor = Color.Transparent;
             Prnm.BackColor = Color.Transparent;
