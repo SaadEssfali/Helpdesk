@@ -14,31 +14,22 @@ namespace Helpdesk.UserControls
 {
     public partial class UserControlEmploye : UserControl
     {
-        private string nom;
-        private string prenom, departement, service, numtel, numbureau;
-        private int etage;
+       
 
-        public UserControlEmploye(string nom, string prenom, string departement, string service, string numbureau, string numtel, int etage)
+        public UserControlEmploye()
         {
             InitializeComponent();
-            this.nom = nom;
-            this.prenom = prenom;
-            this.departement = departement;
-            this.service = service;
-            this.numtel = numtel;
-            this.numbureau = numbureau;
-            this.etage = etage;
+           
 
 
 
-
-            Nom.Text = nom;
-            Prnm.Text = prenom;
-            Departement.Text = departement;
-            sevice.Text = service;
-            nbureau.Text = numbureau;
-            ntel.Text = numtel;
-            netage.Text = etage.ToString();
+            Nom.Text = Employe.nom;
+            Prnm.Text = Employe.prenom; 
+            Departement.Text = Employe.departement;
+            sevice.Text = Employe.service;
+            nbureau.Text = Employe.numbureau;
+            ntel.Text = Employe.numtel;
+            netage.Text = Employe.etage.ToString();
 
 
 

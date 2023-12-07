@@ -22,20 +22,14 @@ namespace Helpdesk
         UserControlTechniciens techniciens = new UserControlTechniciens();
         UserControlCreateticket cre =new UserControlCreateticket();
        
-        public MainForm(string nom, string prenom,string departement,string service,string numbureau,string numtel,int etage)
+        public MainForm()
         {
             InitializeComponent();
             //intialisation du form par dashbord(Control)
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(dashboard);
             dashboard.Dock = DockStyle.Fill;
-            this.nom = nom;
-            this.prenom = prenom;
-            this.departement = departement;
-            this.service = service;
-            this.numtel = numtel;
-            this.numbureau = numbureau;
-            this.etage = etage;
+           
 
 
         }
@@ -95,7 +89,7 @@ namespace Helpdesk
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             NotificationButton.BackColor = ColorTranslator.FromHtml("#004AAD");
-            employe= new UserControlEmploye(nom, prenom,departement, service, numbureau, numtel,etage);
+            employe= new UserControlEmploye();
             //changement de panel vers employee(Control)
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(employe);

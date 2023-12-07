@@ -76,6 +76,7 @@
             // 
             // Departement
             // 
+            Departement.AutoSize = true;
             Departement.Location = new Point(320, 285);
             Departement.Name = "Departement";
             Departement.Size = new Size(50, 20);
@@ -112,7 +113,7 @@
             // ntel
             // 
             ntel.AutoSize = true;
-            ntel.Location = new Point(267, 461);
+            ntel.Location = new Point(267, 459);
             ntel.Name = "ntel";
             ntel.Size = new Size(50, 20);
             ntel.TabIndex = 7;

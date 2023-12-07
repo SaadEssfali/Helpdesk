@@ -20,6 +20,7 @@ namespace Helpdesk.UserControls
             dayOfMonthLabel.Text = DateTime.Now.ToString("dd");
             dayOfWeekLabel.Text = DateTime.Now.ToString("dddd");
             YearLabel.Text = DateTime.Now.ToString("yyyy");
+            dashID.Text=Employe.id.ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -52,6 +53,11 @@ namespace Helpdesk.UserControls
         }
 
         private void dayOfMonthLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dashID_Click(object sender, EventArgs e)
         {
 
         }

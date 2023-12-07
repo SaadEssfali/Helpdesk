@@ -43,6 +43,7 @@
             monthLabel = new Label();
             pictureBox6 = new PictureBox();
             YearLabel = new Label();
+            dashID = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -191,11 +192,23 @@
             YearLabel.TabIndex = 11;
             YearLabel.Text = "label2";
             // 
+            // dashID
+            // 
+            dashID.AutoSize = true;
+            dashID.Font = new Font("Segoe UI Symbol", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            dashID.Location = new Point(539, 90);
+            dashID.Name = "dashID";
+            dashID.Size = new Size(65, 25);
+            dashID.TabIndex = 12;
+            dashID.Text = "label2";
+            dashID.Click += dashID_Click;
+            // 
             // UserControlDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(239, 240, 242);
+            Controls.Add(dashID);
             Controls.Add(YearLabel);
             Controls.Add(pictureBox6);
             Controls.Add(dayOfWeekLabel);
@@ -236,5 +249,6 @@
         private Label monthLabel;
         private PictureBox pictureBox6;
         private Label YearLabel;
+        private Label dashID;
     }
 }
