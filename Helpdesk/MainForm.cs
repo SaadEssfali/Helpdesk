@@ -95,7 +95,7 @@ namespace Helpdesk
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             NotificationButton.BackColor = ColorTranslator.FromHtml("#004AAD");
-            employe= new UserControlEmploye(nom, prenom,departement, service, numtel, numbureau,etage);
+            employe= new UserControlEmploye(nom, prenom,departement, service, numbureau, numtel,etage);
             //changement de panel vers employee(Control)
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(employe);

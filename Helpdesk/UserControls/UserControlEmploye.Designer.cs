@@ -74,11 +74,10 @@
             Prnm.Text = "Prénom";
             Prnm.Click += label2_Click;
             // 
-            // departement
+            // Departement
             // 
-            Departement.AutoSize = false;
             Departement.Location = new Point(320, 285);
-            Departement.Name = "departement";
+            Departement.Name = "Departement";
             Departement.Size = new Size(50, 20);
             Departement.TabIndex = 3;
             Departement.Text = "label1";
@@ -92,11 +91,11 @@
             sevice.TabIndex = 4;
             sevice.Text = "label2";
             // 
-            // etage
+            // netage
             // 
             netage.AutoSize = true;
             netage.Location = new Point(252, 375);
-            netage.Name = "etage";
+            netage.Name = "netage";
             netage.Size = new Size(50, 20);
             netage.TabIndex = 5;
             netage.Text = "label3";
@@ -118,6 +117,7 @@
             ntel.Size = new Size(50, 20);
             ntel.TabIndex = 7;
             ntel.Text = "label5";
+            ntel.Click += ntel_Click;
             // 
             // UserControlEmploye
             // 

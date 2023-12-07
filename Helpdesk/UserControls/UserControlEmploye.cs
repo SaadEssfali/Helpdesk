@@ -26,18 +26,18 @@ namespace Helpdesk.UserControls
             this.departement = departement;
             this.service = service;
             this.numtel = numtel;
-            this.numbureau= numbureau;
+            this.numbureau = numbureau;
             this.etage = etage;
-          
-            
+
+
 
 
             Nom.Text = nom;
             Prnm.Text = prenom;
             Departement.Text = departement;
             sevice.Text = service;
-            ntel.Text = numtel;
             nbureau.Text = numbureau;
+            ntel.Text = numtel;
             netage.Text = etage.ToString();
 
 
@@ -65,6 +65,11 @@ namespace Helpdesk.UserControls
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ntel_Click(object sender, EventArgs e)
         {
 
         }
