@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlEmploye));
-            pictureBox1 = new PictureBox();
+            Id_card = new PictureBox();
             Nom = new Label();
             Prnm = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Id_card).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // Id_card
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(129, 75);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(509, 449);
-            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            Id_card.Image = (Image)resources.GetObject("Id_card.Image");
+            Id_card.Location = new Point(129, 75);
+            Id_card.Name = "Id_card";
+            Id_card.Size = new Size(509, 449);
+            Id_card.SizeMode = PictureBoxSizeMode.CenterImage;
+            Id_card.TabIndex = 0;
+            Id_card.TabStop = false;
             // 
             // Nom
             // 
             Nom.AutoSize = true;
             Nom.BackColor = Color.MintCream;
             Nom.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            Nom.Location = new Point(305, 141);
+            Nom.Location = new Point(185, 75);
             Nom.Name = "Nom";
             Nom.Size = new Size(96, 46);
             Nom.TabIndex = 1;
@@ -62,7 +62,7 @@
             Prnm.AutoSize = true;
             Prnm.BackColor = Color.MintCream;
             Prnm.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            Prnm.Location = new Point(305, 192);
+            Prnm.Location = new Point(185, 121);
             Prnm.Name = "Prnm";
             Prnm.Size = new Size(141, 46);
             Prnm.TabIndex = 2;
@@ -76,18 +76,18 @@
             BackColor = Color.FromArgb(239, 240, 242);
             Controls.Add(Prnm);
             Controls.Add(Nom);
-            Controls.Add(pictureBox1);
+            Controls.Add(Id_card);
             Name = "UserControlEmploye";
             Size = new Size(800, 583);
             Load += UserControlEmploye_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Id_card).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox Id_card;
         private Label Nom;
         private Label Prnm;
     }

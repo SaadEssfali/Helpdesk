@@ -165,6 +165,7 @@
             Controls.Add(pictureBox2);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -43,7 +43,10 @@ namespace Helpdesk.UserControls
 
         private void UserControlEmploye_Load(object sender, EventArgs e)
         {
-
+            Nom.Parent = Id_card; 
+            Prnm.Parent = Id_card;
+            Nom.BackColor = Color.Transparent;
+            Prnm.BackColor = Color.Transparent;
         }
 
         private void label2_Click(object sender, EventArgs e)

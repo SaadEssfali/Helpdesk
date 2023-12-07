@@ -21,7 +21,7 @@ namespace Helpdesk
         UserControlTechniciens techniciens = new UserControlTechniciens();
         UserControlCreateticket cre =new UserControlCreateticket();
        
-        public MainForm(string nom, string prenom)
+        public MainForm(string nom, string prenom,string departement,string service,string numbureau,string numtel,int etage)
         {
             InitializeComponent();
             //intialisation du form par dashbord(Control)
