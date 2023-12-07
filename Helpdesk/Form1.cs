@@ -14,6 +14,11 @@ namespace Helpdesk
         public static DataSet ds;
         public static SqlDataAdapter adapter;
         SqlCommand cmd;
+<<<<<<< HEAD
+        MainForm MainForm = new MainForm();
+        TechnicienForm TechnicienForm = new TechnicienForm();
+=======
+>>>>>>> 1371d8257de0f827aa30fa65dec7eae6476d5b81
         public Form1()
         {
             InitializeComponent();
@@ -52,6 +57,21 @@ namespace Helpdesk
             }
 
             //a l aide de fonction
+<<<<<<< HEAD
+            if (IsValidEmploye(txtUser, txtPass))
+            {
+              
+              
+                MainForm.Show();
+                this.Hide(); 
+            }
+            else if (isValidTechnicien(txtUser, txtPass))
+            {
+                TechnicienForm.Show();
+                this.Hide();
+                
+            }
+=======
             if (IsValidUser(txtUser, txtPass))
             {
               
@@ -59,6 +79,7 @@ namespace Helpdesk
                 MainForm.Show();
                 this.Hide(); 
             }
+>>>>>>> 1371d8257de0f827aa30fa65dec7eae6476d5b81
             else
             {
                 
@@ -67,7 +88,11 @@ namespace Helpdesk
         }
 
 
+<<<<<<< HEAD
+        public static bool IsValidEmploye(TextBox txtUser,TextBox txtPass) {
+=======
         public static bool IsValidUser(TextBox txtUser,TextBox txtPass) {
+>>>>>>> 1371d8257de0f827aa30fa65dec7eae6476d5b81
             cnx = Program.GetConnection();
             cnx.Open();
             int Count = 0;
@@ -91,5 +116,26 @@ namespace Helpdesk
             
 
         }
+<<<<<<< HEAD
+        public static bool isValidTechnicien(TextBox txtUser,TextBox txtPass)
+
+        {
+            cnx = Program.GetConnection();
+            cnx.Open();
+            int Count = 0;
+            ds = new DataSet();
+            adapter = new SqlDataAdapter("select * from Technicien where UserName = @username and MotDePasse = @password", cnx);
+            adapter.SelectCommand.Parameters.AddWithValue("@username", txtUser.Text);
+            adapter.SelectCommand.Parameters.AddWithValue("@password", txtPass.Text);
+            adapter.Fill(ds, "Technicien");
+
+            if (ds.Tables["Technicien"].Rows.Count > 0)
+            {
+                Count = 1;
+            }
+            return Count==1;
+        }
+=======
+>>>>>>> 1371d8257de0f827aa30fa65dec7eae6476d5b81
     }
 }
