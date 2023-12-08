@@ -61,18 +61,12 @@ namespace Helpdesk
             }
 
             //a l aide de fonction
-            (bool isValid,Employe.id, Employe.nom, Employe.prenom, Employe.departement, Employe.service, Employe.numbureau, Employe.numtel, Employe.etage) = IsValidEmploye(txtUser, txtPass);
+         
 
-            if (isValid)
+            if (IsValidEmploye(txtUser, txtPass))
             {
-                adapter = new SqlDataAdapter("select * from Ticket t Inner join Employe e on t.EmployeID=e.ID where UserName = @username and MotDePasse = @password order by DateOuverture DESC ", cnx);
-                adapter.SelectCommand.Parameters.AddWithValue("@username", txtUser.Text);
-                adapter.SelectCommand.Parameters.AddWithValue("@password", txtPass.Text);
-                adapter.Fill(ds, "ticket");
-                ticket.TicketID = (int)ds.Tables["ticket"].Rows[0]["TicketID"];
-                ticket.Statut=(string)ds.Tables["ticket"].Rows[0]["statut"];
 
-
+                ticketfun(txtUser, txtPass);
                 MainForm = new MainForm();
                 MainForm.Show();
                 this.Hide();
@@ -93,14 +87,13 @@ namespace Helpdesk
 
 
 
-        public static (bool,int, String, String, String, String, String, String, int) IsValidEmploye(TextBox txtUser, TextBox txtPass)
+        public static bool IsValidEmploye(TextBox txtUser, TextBox txtPass)
         {
 
             cnx = Program.GetConnection();
             cnx.Open();
             int Count = 0;
-            string Nom, Prenom, departement, service, numbureau, numtel;
-            int id,etage;
+           
 
             ds = new DataSet();
             adapter = new SqlDataAdapter("select * from Employe where UserName = @username and MotDePasse = @password", cnx);
@@ -111,38 +104,35 @@ namespace Helpdesk
             if (ds.Tables["valid"].Rows.Count > 0)
             {
                 Count = 1;
-                id= (int)ds.Tables["valid"].Rows[0]["ID"];
-                Nom = (string)ds.Tables["valid"].Rows[0]["Nom"];
-                Prenom = (string)ds.Tables["valid"].Rows[0]["Prenom"];
-                departement = (string)ds.Tables["valid"].Rows[0]["Departement"];
-                service = (string)ds.Tables["valid"].Rows[0]["N_Service"];
-                numbureau = (string)ds.Tables["valid"].Rows[0]["NumBureau"];
-                numtel = (string)ds.Tables["valid"].Rows[0]["NumTel"];
-                etage = (int)ds.Tables["valid"].Rows[0]["Etage"];
+                Employe.id= (int)ds.Tables["valid"].Rows[0]["ID"];
+                Employe.nom = (string)ds.Tables["valid"].Rows[0]["Nom"];
+                Employe.prenom = (string)ds.Tables["valid"].Rows[0]["Prenom"];
+                Employe.departement= (string)ds.Tables["valid"].Rows[0]["Departement"];
+                Employe.service= (string)ds.Tables["valid"].Rows[0]["N_Service"];
+                Employe.numbureau = (string)ds.Tables["valid"].Rows[0]["NumBureau"];
+                Employe.numtel= (string)ds.Tables["valid"].Rows[0]["NumTel"];
+                Employe.etage= (int)ds.Tables["valid"].Rows[0]["Etage"];
                
 
 
 
             }
-            else
-            {
-                Count = 0;
-                Nom = null;
-                Prenom = null;
-                departement = null;
-                service = null;
-                numtel = null;
-                numbureau = null;
-                etage = 0;
-                id = 0;
-            }
 
-            bool isValid = Count == 1;
-            return (isValid,id, Nom, Prenom, departement, service, numbureau, numtel, etage);
+
+            return Count == 1;
 
 
 
 
+        }
+        public static void ticketfun(TextBox txtUser, TextBox txtPass)
+        {
+            adapter = new SqlDataAdapter("select * from Ticket t Inner join Employe e on t.EmployeID=e.ID where UserName = @username and MotDePasse = @password order by DateOuverture DESC ", cnx);
+            adapter.SelectCommand.Parameters.AddWithValue("@username", txtUser.Text);
+            adapter.SelectCommand.Parameters.AddWithValue("@password", txtPass.Text);
+            adapter.Fill(ds, "ticket");
+            ticket.TicketID = (int)ds.Tables["ticket"].Rows[0]["TicketID"];
+            ticket.Statut = (string)ds.Tables["ticket"].Rows[0]["statut"];
         }
 
         public static bool isValidTechnicien(TextBox txtUser, TextBox txtPass)

@@ -211,9 +211,10 @@
             // nticket
             // 
             nticket.AutoSize = true;
-            nticket.Location = new Point(252, 228);
+            nticket.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            nticket.Location = new Point(236, 217);
             nticket.Name = "nticket";
-            nticket.Size = new Size(50, 20);
+            nticket.Size = new Size(91, 38);
             nticket.TabIndex = 13;
             nticket.Text = "label2";
             nticket.Click += nticket_Click;
@@ -221,9 +222,10 @@
             // statuticket
             // 
             statuticket.AutoSize = true;
+            statuticket.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             statuticket.Location = new Point(212, 261);
             statuticket.Name = "statuticket";
-            statuticket.Size = new Size(50, 20);
+            statuticket.Size = new Size(55, 23);
             statuticket.TabIndex = 14;
             statuticket.Text = "label3";
             // 

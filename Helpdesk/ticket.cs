@@ -15,5 +15,7 @@ namespace Helpdesk
         public static DateTime? DateOuverture;
         public static DateTime? DateCloture;// Nullable to allow for 'NULL' values
         public static string Statut;
+
+        
     }
 }
