@@ -19,6 +19,7 @@ namespace Helpdesk
         UserControlEmploye employe;
         UserControlTechniciens techniciens = new UserControlTechniciens();
         UserControlCreateticket cre =new UserControlCreateticket();
+        UserControlTicketHis his = new UserControlTicketHis();
        
         public MainForm()
         {
@@ -117,6 +118,9 @@ namespace Helpdesk
             techniciensButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             NotificationButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(his);
+            dashboard.Dock = DockStyle.Fill;
         }
 
         private void NotificationButton_Click(object sender, EventArgs e)
