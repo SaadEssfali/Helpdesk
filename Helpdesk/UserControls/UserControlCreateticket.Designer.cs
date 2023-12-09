@@ -30,10 +30,10 @@
         {
             comboBoxCat = new ComboBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtDescription = new TextBox();
             label2 = new Label();
-            button1 = new Button();
-            comboBox2 = new ComboBox();
+            btnSuivre = new Button();
+            comboBoxP = new ComboBox();
             label3 = new Label();
             SuspendLayout();
             // 
@@ -55,13 +55,13 @@
             label1.TabIndex = 1;
             label1.Text = "Catégorie";
             // 
-            // textBox1
+            // txtDescription
             // 
-            textBox1.Location = new Point(198, 221);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(459, 198);
-            textBox1.TabIndex = 2;
+            txtDescription.Location = new Point(198, 221);
+            txtDescription.Multiline = true;
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(459, 198);
+            txtDescription.TabIndex = 2;
             // 
             // label2
             // 
@@ -72,22 +72,25 @@
             label2.TabIndex = 3;
             label2.Text = "Description";
             // 
-            // button1
+            // btnSuivre
             // 
-            button1.Location = new Point(527, 447);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 44);
-            button1.TabIndex = 4;
-            button1.Text = "Suivre";
-            button1.UseVisualStyleBackColor = true;
+            btnSuivre.Location = new Point(527, 447);
+            btnSuivre.Name = "btnSuivre";
+            btnSuivre.Size = new Size(130, 44);
+            btnSuivre.TabIndex = 4;
+            btnSuivre.Text = "Suivre";
+            btnSuivre.UseVisualStyleBackColor = true;
+            btnSuivre.Click += button1_Click;
             // 
-            // comboBox2
+            // comboBoxP
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(198, 110);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 5;
+            comboBoxP.FormattingEnabled = true;
+            comboBoxP.Items.AddRange(new object[] { "Haute Priorité", "Moyenne Priorité", "Basse Priorité" });
+            comboBoxP.Location = new Point(198, 110);
+            comboBoxP.Name = "comboBoxP";
+            comboBoxP.Size = new Size(151, 28);
+            comboBoxP.TabIndex = 5;
+            comboBoxP.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // label3
             // 
@@ -103,10 +106,10 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(label3);
-            Controls.Add(comboBox2);
-            Controls.Add(button1);
+            Controls.Add(comboBoxP);
+            Controls.Add(btnSuivre);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtDescription);
             Controls.Add(label1);
             Controls.Add(comboBoxCat);
             Name = "UserControlCreateticket";
@@ -120,10 +123,10 @@
 
         private ComboBox comboBoxCat;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtDescription;
         private Label label2;
-        private Button button1;
-        private ComboBox comboBox2;
+        private Button btnSuivre;
+        private ComboBox comboBoxP;
         private Label label3;
     }
 }

@@ -23,5 +23,18 @@ namespace Helpdesk
 
 
         }
+
+        public static int catID(ComboBox comboBox)
+        {
+            string nom = comboBox.GetItemText(comboBox.SelectedItem.ToString());
+            Form1.adapter = new SqlDataAdapter(" select CategorieID from CategorieProbleme WHERE Nom=@nom", Form1.cnx);
+            Form1.adapter.SelectCommand.Parameters.AddWithValue("@nom", nom);
+            Form1.adapter.Fill(Form1.ds, "Category");
+            int catID = (int)Form1.ds.Tables["Category"].Rows[0]["CategorieID"] ;
+
+
+            return catID;
+        }
+
     }
 }
