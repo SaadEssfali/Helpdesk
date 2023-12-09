@@ -19,6 +19,14 @@ namespace Helpdesk.UserControls
 
         private void UserControlCreateticket_Load(object sender, EventArgs e)
         {
+            DataTable categoryTable = Categorie.Category();
+            comboBoxCat.DataSource=categoryTable;
+            comboBoxCat.DisplayMember = "Nom";
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
