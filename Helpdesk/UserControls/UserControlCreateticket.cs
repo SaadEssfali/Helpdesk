@@ -14,6 +14,7 @@ namespace Helpdesk.UserControls
 {
     public partial class UserControlCreateticket : UserControl
     {
+        public event EventHandler TicketCreated;
         private int caID;
         public UserControlCreateticket()
         {
@@ -51,7 +52,7 @@ namespace Helpdesk.UserControls
             cmd.Parameters.AddWithValue("@dateouverture", DateTime.Now);
             cmd.Parameters.AddWithValue("@Priorité", comboBoxP.SelectedItem.ToString());
             cmd.ExecuteNonQuery();
-
+            TicketCreated?.Invoke(this, EventArgs.Empty);
 
 
         }

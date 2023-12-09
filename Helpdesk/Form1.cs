@@ -66,7 +66,7 @@ namespace Helpdesk
             if (IsValidEmploye(txtUser, txtPass))
             {
 
-                ticketfun(txtUser, txtPass);
+                ticket.ticketfun();
                 MainForm = new MainForm();
                 MainForm.Show();
                 this.Hide();
@@ -125,16 +125,7 @@ namespace Helpdesk
 
 
         }
-        public static void ticketfun(TextBox txtUser, TextBox txtPass)
-        {
-            adapter = new SqlDataAdapter("select * from Ticket t Inner join Employe e on t.EmployeID=e.ID where UserName = @username and MotDePasse = @password order by DateOuverture DESC ", cnx);
-            adapter.SelectCommand.Parameters.AddWithValue("@username", txtUser.Text);
-            adapter.SelectCommand.Parameters.AddWithValue("@password", txtPass.Text);
-            adapter.Fill(ds, "ticket");
-            ticket.TicketID = (int)ds.Tables["ticket"].Rows[0]["TicketID"];
-            ticket.Statut = (string)ds.Tables["ticket"].Rows[0]["statut"];
-        }
-
+        
         public static bool isValidTechnicien(TextBox txtUser, TextBox txtPass)
 
         {

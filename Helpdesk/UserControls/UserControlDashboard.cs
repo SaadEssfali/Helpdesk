@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,13 +22,19 @@ namespace Helpdesk.UserControls
             dayOfWeekLabel.Text = DateTime.Now.ToString("dddd");
             YearLabel.Text = DateTime.Now.ToString("yyyy");
             dashID.Text = Employe.id.ToString();
+            refreshntciket();
+
+
+
+        }
+        public void refreshntciket()
+        {
             nticket.Text = ticket.TicketID.ToString();
             statuticket.Text = ticket.Statut;
             if (ticket.Statut.ToUpper() == "OPEN")
             {
                 statuticket.ForeColor = Color.Green;
             }
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

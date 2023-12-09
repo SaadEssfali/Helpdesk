@@ -28,11 +28,17 @@ namespace Helpdesk
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(dashboard);
             dashboard.Dock = DockStyle.Fill;
-           
+            cre.TicketCreated += updatedatarefresh;
 
 
         }
         
+        private void updatedatarefresh(object sender, EventArgs e)
+        {
+            his.Displaydata();
+            ticket.ticketfun();
+            dashboard.refreshntciket();
+        }
 
 
 
