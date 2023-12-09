@@ -24,7 +24,7 @@ namespace Helpdesk.UserControls
         {
             Form1.cnx = Program.GetConnection();
             Form1.ds = new DataSet();
-            Form1.adapter = new SqlDataAdapter("select TicketID,t.Description,Nom,DateOuverture,DateCloture,statut from Ticket t inner join CategorieProbleme c on t.CategorieID=c.CategorieID  where EmployeID=@ID ", Form1.cnx);
+            Form1.adapter = new SqlDataAdapter("select TicketID,t.Description,Nom as Categorie,DateOuverture,DateCloture,statut from Ticket t inner join CategorieProbleme c on t.CategorieID=c.CategorieID  where EmployeID=@ID ", Form1.cnx);
             Form1.adapter.SelectCommand.Parameters.AddWithValue("@ID", Employe.id);
             Form1.adapter.Fill(Form1.ds, "ticketss");
             dataGridView1.DataSource = Form1.ds.Tables["ticketss"];
