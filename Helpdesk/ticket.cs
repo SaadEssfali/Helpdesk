@@ -22,8 +22,16 @@ namespace Helpdesk
             Form1.adapter.SelectCommand.Parameters.AddWithValue("@emplyeid", Employe.id);
 
             Form1.adapter.Fill(Form1.ds, "ticket");
+            if (Form1.ds.Tables["ticket"].Rows.Count > 0){ 
             ticket.TicketID = (int)Form1.ds.Tables["ticket"].Rows[0]["TicketID"];
             ticket.Statut = (string)Form1.ds.Tables["ticket"].Rows[0]["statut"];
+            }
+            else
+            {
+                ticket.TicketID = 0;
+                ticket.Statut = "Pas de Ticket";
+            }
+        }
         }
 
 
@@ -31,4 +39,4 @@ namespace Helpdesk
     }
 
 
-}
+

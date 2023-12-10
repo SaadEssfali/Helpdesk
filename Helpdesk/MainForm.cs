@@ -14,13 +14,14 @@ namespace Helpdesk
     public partial class MainForm : Form
 
     {
-        
+
         UserControlDashboard dashboard = new UserControlDashboard();
         UserControlEmploye employe;
         UserControlTechniciens techniciens = new UserControlTechniciens();
-        UserControlCreateticket cre =new UserControlCreateticket();
+        UserControlCreateticket cre = new UserControlCreateticket();
         UserControlTicketHis his = new UserControlTicketHis();
-       
+        Form1 login = new Form1();
+
         public MainForm()
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace Helpdesk
 
 
         }
-        
+
         private void updatedatarefresh(object sender, EventArgs e)
         {
             his.Displaydata();
@@ -94,7 +95,7 @@ namespace Helpdesk
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             NotificationButton.BackColor = ColorTranslator.FromHtml("#004AAD");
-            employe= new UserControlEmploye();
+            employe = new UserControlEmploye();
             //changement de panel vers employee(Control)
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(employe);
@@ -145,6 +146,18 @@ namespace Helpdesk
         }
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            login.Show();
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             panel1 = new Panel();
+            panel8 = new Panel();
+            btnlogout = new Button();
             panel7 = new Panel();
             NotificationButton = new Button();
             panel6 = new Panel();
@@ -44,6 +46,7 @@
             techniciensButton = new Button();
             mainPanel = new Panel();
             panel1.SuspendLayout();
+            panel8.SuspendLayout();
             panel7.SuspendLayout();
             panel6.SuspendLayout();
             panel2.SuspendLayout();
@@ -56,6 +59,7 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel1.BackColor = Color.FromArgb(0, 74, 173);
+            panel1.Controls.Add(panel8);
             panel1.Controls.Add(panel7);
             panel1.Controls.Add(panel6);
             panel1.Controls.Add(panel2);
@@ -66,6 +70,37 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(232, 604);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.FromArgb(0, 74, 173);
+            panel8.Controls.Add(btnlogout);
+            panel8.Location = new Point(-1, 544);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(234, 45);
+            panel8.TabIndex = 8;
+            // 
+            // btnlogout
+            // 
+            btnlogout.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnlogout.BackColor = Color.FromArgb(0, 74, 173);
+            btnlogout.FlatAppearance.BorderSize = 0;
+            btnlogout.FlatAppearance.MouseDownBackColor = Color.Black;
+            btnlogout.FlatAppearance.MouseOverBackColor = Color.Black;
+            btnlogout.FlatStyle = FlatStyle.Flat;
+            btnlogout.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnlogout.ForeColor = SystemColors.ControlLightLight;
+            btnlogout.Image = (Image)resources.GetObject("btnlogout.Image");
+            btnlogout.Location = new Point(-77, -17);
+            btnlogout.Name = "btnlogout";
+            btnlogout.Padding = new Padding(0, 15, 70, 11);
+            btnlogout.Size = new Size(311, 75);
+            btnlogout.TabIndex = 1;
+            btnlogout.Text = "Log out";
+            btnlogout.TextAlign = ContentAlignment.MiddleRight;
+            btnlogout.UseVisualStyleBackColor = false;
+            btnlogout.Click += btnlogout_Click;
             // 
             // panel7
             // 
@@ -268,6 +303,7 @@
             Text = "MainForm";
             Load += MainForm_Load;
             panel1.ResumeLayout(false);
+            panel8.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel2.ResumeLayout(false);
@@ -293,5 +329,7 @@
         private Panel panel7;
         private Button NotificationButton;
         private Panel mainPanel;
+        private Panel panel8;
+        private Button btnlogout;
     }
 }
