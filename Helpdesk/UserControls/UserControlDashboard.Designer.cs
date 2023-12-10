@@ -31,7 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlDashboard));
             picnticket = new PictureBox();
-            pictureBox2 = new PictureBox();
+            picRticket = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             hourlabel = new Label();
@@ -46,8 +46,9 @@
             dashID = new Label();
             nticket = new Label();
             statuticket = new Label();
+            nresolu = new Label();
             ((System.ComponentModel.ISupportInitialize)picnticket).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picRticket).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -66,17 +67,17 @@
             picnticket.TabIndex = 0;
             picnticket.TabStop = false;
             // 
-            // pictureBox2
+            // picRticket
             // 
-            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(406, 180);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(246, 114);
-            pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
+            picRticket.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            picRticket.Image = (Image)resources.GetObject("picRticket.Image");
+            picRticket.Location = new Point(406, 180);
+            picRticket.Margin = new Padding(3, 4, 3, 4);
+            picRticket.Name = "picRticket";
+            picRticket.Size = new Size(246, 114);
+            picRticket.SizeMode = PictureBoxSizeMode.AutoSize;
+            picRticket.TabIndex = 1;
+            picRticket.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -200,7 +201,7 @@
             dashID.AutoSize = true;
             dashID.BackColor = Color.Transparent;
             dashID.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            dashID.ForeColor = SystemColors.ActiveCaptionText;
+            dashID.ForeColor = SystemColors.ButtonFace;
             dashID.Location = new Point(510, 79);
             dashID.Name = "dashID";
             dashID.Size = new Size(113, 46);
@@ -211,7 +212,9 @@
             // nticket
             // 
             nticket.AutoSize = true;
+            nticket.BackColor = Color.Transparent;
             nticket.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            nticket.ForeColor = SystemColors.ButtonFace;
             nticket.Location = new Point(236, 217);
             nticket.Name = "nticket";
             nticket.Size = new Size(91, 38);
@@ -222,21 +225,36 @@
             // statuticket
             // 
             statuticket.AutoSize = true;
-            statuticket.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            statuticket.Location = new Point(212, 261);
+            statuticket.BackColor = Color.Transparent;
+            statuticket.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            statuticket.ForeColor = SystemColors.ButtonFace;
+            statuticket.Location = new Point(80, 80);
             statuticket.Name = "statuticket";
-            statuticket.Size = new Size(55, 23);
+            statuticket.Size = new Size(59, 23);
             statuticket.TabIndex = 14;
             statuticket.Text = "label3";
+            // 
+            // nresolu
+            // 
+            nresolu.AutoSize = true;
+            nresolu.BackColor = Color.Transparent;
+            nresolu.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            nresolu.ForeColor = SystemColors.ButtonFace;
+            nresolu.Location = new Point(430, 226);
+            nresolu.Name = "nresolu";
+            nresolu.Size = new Size(113, 46);
+            nresolu.TabIndex = 15;
+            nresolu.Text = "label2";
             // 
             // UserControlDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(239, 240, 242);
+            Controls.Add(nresolu);
+            Controls.Add(dashID);
             Controls.Add(statuticket);
             Controls.Add(nticket);
-            Controls.Add(dashID);
             Controls.Add(YearLabel);
             Controls.Add(dayOfWeekLabel);
             Controls.Add(dayOfMonthLabel);
@@ -246,14 +264,14 @@
             Controls.Add(hourlabel);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
+            Controls.Add(picRticket);
             Controls.Add(picnticket);
             Controls.Add(picVotreID);
             Name = "UserControlDashboard";
             Size = new Size(800, 583);
             Load += UserControlDashboard_Load;
             ((System.ComponentModel.ISupportInitialize)picnticket).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picRticket).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
@@ -265,7 +283,7 @@
         #endregion
 
         private PictureBox picnticket;
-        private PictureBox pictureBox2;
+        private PictureBox picRticket;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private Label hourlabel;
@@ -280,5 +298,6 @@
         private Label dashID;
         private Label nticket;
         private Label statuticket;
+        private Label nresolu;
     }
 }

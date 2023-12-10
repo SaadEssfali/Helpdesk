@@ -14,17 +14,17 @@ namespace Helpdesk.UserControls
 {
     public partial class UserControlEmploye : UserControl
     {
-       
+
 
         public UserControlEmploye()
         {
             InitializeComponent();
-           
+
 
 
 
             Nom.Text = Employe.nom;
-            Prnm.Text = Employe.prenom; 
+            Prnm.Text = Employe.prenom;
             Departement.Text = Employe.departement;
             sevice.Text = Employe.service;
             nbureau.Text = Employe.numbureau;
@@ -61,6 +61,11 @@ namespace Helpdesk.UserControls
         }
 
         private void ntel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Id_card_Click(object sender, EventArgs e)
         {
 
         }

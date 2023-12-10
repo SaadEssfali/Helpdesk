@@ -42,6 +42,7 @@
             // 
             // Id_card
             // 
+        
             Id_card.Image = (Image)resources.GetObject("Id_card.Image");
             Id_card.Location = new Point(129, 75);
             Id_card.Name = "Id_card";
@@ -49,6 +50,7 @@
             Id_card.SizeMode = PictureBoxSizeMode.CenterImage;
             Id_card.TabIndex = 0;
             Id_card.TabStop = false;
+            Id_card.Click += Id_card_Click;
             // 
             // Nom
             // 

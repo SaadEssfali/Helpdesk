@@ -16,13 +16,22 @@ namespace Helpdesk.UserControls
         public UserControlDashboard()
         {
             InitializeComponent();
+            nticket.Parent = picnticket;
+            dashID.Parent = picVotreID;
+            statuticket.Parent = picnticket;
+            nresolu.Parent = picRticket;
+            nresolu.Location = new(90,42);
+            dashID.Location = new Point(123, 42);
+            nticket.Location = new Point(123, 37);
             hourlabel.Text = DateTime.Now.ToString("HH:mm:ss");
             monthLabel.Text = DateTime.Now.ToString("MMMM");
             dayOfMonthLabel.Text = DateTime.Now.ToString("dd");
             dayOfWeekLabel.Text = DateTime.Now.ToString("dddd");
             YearLabel.Text = DateTime.Now.ToString("yyyy");
             dashID.Text = Employe.id.ToString();
+            nresolu.Text = ticket.resolvedticket().ToString();
             refreshntciket();
+
 
 
 
@@ -31,10 +40,7 @@ namespace Helpdesk.UserControls
         {
             nticket.Text = ticket.TicketID.ToString();
             statuticket.Text = ticket.Statut;
-            if (ticket.Statut.ToUpper() == "OPEN")
-            {
-                statuticket.ForeColor = Color.Green;
-            }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -44,8 +50,6 @@ namespace Helpdesk.UserControls
 
         private void UserControlDashboard_Load(object sender, EventArgs e)
         {
-
-
 
 
         }

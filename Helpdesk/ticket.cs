@@ -32,6 +32,16 @@ namespace Helpdesk
                 ticket.Statut = "Pas de Ticket";
             }
         }
+
+        public static int resolvedticket()
+        {
+            Form1.adapter = new SqlDataAdapter("select * from Ticket t Inner join Employe e on t.EmployeID=e.ID where  t.EmployeID=@emplyeid  and t.Statut='Resolved' ", Form1.cnx);
+            Form1.adapter.SelectCommand.Parameters.AddWithValue("@emplyeid", Employe.id);
+            Form1.adapter.Fill(Form1.ds, "resolved");
+            int resolve = Form1.ds.Tables["resolved"].Rows.Count;
+
+            return resolve;
+        }
         }
 
 
