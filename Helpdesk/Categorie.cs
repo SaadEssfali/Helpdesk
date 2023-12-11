@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Data.SqlClient;
 using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Helpdesk
 {
@@ -16,26 +11,30 @@ namespace Helpdesk
 
         public static DataTable Category()
         {
-            Form1.adapter = new SqlDataAdapter("select * from CategorieProbleme", Form1.cnx);
-            Form1.adapter.Fill(Form1.ds, "Category");
-
-            return Form1.ds.Tables["Category"];
-
-
+            DataTable categoryTable = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM CategorieProbleme", Form1.cnx);
+            adapter.Fill(categoryTable);
+            return categoryTable;
         }
 
         public static int catID(ComboBox comboBox)
         {
-            string nom = comboBox.GetItemText(comboBox.SelectedItem.ToString());
-            Form1.adapter = new SqlDataAdapter(" select CategorieID from CategorieProbleme WHERE Nom=@nom", Form1.cnx);
-            Form1.adapter.SelectCommand.Parameters.AddWithValue("@nom", nom);
-            Form1.adapter.Fill(Form1.ds, "Category");
-          
-             return (int)Form1.ds.Tables["Category"].Rows[0]["CategorieID"];
+            string nom = comboBox.GetItemText(comboBox.SelectedItem);
+            SqlConnection cnx = Program.GetConnection();
+            cnx.Open();
+            SqlCommand cmd = new SqlCommand("SELECT CategorieID FROM CategorieProbleme WHERE Nom = @nom", cnx);
+            cmd.Parameters.AddWithValue("@nom", nom);
+            int result = Convert.ToInt32(cmd.ExecuteScalar());
+            cnx.Close();
 
-           
+            if (result != null)
+            {
+                return result;
+            }
+            else
+            {
+                return -1;
+            }
         }
-
-
     }
 }

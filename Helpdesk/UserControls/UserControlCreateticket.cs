@@ -33,6 +33,8 @@ namespace Helpdesk.UserControls
             comboBoxCat.DataSource = null;
             comboBoxCat.DataSource = categoryTable;
             comboBoxCat.DisplayMember = "Nom";
+            comboBoxCat.SelectedIndex = 0;
+            comboBoxP.SelectedIndex = 2;
         }
 
 
