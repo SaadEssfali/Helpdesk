@@ -45,7 +45,7 @@ namespace Helpdesk.UserControls
             Form1.cnx = Program.GetConnection();
             Form1.cnx.Open();
            
-            SqlCommand cmd = new SqlCommand("insert into Ticket(TicketID, Description, CategorieID, EmployeID, DateOuverture, DateCloture, Statut,Priorité)values(3,@desc,@catgoryid,@employeid,@dateouverture,NULL,'Open',@Priorité)", Form1.cnx);
+            SqlCommand cmd = new SqlCommand("insert into Ticket( Description, CategorieID, EmployeID, DateOuverture, DateCloture, Statut,Priorité)values(@desc,@catgoryid,@employeid,@dateouverture,NULL,'Ouvert',@Priorité)", Form1.cnx);
             cmd.Parameters.AddWithValue("@desc", txtDescription.Text);
             cmd.Parameters.AddWithValue("@catgoryid", caID);
             cmd.Parameters.AddWithValue("@employeid", Employe.id);
