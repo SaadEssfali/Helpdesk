@@ -34,14 +34,15 @@ namespace Helpdesk.UserControls
 
 
             DataTable technicienTable = Classtech.technicienInformation();
-
+           
             foreach (DataRow row in technicienTable.Rows)
             {
                 flowyoutTech techControl = new flowyoutTech();
+
                 {
-                    flowyoutTech.label1.Text = row["Nom"].ToString();
-                    flowyoutTech.label2.Text = row["Prenom"].ToString();
-                    flowyoutTech.label3.Text = row["Specialite"].ToString();
+                    techControl.label1.Text = row["Nom"].ToString();
+                    techControl.label2.Text = row["Prenom"].ToString();
+                    techControl.label3.Text = row["Specialite"].ToString();
                 }
 
 
@@ -51,7 +52,7 @@ namespace Helpdesk.UserControls
 
 
             }
-
+           
         }
 
         private void label1_Click(object sender, EventArgs e)

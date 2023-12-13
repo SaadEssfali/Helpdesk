@@ -44,6 +44,7 @@
             pictureBox1.Size = new Size(649, 123);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label1
             // 
@@ -92,8 +93,8 @@
         #endregion
 
         private PictureBox pictureBox1;
-        public static Label label1;
-        public static Label label2;
-        public static Label label3;
+        public Label label1;
+        public Label label2;
+        public Label label3;
     }
 }
