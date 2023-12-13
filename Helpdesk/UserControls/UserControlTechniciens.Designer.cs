@@ -28,34 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlTechniciens));
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             SuspendLayout();
             // 
-            // pictureBox1
+            // flowLayoutPanel1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(77, 70);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(230, 150);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            flowLayoutPanel1.AllowDrop = true;
+            flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(46, 31);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(649, 123);
+            flowLayoutPanel1.TabIndex = 0;
             // 
             // UserControlTechniciens
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(pictureBox1);
+            Controls.Add(flowLayoutPanel1);
             Name = "UserControlTechniciens";
             Size = new Size(800, 583);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Load += UserControlTechniciens_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
