@@ -140,6 +140,14 @@ namespace Helpdesk
 
             if (ds.Tables["Technicien"].Rows.Count > 0)
             {
+                Classtech.ID = (int)ds.Tables["Technicien"].Rows[0]["ID"];
+                Classtech.Nom = (string)ds.Tables["Technicien"].Rows[0]["Nom"];
+                Classtech.Prenom = (string)ds.Tables["Technicien"].Rows[0]["Prenom"];
+                Classtech.Departement = (string)ds.Tables["Technicien"].Rows[0]["Departement"];
+                Classtech.Service = (string)ds.Tables["Technicien"].Rows[0]["N_Service"];
+                Classtech.Nbureau = (string)ds.Tables["Technicien"].Rows[0]["NumBureau"];
+                Classtech.Ntel = (string)ds.Tables["Technicien"].Rows[0]["NumTel"];
+               
                 Count = 1;
             }
             return Count == 1;

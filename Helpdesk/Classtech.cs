@@ -10,6 +10,15 @@ namespace Helpdesk
 {
     internal class Classtech
     {
+        public static int ID;
+        public static string Nom;
+        public static string Prenom;
+        public static string Departement;
+        public static string Service;
+        public static string Nbureau;
+        public static string Ntel;
+        public static string Specialité;
+
     public static DataTable technicienInformation() { 
         
             DataTable dataTable = new DataTable();
