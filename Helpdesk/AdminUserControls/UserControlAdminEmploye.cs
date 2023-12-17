@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Helpdesk.AdminUserControls
 {
@@ -23,8 +24,9 @@ namespace Helpdesk.AdminUserControls
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0) { 
-            DataGridViewRow row = dataGridViewemp.Rows[e.RowIndex];
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewemp.Rows[e.RowIndex];
                 txtName.Text = row.Cells["Nom"].Value.ToString();
                 txtPrenom.Text = row.Cells["Prenom"].Value.ToString();
                 txtUsername.Text = row.Cells["UserName"].Value.ToString();
@@ -79,7 +81,7 @@ namespace Helpdesk.AdminUserControls
         {
             cnx = Program.GetConnection();
 
-            if (dtv.SelectedRows.Count > 0)
+            if (dtv.SelectedRows.Count >= 0)
             {
                 cnx.Open();
                 int id = (int)dtv.SelectedRows[0].Cells["ID"].Value;
@@ -97,6 +99,29 @@ namespace Helpdesk.AdminUserControls
             return dataGridViewemp;
 
         }
+        public static void updatetable(DataGridView dataGridViewemp)
+        {
+            if (dataGridViewemp.SelectedRows.Count > 0)
+            {
+                cnx.Open();
+                int id = (int)dataGridViewemp.SelectedRows[0].Cells["ID"].Value;
+                SqlCommand cmd = new SqlCommand("UPDATE Employe SET Nom = @Nom, Prenom = @Prenom, UserName = @UserName, MotDePasse = @MotDePasse, Departement = @Departement, N_Service = @N_Service, NumBureau = @NumBureau, NumTel = @NumTel, Etage = @Etage WHERE ID = @ID", cnx);
+                cmd.Parameters.Add(new SqlParameter("@id", id));
+                cmd.Parameters.AddWithValue("@Nom", txtName.Text);
+                cmd.Parameters.AddWithValue("@Prenom", txtPrenom.Text);
+                cmd.Parameters.AddWithValue("@UserName", txtUsername.Text);
+                cmd.Parameters.AddWithValue("@MotDePasse", txtPass.Text);
+                cmd.Parameters.AddWithValue("@Departement", txtDepartement.Text);
+                cmd.Parameters.AddWithValue("@N_Service", txtService.Text);
+                cmd.Parameters.AddWithValue("@NumBureau", txtBureau.Text);
+                cmd.Parameters.AddWithValue("@NumTel", txtTelephone.Text);
+                cmd.Parameters.AddWithValue("@Etage", txtEtage.Text);
+
+                cmd.ExecuteNonQuery();
+                cnx.Close();
+            }
+        }
+
         public static void clearboxes()
         {
             txtName.Clear();
@@ -129,6 +154,12 @@ namespace Helpdesk.AdminUserControls
         private void btnvider_Click(object sender, EventArgs e)
         {
             clearboxes();
+        }
+
+        private void btnmettreajour_Click(object sender, EventArgs e)
+        {
+            updatetable(dataGridViewemp);
+            refresh(dataGridViewemp);
         }
     }
 }

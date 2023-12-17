@@ -230,6 +230,7 @@
             btnmettreajour.TabIndex = 63;
             btnmettreajour.Text = "Mettre à jour";
             btnmettreajour.UseVisualStyleBackColor = false;
+            btnmettreajour.Click += btnmettreajour_Click;
             // 
             // btnsupprimer
             // 

@@ -184,6 +184,7 @@
             btnticket.Text = "Tickets";
             btnticket.TextAlign = ContentAlignment.MiddleRight;
             btnticket.UseVisualStyleBackColor = false;
+            btnticket.Click += btnticket_Click;
             // 
             // MAINpanel
             // 

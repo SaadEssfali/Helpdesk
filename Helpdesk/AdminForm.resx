@@ -121,7 +121,7 @@
   <data name="btntechnicien.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAYAAAB/HSuDAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAADx0RVh0Q29tbWVudAB4cjpkOkRBRjFSeVJQRWxnOjIwLGo6MTQyOTE3ODkyNjI4
+        vQAADr0BR/uQrQAAADx0RVh0Q29tbWVudAB4cjpkOkRBRjFSeVJQRWxnOjIwLGo6MTQyOTE3ODkyNjI4
         NTYwMzM1MCx0OjIzMTIxMTA59Mg+8wAAFrJJREFUeF7t3X9snHUdB/Br52hHEKMxYhRQYuIfGKDdNEiC
         Gv6DRLMo0YhGY4wK/xg1xJCt3Xa9kW3AgN6t6zbDQtd1qFVkbIumvXZjG+L4sXVsmQJBmLAtRhbW3l27
         re3d1+9zvcJkTPyLdeb1St75Pnd7nuf+fn+eb5+lAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -321,7 +321,7 @@
   <data name="btnemploye.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAYAAAB/HSuDAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAADx0RVh0Q29tbWVudAB4cjpkOkRBRjFSeVJQRWxnOjIxLGo6MTkxMTA2NDA4ODU4
+        vQAADr0BR/uQrQAAADx0RVh0Q29tbWVudAB4cjpkOkRBRjFSeVJQRWxnOjIxLGo6MTkxMTA2NDA4ODU4
         MjE0NjQ2OCx0OjIzMTIxMTA5tW2MxQAAFfFJREFUeF7t3W9sVeUdB/BbmJtZeLW9cJtmJC4zwzhZTMa9
         +AfkzyjQ0paWSkVE/gyFUmCdwEYp7VXaokAtoGxkK8iQQUCDosFlWzBOBLQCmslfZYoMF+YyZ4iACPc8
         67k7mm2+2bta9vkkJzn3/H7f57x+nnPuc1IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -422,7 +422,7 @@
   <data name="btnticket.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAYAAAB/HSuDAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAADx0RVh0Q29tbWVudAB4cjpkOkRBRjFSeVJQRWxnOjE2LGo6NTExNjUwMDIwMzQ3
+        vQAADr0BR/uQrQAAADx0RVh0Q29tbWVudAB4cjpkOkRBRjFSeVJQRWxnOjE2LGo6NTExNjUwMDIwMzQ3
         ODMxMTY3OSx0OjIzMTIwMjExgqitUgAAFApJREFUeF7t3UmIHGUYBuAeFxSC4kXw5EURxIMGT0ank7iv
         iRrQqMmMOB1FEMTlICqaaBQXcAVjBI044hqNwaSXxOC4oQEPLngQFxT3EBEVEnC66vOv7k6cybQ6EKE7
         8jzw0k31X/Wf36+ru0oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA

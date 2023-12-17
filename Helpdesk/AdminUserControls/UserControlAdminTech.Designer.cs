@@ -281,7 +281,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(782, 273);
+            dataGridView1.Size = new Size(933, 273);
             dataGridView1.TabIndex = 41;
             // 
             // comboBoxSpecialite
@@ -323,7 +323,7 @@
             Controls.Add(txtName);
             ForeColor = SystemColors.HotTrack;
             Name = "UserControlAdminTech";
-            Size = new Size(791, 601);
+            Size = new Size(953, 601);
             Load += UserControlAdminTech_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

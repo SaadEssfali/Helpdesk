@@ -14,6 +14,7 @@ namespace Helpdesk
     public partial class AdminForm : Form
     {
         UserControlAdminEmploye Ae = new UserControlAdminEmploye();
+        UserControlAdminTech At = new UserControlAdminTech();
         public AdminForm()
         {
             InitializeComponent();
@@ -26,7 +27,10 @@ namespace Helpdesk
 
         private void btndash_Click(object sender, EventArgs e)
         {
-
+            btnemploye.BackColor = ColorTranslator.FromHtml("#004AAD");
+            btndash.BackColor = Color.Black;
+            btntechnicien.BackColor = ColorTranslator.FromHtml("#004AAD");
+            btnticket.BackColor = ColorTranslator.FromHtml("#004AAD");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -35,7 +39,12 @@ namespace Helpdesk
         }
 
         private void btntechnicien_Click(object sender, EventArgs e)
-        {
+        {   MAINpanel.Controls.Clear();
+            MAINpanel.Controls.Add(At);
+            btnemploye.BackColor = ColorTranslator.FromHtml("#004AAD");
+            btndash.BackColor = ColorTranslator.FromHtml("#004AAD");
+            btntechnicien.BackColor = Color.Black;
+            btnticket.BackColor = ColorTranslator.FromHtml("#004AAD");
 
         }
 
@@ -43,7 +52,18 @@ namespace Helpdesk
         {
             MAINpanel.Controls.Clear();
             MAINpanel.Controls.Add(Ae);
-            Ae.Show();
+            btnemploye.BackColor = Color.Black;
+            btndash.BackColor = ColorTranslator.FromHtml("#004AAD");
+            btntechnicien.BackColor = ColorTranslator.FromHtml("#004AAD");
+            btnticket.BackColor = ColorTranslator.FromHtml("#004AAD");
+        }
+
+        private void btnticket_Click(object sender, EventArgs e)
+        {
+            btnemploye.BackColor = ColorTranslator.FromHtml("#004AAD");
+            btndash.BackColor = ColorTranslator.FromHtml("#004AAD");
+            btntechnicien.BackColor = ColorTranslator.FromHtml("#004AAD");
+            btnticket.BackColor = Color.Black;
         }
     }
 }
