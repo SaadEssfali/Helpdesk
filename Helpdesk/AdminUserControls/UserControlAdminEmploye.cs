@@ -23,7 +23,27 @@ namespace Helpdesk.AdminUserControls
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if(e.RowIndex >= 0) { 
+            DataGridViewRow row = dataGridViewemp.Rows[e.RowIndex];
+                txtName.Text = row.Cells["Nom"].Value.ToString();
+                txtPrenom.Text = row.Cells["Prenom"].Value.ToString();
+                txtUsername.Text = row.Cells["UserName"].Value.ToString();
+                txtPass.Text = row.Cells["MotDePasse"].Value.ToString();
+                txtTelephone.Text = row.Cells["NumTel"].Value.ToString();
+                txtService.Text = row.Cells["N_Service"].Value.ToString();
+                txtEtage.Text = row.Cells["Etage"].Value.ToString();
+                txtBureau.Text = row.Cells["NumBureau"].Value.ToString();
+                txtDepartement.Text = row.Cells["Departement"].Value.ToString();
 
+
+
+
+
+
+
+
+
+            }
         }
 
         private void UserControlAdminEmploye_Load(object sender, EventArgs e)

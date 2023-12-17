@@ -267,6 +267,7 @@
             dataGridViewemp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewemp.Location = new Point(3, 310);
             dataGridViewemp.Name = "dataGridViewemp";
+            dataGridViewemp.ReadOnly = true;
             dataGridViewemp.RowHeadersVisible = false;
             dataGridViewemp.RowHeadersWidth = 51;
             dataGridViewemp.RowTemplate.Height = 29;
