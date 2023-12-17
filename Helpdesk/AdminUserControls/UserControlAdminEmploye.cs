@@ -18,8 +18,7 @@ namespace Helpdesk.AdminUserControls
         public UserControlAdminEmploye()
         {
             InitializeComponent();
-            DataTable empable = dataemp();
-            dataGridViewemp.DataSource = empable;
+            refresh(dataGridViewemp);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -59,25 +58,57 @@ namespace Helpdesk.AdminUserControls
         public static void deleterow(DataGridView dtv)
         {
             cnx = Program.GetConnection();
-           
+
             if (dtv.SelectedRows.Count > 0)
             {
                 cnx.Open();
                 int id = (int)dtv.SelectedRows[0].Cells["ID"].Value;
-                SqlCommand cmd = new SqlCommand("delete from Employe where ID =@id",cnx);
+                SqlCommand cmd = new SqlCommand("delete from Employe where ID =@id", cnx);
                 cmd.Parameters.Add(new SqlParameter("@id", id));
                 cmd.ExecuteNonQuery();
 
             }
         }
+        public static DataGridView refresh(DataGridView dataGridViewemp)
+        {
+            DataTable empable = dataemp();
+            dataGridViewemp.DataSource = empable;
+
+            return dataGridViewemp;
+
+        }
+        public static void clearboxes()
+        {
+            txtName.Clear();
+            txtPrenom.Clear();
+            txtBureau.Clear();
+            txtDepartement.Clear();
+            txtTelephone.Clear();
+            txtService.Clear();
+            txtEtage.Clear();
+            txtUsername.Clear();
+            txtPass.Clear();
+
+        }
+
         private void btnajouter_Click(object sender, EventArgs e)
         {
             insertempinfo();
+            refresh(dataGridViewemp);
+
         }
 
         private void btnsupprimer_Click(object sender, EventArgs e)
         {
             deleterow(dataGridViewemp);
+            refresh(dataGridViewemp);
+
+
+        }
+
+        private void btnvider_Click(object sender, EventArgs e)
+        {
+            clearboxes();
         }
     }
 }

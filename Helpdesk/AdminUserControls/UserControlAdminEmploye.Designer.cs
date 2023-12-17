@@ -217,6 +217,7 @@
             btnvider.TabIndex = 64;
             btnvider.Text = "Vider";
             btnvider.UseVisualStyleBackColor = false;
+            btnvider.Click += btnvider_Click;
             // 
             // btnmettreajour
             // 
