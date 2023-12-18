@@ -33,7 +33,7 @@
             // 
             // flowLayoutTicket
             // 
-            flowLayoutTicket.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            flowLayoutTicket.AutoSize = true;
             flowLayoutTicket.FlowDirection = FlowDirection.TopDown;
             flowLayoutTicket.Location = new Point(29, 17);
             flowLayoutTicket.Name = "flowLayoutTicket";
@@ -45,11 +45,13 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             Controls.Add(flowLayoutTicket);
             Name = "Vtickets";
             Size = new Size(800, 583);
             Load += Vtickets_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
