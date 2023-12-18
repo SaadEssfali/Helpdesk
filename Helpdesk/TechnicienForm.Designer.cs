@@ -205,9 +205,10 @@
             employeButton.Padding = new Padding(0, 15, 87, 11);
             employeButton.Size = new Size(293, 75);
             employeButton.TabIndex = 1;
-            employeButton.Text = "Employé";
+            employeButton.Text = "Ma fiche";
             employeButton.TextAlign = ContentAlignment.MiddleRight;
             employeButton.UseVisualStyleBackColor = false;
+            employeButton.Click += employeButton_Click;
             // 
             // mainpanel_tech
             // 

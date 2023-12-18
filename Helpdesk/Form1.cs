@@ -148,7 +148,8 @@ namespace Helpdesk
                 Classtech.Service = (string)ds.Tables["Technicien"].Rows[0]["N_Service"];
                 Classtech.Nbureau = (string)ds.Tables["Technicien"].Rows[0]["NumBureau"];
                 Classtech.Ntel = (string)ds.Tables["Technicien"].Rows[0]["NumTel"];
-               
+                Classtech.Specialité= (string)ds.Tables["Technicien"].Rows[0]["Specialite"];
+
                 Count = 1;
             }
             return Count == 1;

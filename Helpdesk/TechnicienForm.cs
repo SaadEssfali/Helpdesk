@@ -17,6 +17,7 @@ namespace Helpdesk
     {
         // déclaration et d'initialisation de dashboard 
         techniciendash techdash = new techniciendash();
+        MaficheUsControl mafiche = new MaficheUsControl(); 
 
 
 
@@ -92,10 +93,18 @@ namespace Helpdesk
         }
 
         private void btnlogout_Click_1(object sender, EventArgs e)
-        {   Form1 login = new Form1();
+        {
+            Form1 login = new Form1();
             this.Close();
             login.Show();
-          
+
+        }
+
+        private void employeButton_Click(object sender, EventArgs e)
+        {
+            mainpanel_tech.Controls.Clear();
+            mainpanel_tech.Controls.Add(mafiche);
+            mafiche.Dock = DockStyle.Fill;
         }
     }
 }
