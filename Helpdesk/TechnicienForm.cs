@@ -19,7 +19,7 @@ namespace Helpdesk
         techniciendash techdash = new techniciendash();
         MaficheUsControl mafiche = new MaficheUsControl();
         TechTickHis HisTick = new TechTickHis();
-
+        Vtickets VT = new Vtickets();
 
         public TechnicienForm()
         {
@@ -123,6 +123,10 @@ namespace Helpdesk
             dashboardButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             ficheBtn.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+
+            mainpanel_tech.Controls.Clear();
+            mainpanel_tech.Controls.Add(VT);
+            VT.Dock = DockStyle.Fill;
 
         }
 
