@@ -1,5 +1,6 @@
 ﻿using Helpdesk.UserControls;
 using Helpdesk.usercontroltech;
+using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,8 +17,8 @@ namespace Helpdesk
     {
         // déclaration et d'initialisation de dashboard 
         techniciendash techdash = new techniciendash();
-        
-        
+
+
 
         public TechnicienForm()
         {
@@ -88,6 +89,13 @@ namespace Helpdesk
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnlogout_Click_1(object sender, EventArgs e)
+        {   Form1 login = new Form1();
+            this.Close();
+            login.Show();
+          
         }
     }
 }

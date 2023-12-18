@@ -90,6 +90,7 @@
             btnlogout.Text = "Log out";
             btnlogout.TextAlign = ContentAlignment.MiddleRight;
             btnlogout.UseVisualStyleBackColor = false;
+            btnlogout.Click += btnlogout_Click_1;
             // 
             // panel6
             // 
