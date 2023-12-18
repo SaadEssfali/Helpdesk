@@ -48,6 +48,7 @@ namespace Helpdesk.usercontroltech
                     flowt.label4.Text = row["N_Service"].ToString();
                     flowt.label5.Text = row["Etage"].ToString();
                     flowt.label6.Text = row["NumBureau"].ToString();
+                    flowt.textBox1.Text = row["Description"].ToString();
 
 
 
