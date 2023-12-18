@@ -37,21 +37,21 @@
             Usename = new Label();
             txtUsername = new TextBox();
             Passe = new Label();
-            textPass = new TextBox();
             Prenom = new Label();
-            textPrenom = new TextBox();
+            txtPrenom = new TextBox();
             Telephone = new Label();
-            textTelephone = new TextBox();
+            txtTelephone = new TextBox();
             Departement = new Label();
-            textDepartement = new TextBox();
+            txtDepartement = new TextBox();
             Service = new Label();
-            textService = new TextBox();
+            txtService = new TextBox();
             Specialite = new Label();
             Bureau = new Label();
-            textBureau = new TextBox();
-            dataGridView1 = new DataGridView();
-            comboBoxSpecialite = new ComboBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txtBureau = new TextBox();
+            dataGridViewtech = new DataGridView();
+            txtPass = new TextBox();
+            txtspecialite = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewtech).BeginInit();
             SuspendLayout();
             // 
             // txtName
@@ -87,6 +87,7 @@
             btnajouter.TabIndex = 21;
             btnajouter.Text = "Ajouter";
             btnajouter.UseVisualStyleBackColor = false;
+            btnajouter.Click += btnajouter_Click;
             // 
             // btnsupprimer
             // 
@@ -99,6 +100,7 @@
             btnsupprimer.TabIndex = 22;
             btnsupprimer.Text = "Supprimer";
             btnsupprimer.UseVisualStyleBackColor = false;
+            btnsupprimer.Click += btnsupprimer_Click;
             // 
             // btnmettreajour
             // 
@@ -157,14 +159,6 @@
             Passe.Text = "Mot De Passe :";
             Passe.Click += label2_Click_1;
             // 
-            // textPass
-            // 
-            textPass.Location = new Point(662, 42);
-            textPass.Name = "textPass";
-            textPass.Size = new Size(123, 27);
-            textPass.TabIndex = 27;
-            textPass.TextChanged += textBox2_TextChanged_1;
-            // 
             // Prenom
             // 
             Prenom.AutoSize = true;
@@ -177,12 +171,12 @@
             Prenom.TabIndex = 30;
             Prenom.Text = "Prenom :";
             // 
-            // textPrenom
+            // txtPrenom
             // 
-            textPrenom.Location = new Point(119, 104);
-            textPrenom.Name = "textPrenom";
-            textPrenom.Size = new Size(117, 27);
-            textPrenom.TabIndex = 29;
+            txtPrenom.Location = new Point(119, 104);
+            txtPrenom.Name = "txtPrenom";
+            txtPrenom.Size = new Size(117, 27);
+            txtPrenom.TabIndex = 29;
             // 
             // Telephone
             // 
@@ -196,12 +190,12 @@
             Telephone.TabIndex = 32;
             Telephone.Text = "Telephone :";
             // 
-            // textTelephone
+            // txtTelephone
             // 
-            textTelephone.Location = new Point(368, 104);
-            textTelephone.Name = "textTelephone";
-            textTelephone.Size = new Size(135, 27);
-            textTelephone.TabIndex = 31;
+            txtTelephone.Location = new Point(368, 104);
+            txtTelephone.Name = "txtTelephone";
+            txtTelephone.Size = new Size(135, 27);
+            txtTelephone.TabIndex = 31;
             // 
             // Departement
             // 
@@ -216,12 +210,12 @@
             Departement.Text = "Departement :";
             Departement.Click += label5_Click;
             // 
-            // textDepartement
+            // txtDepartement
             // 
-            textDepartement.Location = new Point(662, 104);
-            textDepartement.Name = "textDepartement";
-            textDepartement.Size = new Size(123, 27);
-            textDepartement.TabIndex = 33;
+            txtDepartement.Location = new Point(662, 104);
+            txtDepartement.Name = "txtDepartement";
+            txtDepartement.Size = new Size(123, 27);
+            txtDepartement.TabIndex = 33;
             // 
             // Service
             // 
@@ -231,17 +225,17 @@
             Service.ForeColor = Color.White;
             Service.Location = new Point(516, 163);
             Service.Name = "Service";
-            Service.Size = new Size(109, 21);
+            Service.Size = new Size(84, 21);
             Service.TabIndex = 36;
-            Service.Text = "N° Service :";
+            Service.Text = "Service :";
             // 
-            // textService
+            // txtService
             // 
-            textService.Location = new Point(662, 161);
-            textService.Name = "textService";
-            textService.Size = new Size(123, 27);
-            textService.TabIndex = 35;
-            textService.TextChanged += textBox6_TextChanged;
+            txtService.Location = new Point(662, 161);
+            txtService.Name = "txtService";
+            txtService.Size = new Size(123, 27);
+            txtService.TabIndex = 35;
+            txtService.TextChanged += textBox6_TextChanged;
             // 
             // Specialite
             // 
@@ -267,52 +261,59 @@
             Bureau.TabIndex = 40;
             Bureau.Text = "N° Bureau :";
             // 
-            // textBureau
+            // txtBureau
             // 
-            textBureau.Location = new Point(368, 161);
-            textBureau.Name = "textBureau";
-            textBureau.Size = new Size(135, 27);
-            textBureau.TabIndex = 39;
+            txtBureau.Location = new Point(368, 161);
+            txtBureau.Name = "txtBureau";
+            txtBureau.Size = new Size(135, 27);
+            txtBureau.TabIndex = 39;
             // 
-            // dataGridView1
+            // dataGridViewtech
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 310);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(933, 273);
-            dataGridView1.TabIndex = 41;
+            dataGridViewtech.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewtech.Location = new Point(3, 310);
+            dataGridViewtech.Name = "dataGridViewtech";
+            dataGridViewtech.RowHeadersWidth = 51;
+            dataGridViewtech.RowTemplate.Height = 29;
+            dataGridViewtech.Size = new Size(933, 273);
+            dataGridViewtech.TabIndex = 41;
             // 
-            // comboBoxSpecialite
+            // txtPass
             // 
-            comboBoxSpecialite.FormattingEnabled = true;
-            comboBoxSpecialite.Items.AddRange(new object[] { "Software", "Hardware" });
-            comboBoxSpecialite.Location = new Point(119, 156);
-            comboBoxSpecialite.Name = "comboBoxSpecialite";
-            comboBoxSpecialite.Size = new Size(117, 28);
-            comboBoxSpecialite.TabIndex = 42;
+            txtPass.Location = new Point(662, 42);
+            txtPass.Name = "txtPass";
+            txtPass.PasswordChar = '*';
+            txtPass.Size = new Size(123, 27);
+            txtPass.TabIndex = 27;
+            txtPass.TextChanged += textBox2_TextChanged_1;
+            // 
+            // txtspecialite
+            // 
+            txtspecialite.Location = new Point(119, 157);
+            txtspecialite.Name = "txtspecialite";
+            txtspecialite.Size = new Size(117, 27);
+            txtspecialite.TabIndex = 42;
             // 
             // UserControlAdminTech
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(11, 29, 36);
-            Controls.Add(comboBoxSpecialite);
-            Controls.Add(dataGridView1);
+            Controls.Add(txtspecialite);
+            Controls.Add(dataGridViewtech);
             Controls.Add(Bureau);
-            Controls.Add(textBureau);
+            Controls.Add(txtBureau);
             Controls.Add(Specialite);
             Controls.Add(Service);
-            Controls.Add(textService);
+            Controls.Add(txtService);
             Controls.Add(Departement);
-            Controls.Add(textDepartement);
+            Controls.Add(txtDepartement);
             Controls.Add(Telephone);
-            Controls.Add(textTelephone);
+            Controls.Add(txtTelephone);
             Controls.Add(Prenom);
-            Controls.Add(textPrenom);
+            Controls.Add(txtPrenom);
             Controls.Add(Passe);
-            Controls.Add(textPass);
+            Controls.Add(txtPass);
             Controls.Add(Usename);
             Controls.Add(txtUsername);
             Controls.Add(btnvider);
@@ -325,35 +326,34 @@
             Name = "UserControlAdminTech";
             Size = new Size(953, 601);
             Load += UserControlAdminTech_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewtech).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox txtName;
         private Label Nom;
         private Button btnajouter;
         private Button btnsupprimer;
         private Button btnmettreajour;
         private Button btnvider;
         private Label Usename;
-        private TextBox txtUsername;
         private Label Passe;
-        private TextBox textPass;
         private Label Prenom;
-        private TextBox textPrenom;
         private Label Telephone;
-        private TextBox textTelephone;
         private Label Departement;
-        private TextBox textDepartement;
         private Label Service;
-        private TextBox textService;
         private Label Specialite;
         private Label Bureau;
-        private TextBox textBureau;
-        private DataGridView dataGridView1;
-        private ComboBox comboBoxSpecialite;
+        private DataGridView dataGridViewtech;
+        private static TextBox txtName;
+        private static TextBox txtUsername;
+        private static TextBox txtPrenom;
+        private static TextBox txtTelephone;
+        private static TextBox txtDepartement;
+        private static TextBox txtService;
+        private static TextBox txtBureau;
+        private static TextBox txtPass;
+        private static TextBox txtspecialite;
     }
 }
