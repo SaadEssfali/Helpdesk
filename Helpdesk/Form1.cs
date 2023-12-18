@@ -21,7 +21,7 @@ namespace Helpdesk
 
         SqlCommand cmd;
         MainForm MainForm;
-        TechnicienForm TechnicienForm = new TechnicienForm();
+        TechnicienForm TechnicienForm;
 
         public Form1()
         {
@@ -73,6 +73,7 @@ namespace Helpdesk
             }
             else if (isValidTechnicien(txtUser, txtPass))
             {
+                TechnicienForm = new TechnicienForm();
                 TechnicienForm.Show();
                 this.Hide();
 
