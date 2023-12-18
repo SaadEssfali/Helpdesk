@@ -39,7 +39,7 @@
             panel5 = new Panel();
             ticketsButton = new Button();
             panel3 = new Panel();
-            employeButton = new Button();
+            ficheBtn = new Button();
             mainpanel_tech = new Panel();
             panel1.SuspendLayout();
             panel8.SuspendLayout();
@@ -120,6 +120,7 @@
             HistoryButton.Text = "Historique tickets";
             HistoryButton.TextAlign = ContentAlignment.MiddleRight;
             HistoryButton.UseVisualStyleBackColor = false;
+            HistoryButton.Click += HistoryButton_Click_3;
             // 
             // panel2
             // 
@@ -179,36 +180,37 @@
             ticketsButton.Text = "voir tickets";
             ticketsButton.TextAlign = ContentAlignment.MiddleRight;
             ticketsButton.UseVisualStyleBackColor = false;
+            ticketsButton.Click += ticketsButton_Click_1;
             // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(0, 74, 173);
-            panel3.Controls.Add(employeButton);
+            panel3.Controls.Add(ficheBtn);
             panel3.Location = new Point(3, 83);
             panel3.Name = "panel3";
             panel3.Size = new Size(234, 45);
             panel3.TabIndex = 9;
             // 
-            // employeButton
+            // ficheBtn
             // 
-            employeButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            employeButton.BackColor = Color.FromArgb(0, 74, 173);
-            employeButton.FlatAppearance.BorderSize = 0;
-            employeButton.FlatAppearance.MouseDownBackColor = Color.Black;
-            employeButton.FlatAppearance.MouseOverBackColor = Color.Black;
-            employeButton.FlatStyle = FlatStyle.Flat;
-            employeButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            employeButton.ForeColor = SystemColors.ControlLightLight;
-            employeButton.Image = (Image)resources.GetObject("employeButton.Image");
-            employeButton.Location = new Point(-58, -17);
-            employeButton.Name = "employeButton";
-            employeButton.Padding = new Padding(0, 15, 87, 11);
-            employeButton.Size = new Size(293, 75);
-            employeButton.TabIndex = 1;
-            employeButton.Text = "Ma fiche";
-            employeButton.TextAlign = ContentAlignment.MiddleRight;
-            employeButton.UseVisualStyleBackColor = false;
-            employeButton.Click += employeButton_Click;
+            ficheBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ficheBtn.BackColor = Color.FromArgb(0, 74, 173);
+            ficheBtn.FlatAppearance.BorderSize = 0;
+            ficheBtn.FlatAppearance.MouseDownBackColor = Color.Black;
+            ficheBtn.FlatAppearance.MouseOverBackColor = Color.Black;
+            ficheBtn.FlatStyle = FlatStyle.Flat;
+            ficheBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            ficheBtn.ForeColor = SystemColors.ControlLightLight;
+            ficheBtn.Image = (Image)resources.GetObject("ficheBtn.Image");
+            ficheBtn.Location = new Point(-58, -17);
+            ficheBtn.Name = "ficheBtn";
+            ficheBtn.Padding = new Padding(0, 15, 87, 11);
+            ficheBtn.Size = new Size(293, 75);
+            ficheBtn.TabIndex = 1;
+            ficheBtn.Text = "Ma fiche";
+            ficheBtn.TextAlign = ContentAlignment.MiddleRight;
+            ficheBtn.UseVisualStyleBackColor = false;
+            ficheBtn.Click += employeButton_Click;
             // 
             // mainpanel_tech
             // 
@@ -247,7 +249,7 @@
         private Panel panel5;
         private Button ticketsButton;
         private Panel panel3;
-        private Button employeButton;
+        private Button ficheBtn;
         private Panel panel8;
         private Button btnlogout;
         private Panel mainpanel_tech;

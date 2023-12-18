@@ -42,6 +42,11 @@ namespace Helpdesk.usercontroltech
         {
 
         }
+
+        private void NAMElabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

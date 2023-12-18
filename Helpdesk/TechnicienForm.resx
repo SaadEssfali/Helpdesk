@@ -499,7 +499,7 @@
         +u3vnwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="employeButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ficheBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAYAAAB/HSuDAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAADx0RVh0Q29tbWVudAB4cjpkOkRBRjFSeVJQRWxnOjEyLGo6NDQ5OTUwNzA1MDIw

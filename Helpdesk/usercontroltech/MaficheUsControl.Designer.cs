@@ -44,9 +44,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(28, 19);
+            pictureBox1.Location = new Point(24, 14);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(740, 549);
+            pictureBox1.Size = new Size(648, 412);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -55,64 +56,72 @@
             // DEPlabel
             // 
             DEPlabel.AutoSize = true;
-            DEPlabel.Location = new Point(350, 329);
+            DEPlabel.Location = new Point(306, 247);
             DEPlabel.Name = "DEPlabel";
-            DEPlabel.Size = new Size(50, 20);
+            DEPlabel.Size = new Size(38, 15);
             DEPlabel.TabIndex = 1;
             DEPlabel.Text = "label1";
             // 
             // SERVlabrl
             // 
             SERVlabrl.AutoSize = true;
-            SERVlabrl.Location = new Point(301, 372);
+            SERVlabrl.BackColor = SystemColors.Control;
+            SERVlabrl.ForeColor = SystemColors.ControlText;
+            SERVlabrl.Location = new Point(263, 279);
             SERVlabrl.Name = "SERVlabrl";
-            SERVlabrl.Size = new Size(50, 20);
+            SERVlabrl.Size = new Size(38, 15);
             SERVlabrl.TabIndex = 2;
             SERVlabrl.Text = "label2";
             // 
             // SPEClabel
             // 
             SPEClabel.AutoSize = true;
-            SPEClabel.Location = new Point(318, 414);
+            SPEClabel.Location = new Point(278, 310);
             SPEClabel.Name = "SPEClabel";
-            SPEClabel.Size = new Size(50, 20);
+            SPEClabel.Size = new Size(38, 15);
             SPEClabel.TabIndex = 3;
             SPEClabel.Text = "label3";
             // 
             // BURlabel
             // 
             BURlabel.AutoSize = true;
-            BURlabel.Location = new Point(330, 451);
+            BURlabel.Location = new Point(289, 338);
             BURlabel.Name = "BURlabel";
-            BURlabel.Size = new Size(50, 20);
+            BURlabel.Size = new Size(38, 15);
             BURlabel.TabIndex = 4;
             BURlabel.Text = "label4";
             // 
             // TELElabel
             // 
             TELElabel.AutoSize = true;
-            TELElabel.Location = new Point(301, 490);
+            TELElabel.Location = new Point(263, 368);
             TELElabel.Name = "TELElabel";
-            TELElabel.Size = new Size(50, 20);
+            TELElabel.Size = new Size(38, 15);
             TELElabel.TabIndex = 5;
             TELElabel.Text = "label5";
             // 
             // NAMElabel
             // 
             NAMElabel.AutoSize = true;
-            NAMElabel.ForeColor = Color.Black;
-            NAMElabel.Location = new Point(407, 252);
+            NAMElabel.BackColor = Color.FromArgb(26, 44, 68);
+            NAMElabel.Font = new Font("Calisto MT", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            NAMElabel.ForeColor = Color.White;
+            NAMElabel.Location = new Point(336, 196);
             NAMElabel.Name = "NAMElabel";
-            NAMElabel.Size = new Size(50, 20);
+            NAMElabel.Size = new Size(85, 31);
             NAMElabel.TabIndex = 6;
             NAMElabel.Text = "label6";
+            NAMElabel.Click += NAMElabel_Click;
             // 
             // IDlabel
             // 
             IDlabel.AutoSize = true;
-            IDlabel.Location = new Point(135, 51);
+            IDlabel.BackColor = Color.FromArgb(26, 44, 68);
+            IDlabel.Font = new Font("Calisto MT", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            IDlabel.ForeColor = Color.White;
+            IDlabel.Location = new Point(129, 58);
             IDlabel.Name = "IDlabel";
-            IDlabel.Size = new Size(50, 20);
+            IDlabel.Size = new Size(85, 31);
             IDlabel.TabIndex = 7;
             IDlabel.Text = "label7";
             IDlabel.Click += IDlabel_Click;
@@ -120,15 +129,18 @@
             // prenomlabel
             // 
             prenomlabel.AutoSize = true;
-            prenomlabel.Location = new Point(350, 252);
+            prenomlabel.BackColor = Color.FromArgb(26, 44, 68);
+            prenomlabel.Font = new Font("Calisto MT", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            prenomlabel.ForeColor = Color.White;
+            prenomlabel.Location = new Point(256, 196);
             prenomlabel.Name = "prenomlabel";
-            prenomlabel.Size = new Size(50, 20);
+            prenomlabel.Size = new Size(85, 31);
             prenomlabel.TabIndex = 10;
             prenomlabel.Text = "label8";
             // 
             // MaficheUsControl
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(prenomlabel);
             Controls.Add(IDlabel);
@@ -139,8 +151,9 @@
             Controls.Add(SERVlabrl);
             Controls.Add(DEPlabel);
             Controls.Add(pictureBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MaficheUsControl";
-            Size = new Size(800, 583);
+            Size = new Size(700, 437);
             Load += MaficheUsControl_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
