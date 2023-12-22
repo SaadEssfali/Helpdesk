@@ -272,6 +272,8 @@
             // 
             // dataGridViewtech
             // 
+            dataGridViewtech.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewtech.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewtech.BackgroundColor = Color.FromArgb(11, 29, 36);
             dataGridViewtech.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewtech.Location = new Point(3, 310);
