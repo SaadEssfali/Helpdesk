@@ -45,6 +45,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             Controls.Add(flowLayoutPanel1);
             Name = "UserControlTechniciens";
             Size = new Size(800, 583);

@@ -85,6 +85,7 @@ namespace Helpdesk
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(techniciens);
             dashboard.Dock = DockStyle.Fill;
+            
         }
 
         private void employeButton_Click(object sender, EventArgs e)
