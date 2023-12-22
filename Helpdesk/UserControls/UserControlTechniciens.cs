@@ -34,7 +34,7 @@ namespace Helpdesk.UserControls
 
 
             DataTable technicienTable = Classtech.technicienInformation();
-           
+
             foreach (DataRow row in technicienTable.Rows)
             {
                 flowyoutTech techControl = new flowyoutTech();
@@ -52,7 +52,7 @@ namespace Helpdesk.UserControls
 
 
             }
-           
+
         }
 
         private void label1_Click(object sender, EventArgs e)
