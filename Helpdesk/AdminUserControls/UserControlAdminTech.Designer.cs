@@ -113,6 +113,7 @@
             btnmettreajour.TabIndex = 23;
             btnmettreajour.Text = "Mettre à jour";
             btnmettreajour.UseVisualStyleBackColor = false;
+            btnmettreajour.Click += btnmettreajour_Click_1;
             // 
             // btnvider
             // 
@@ -293,6 +294,7 @@
             txtspecialite.Name = "txtspecialite";
             txtspecialite.Size = new Size(117, 27);
             txtspecialite.TabIndex = 42;
+            txtspecialite.TextChanged += txtspecialite_TextChanged;
             // 
             // UserControlAdminTech
             // 

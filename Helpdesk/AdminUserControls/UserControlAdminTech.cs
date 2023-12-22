@@ -130,10 +130,32 @@ namespace Helpdesk.AdminUserControls
                 cmd.Parameters.Add(new SqlParameter("@id", id));
                 cmd.ExecuteNonQuery();
             }
-           
-           
+
+
         }
-        
+        public static void updatetech(DataGridView dataGridViewtech)
+        {
+            if (dataGridViewtech.SelectedRows.Count > 0)
+            {
+                cnx.Open();
+                int id = (int)dataGridViewtech.SelectedRows[0].Cells["ID"].Value;
+                SqlCommand cmd = new SqlCommand("UPDATE Technicien SET Nom = @Nom, Prenom = @Prenom, UserName = @UserName, MotDePasse = @MotDePasse, Departement = @Departement, N_Service = @N_Service, NumBureau = @NumBureau, NumTel = @NumTel, Specialite = @specialite where ID = @id", cnx);
+                cmd.Parameters.Add(new SqlParameter("@id", id));
+                cmd.Parameters.AddWithValue("@Nom", txtName.Text);
+                cmd.Parameters.AddWithValue("@Prenom", txtPrenom.Text);
+                cmd.Parameters.AddWithValue("@UserName", txtUsername.Text);
+                cmd.Parameters.AddWithValue("@MotDePasse", txtPass.Text);
+                cmd.Parameters.AddWithValue("@Departement", txtDepartement.Text);
+                cmd.Parameters.AddWithValue("@N_Service", txtService.Text);
+                cmd.Parameters.AddWithValue("@NumBureau", txtBureau.Text);
+                cmd.Parameters.AddWithValue("@NumTel", txtTelephone.Text);
+                cmd.Parameters.AddWithValue("@Specialite", txtspecialite.Text);
+
+                cmd.ExecuteNonQuery();
+                cnx.Close();
+            }
+        }
+
         private void btnsupprimer_Click(object sender, EventArgs e)
         {
             deletetech(dataGridViewtech);
@@ -142,7 +164,18 @@ namespace Helpdesk.AdminUserControls
 
         private void btnmettreajour_Click(object sender, EventArgs e)
         {
+           
+        }
 
+        private void txtspecialite_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnmettreajour_Click_1(object sender, EventArgs e)
+        {
+            updatetech(dataGridViewtech);
+            actualisertech(dataGridViewtech);
         }
     }
 }
