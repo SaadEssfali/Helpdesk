@@ -33,7 +33,6 @@
             textBox1 = new TextBox();
             label2 = new Label();
             comboBoxCategorie = new ComboBox();
-            comboBox1 = new ComboBox();
             label3 = new Label();
             textBox2 = new TextBox();
             comboBox2 = new ComboBox();
@@ -47,6 +46,7 @@
             btnsupprimer = new Button();
             btnajouter = new Button();
             dataGridView1 = new DataGridView();
+            textBox3 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -76,7 +76,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(432, 40);
+            textBox1.Location = new Point(432, 46);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(117, 27);
             textBox1.TabIndex = 47;
@@ -100,14 +100,6 @@
             comboBoxCategorie.Name = "comboBoxCategorie";
             comboBoxCategorie.Size = new Size(151, 28);
             comboBoxCategorie.TabIndex = 51;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(166, 44);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(131, 28);
-            comboBox1.TabIndex = 52;
             // 
             // label3
             // 
@@ -191,6 +183,8 @@
             DateCloture.Name = "DateCloture";
             DateCloture.Size = new Size(173, 27);
             DateCloture.TabIndex = 60;
+            DateCloture.ValueChanged += DateCloture_ValueChanged;
+            DateCloture.KeyDown += DateCloture_KeyDown;
             // 
             // btnvider
             // 
@@ -243,19 +237,28 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.FromArgb(41, 75, 93);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(3, 310);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(782, 273);
+            dataGridView1.Size = new Size(989, 273);
             dataGridView1.TabIndex = 65;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(145, 44);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(117, 27);
+            textBox3.TabIndex = 66;
             // 
             // UserControlAdminTickets
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(41, 75, 93);
+            Controls.Add(textBox3);
             Controls.Add(dataGridView1);
             Controls.Add(btnvider);
             Controls.Add(btnmettreajour);
@@ -269,14 +272,13 @@
             Controls.Add(label4);
             Controls.Add(textBox2);
             Controls.Add(label3);
-            Controls.Add(comboBox1);
             Controls.Add(comboBoxCategorie);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(Categorie);
             Name = "UserControlAdminTickets";
-            Size = new Size(791, 601);
+            Size = new Size(998, 601);
             Load += UserControlAdminTickets_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -291,7 +293,6 @@
         private TextBox textBox1;
         private Label label2;
         private ComboBox comboBoxCategorie;
-        private ComboBox comboBox1;
         private Label label3;
         private TextBox textBox2;
         private ComboBox comboBox2;
@@ -305,5 +306,6 @@
         private Button btnsupprimer;
         private Button btnajouter;
         private DataGridView dataGridView1;
+        private TextBox textBox3;
     }
 }

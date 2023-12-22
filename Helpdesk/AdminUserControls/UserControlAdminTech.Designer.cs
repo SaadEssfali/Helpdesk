@@ -126,6 +126,7 @@
             btnvider.TabIndex = 24;
             btnvider.Text = "Vider";
             btnvider.UseVisualStyleBackColor = false;
+            btnvider.Click += btnvider_Click;
             // 
             // Usename
             // 
@@ -271,6 +272,7 @@
             // 
             // dataGridViewtech
             // 
+            dataGridViewtech.BackgroundColor = Color.FromArgb(11, 29, 36);
             dataGridViewtech.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewtech.Location = new Point(3, 310);
             dataGridViewtech.Name = "dataGridViewtech";

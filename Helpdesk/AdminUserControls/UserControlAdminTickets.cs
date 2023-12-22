@@ -24,14 +24,28 @@ namespace Helpdesk.AdminUserControls
 
         private void DateOuverture_ValueChanged(object sender, EventArgs e)
         {
-            DateOuverture.CustomFormat = "dd/MM/yyyy";
+            DateOuverture.CustomFormat = "dd/MM/yyyy hh:mm";
         }
 
         private void DateOuverture_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Back)
+            if (e.KeyCode == Keys.Back)
             {
                 DateOuverture.CustomFormat = " ";
+            }
+        }
+
+        private void DateCloture_ValueChanged(object sender, EventArgs e)
+        {
+            DateCloture.CustomFormat = "dd/MM/yyyy";
+
+        }
+
+        private void DateCloture_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Back)
+            {
+                DateCloture.CustomFormat = " ";
             }
         }
     }

@@ -28,17 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlAdminDash));
+            TickResPicture = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)TickResPicture).BeginInit();
             SuspendLayout();
+            // 
+            // TickResPicture
+            // 
+            TickResPicture.Image = (Image)resources.GetObject("TickResPicture.Image");
+            TickResPicture.Location = new Point(619, 27);
+            TickResPicture.Name = "TickResPicture";
+            TickResPicture.Size = new Size(335, 150);
+            TickResPicture.TabIndex = 2;
+            TickResPicture.TabStop = false;
             // 
             // UserControlAdminDash
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
+            Controls.Add(TickResPicture);
             Name = "UserControlAdminDash";
-            Size = new Size(791, 601);
+            Size = new Size(998, 601);
+            ((System.ComponentModel.ISupportInitialize)TickResPicture).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox TickResPicture;
     }
 }

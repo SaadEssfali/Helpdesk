@@ -192,6 +192,7 @@
             MAINpanel.Name = "MAINpanel";
             MAINpanel.Size = new Size(953, 601);
             MAINpanel.TabIndex = 6;
+            MAINpanel.Paint += MAINpanel_Paint;
             // 
             // AdminForm
             // 

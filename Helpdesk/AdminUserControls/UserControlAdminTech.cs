@@ -161,10 +161,23 @@ namespace Helpdesk.AdminUserControls
             deletetech(dataGridViewtech);
             actualisertech(dataGridViewtech);
         }
+        public static void viderboxes()
+        {
+            txtName.Clear();
+            txtPrenom.Clear();
+            txtBureau.Clear();
+            txtDepartement.Clear();
+            txtTelephone.Clear();
+            txtService.Clear();
+            txtspecialite.Clear();
+            txtUsername.Clear();
+            txtPass.Clear();
+
+        }
 
         private void btnmettreajour_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtspecialite_TextChanged(object sender, EventArgs e)
@@ -176,6 +189,11 @@ namespace Helpdesk.AdminUserControls
         {
             updatetech(dataGridViewtech);
             actualisertech(dataGridViewtech);
+        }
+
+        private void btnvider_Click(object sender, EventArgs e)
+        {
+            viderboxes();
         }
     }
 }

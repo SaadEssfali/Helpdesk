@@ -15,6 +15,8 @@ namespace Helpdesk
     {
         UserControlAdminEmploye Ae = new UserControlAdminEmploye();
         UserControlAdminTech At = new UserControlAdminTech();
+        UserControlAdminTickets Ct = new UserControlAdminTickets(); 
+        UserControlAdminDash dash = new UserControlAdminDash();
         public AdminForm()
         {
             InitializeComponent();
@@ -27,6 +29,8 @@ namespace Helpdesk
 
         private void btndash_Click(object sender, EventArgs e)
         {
+            MAINpanel.Controls.Clear();
+            MAINpanel.Controls.Add(dash);
             btnemploye.BackColor = ColorTranslator.FromHtml("#004AAD");
             btndash.BackColor = Color.Black;
             btntechnicien.BackColor = ColorTranslator.FromHtml("#004AAD");
@@ -39,7 +43,8 @@ namespace Helpdesk
         }
 
         private void btntechnicien_Click(object sender, EventArgs e)
-        {   MAINpanel.Controls.Clear();
+        {
+            MAINpanel.Controls.Clear();
             MAINpanel.Controls.Add(At);
             btnemploye.BackColor = ColorTranslator.FromHtml("#004AAD");
             btndash.BackColor = ColorTranslator.FromHtml("#004AAD");
@@ -60,10 +65,17 @@ namespace Helpdesk
 
         private void btnticket_Click(object sender, EventArgs e)
         {
+            MAINpanel.Controls.Clear();
+            MAINpanel.Controls.Add(Ct);
             btnemploye.BackColor = ColorTranslator.FromHtml("#004AAD");
             btndash.BackColor = ColorTranslator.FromHtml("#004AAD");
             btntechnicien.BackColor = ColorTranslator.FromHtml("#004AAD");
             btnticket.BackColor = Color.Black;
+        }
+
+        private void MAINpanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
