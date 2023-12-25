@@ -30,32 +30,141 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlAdminDash));
             TickResPicture = new PictureBox();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            nombretech = new Label();
+            ticketresolut = new Label();
+            nombreticket = new Label();
+            nombreemploye = new Label();
             ((System.ComponentModel.ISupportInitialize)TickResPicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // TickResPicture
             // 
             TickResPicture.Image = (Image)resources.GetObject("TickResPicture.Image");
-            TickResPicture.Location = new Point(619, 27);
+            TickResPicture.Location = new Point(576, 17);
             TickResPicture.Name = "TickResPicture";
             TickResPicture.Size = new Size(335, 150);
             TickResPicture.TabIndex = 2;
             TickResPicture.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(161, 17);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(335, 150);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(161, 249);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(335, 150);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 4;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(576, 249);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(335, 150);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 5;
+            pictureBox3.TabStop = false;
+            // 
+            // nombretech
+            // 
+            nombretech.AutoSize = true;
+            nombretech.BackColor = Color.Transparent;
+            nombretech.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            nombretech.ForeColor = SystemColors.ActiveCaptionText;
+            nombretech.Location = new Point(327, 94);
+            nombretech.Name = "nombretech";
+            nombretech.Size = new Size(113, 46);
+            nombretech.TabIndex = 13;
+            nombretech.Text = "label2";
+            nombretech.Click += nombretech_Click;
+            // 
+            // ticketresolut
+            // 
+            ticketresolut.AutoSize = true;
+            ticketresolut.BackColor = Color.Transparent;
+            ticketresolut.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            ticketresolut.ForeColor = SystemColors.ActiveCaptionText;
+            ticketresolut.Location = new Point(642, 94);
+            ticketresolut.Name = "ticketresolut";
+            ticketresolut.Size = new Size(113, 46);
+            ticketresolut.TabIndex = 14;
+            ticketresolut.Text = "label2";
+            ticketresolut.Click += ticketresolut_Click;
+            // 
+            // nombreticket
+            // 
+            nombreticket.AutoSize = true;
+            nombreticket.BackColor = Color.Transparent;
+            nombreticket.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            nombreticket.ForeColor = SystemColors.ActiveCaptionText;
+            nombreticket.Location = new Point(327, 320);
+            nombreticket.Name = "nombreticket";
+            nombreticket.Size = new Size(113, 46);
+            nombreticket.TabIndex = 15;
+            nombreticket.Text = "label2";
+            nombreticket.Click += nombreticket_Click;
+            // 
+            // nombreemploye
+            // 
+            nombreemploye.AutoSize = true;
+            nombreemploye.BackColor = Color.Transparent;
+            nombreemploye.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            nombreemploye.ForeColor = SystemColors.ActiveCaptionText;
+            nombreemploye.Location = new Point(737, 320);
+            nombreemploye.Name = "nombreemploye";
+            nombreemploye.Size = new Size(113, 46);
+            nombreemploye.TabIndex = 16;
+            nombreemploye.Text = "label2";
             // 
             // UserControlAdminDash
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
+            Controls.Add(nombreemploye);
+            Controls.Add(nombreticket);
+            Controls.Add(ticketresolut);
+            Controls.Add(nombretech);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             Controls.Add(TickResPicture);
             Name = "UserControlAdminDash";
             Size = new Size(998, 601);
             ((System.ComponentModel.ISupportInitialize)TickResPicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private PictureBox TickResPicture;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private Label nombretech;
+        private Label ticketresolut;
+        private Label nombreticket;
+        private Label nombreemploye;
     }
 }
