@@ -37,7 +37,7 @@ namespace Helpdesk.AdminUserControls
 
         private void DateCloture_ValueChanged(object sender, EventArgs e)
         {
-            DateCloture.CustomFormat = "dd/MM/yyyy";
+            DateCloture.CustomFormat = "dd/MM/yyyy hh:mm";
 
         }
 
@@ -47,6 +47,11 @@ namespace Helpdesk.AdminUserControls
             {
                 DateCloture.CustomFormat = " ";
             }
+        }
+
+        private void comboBoxCategorie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

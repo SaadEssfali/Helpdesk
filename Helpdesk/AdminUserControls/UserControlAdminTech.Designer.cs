@@ -272,10 +272,13 @@
             // 
             // dataGridViewtech
             // 
+            dataGridViewtech.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewtech.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewtech.BackgroundColor = Color.FromArgb(11, 29, 36);
             dataGridViewtech.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewtech.Location = new Point(3, 310);
             dataGridViewtech.Name = "dataGridViewtech";
+            dataGridViewtech.RowHeadersVisible = false;
             dataGridViewtech.RowHeadersWidth = 51;
             dataGridViewtech.RowTemplate.Height = 29;
             dataGridViewtech.Size = new Size(933, 273);

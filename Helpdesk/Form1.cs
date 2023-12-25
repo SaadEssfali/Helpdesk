@@ -78,12 +78,22 @@ namespace Helpdesk
                 this.Hide();
 
             }
+            else if (txtUser.Text=="admin" && txtPass.Text=="admin")
+            {
+                AdminForm adminForm =new AdminForm();
+                adminForm.Show();
+                this.Hide();
+
+
+            }
 
             else
             {
 
                 MessageBox.Show("Invalid username ou password");
             }
+
+
         }
 
 

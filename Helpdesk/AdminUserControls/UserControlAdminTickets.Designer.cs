@@ -68,7 +68,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(310, 46);
+            label1.Location = new Point(341, 46);
             label1.Name = "label1";
             label1.Size = new Size(116, 21);
             label1.TabIndex = 48;
@@ -76,7 +76,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(432, 46);
+            textBox1.Location = new Point(563, 50);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(117, 27);
             textBox1.TabIndex = 47;
@@ -87,7 +87,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(555, 46);
+            label2.Location = new Point(686, 50);
             label2.Name = "label2";
             label2.Size = new Size(76, 21);
             label2.TabIndex = 50;
@@ -96,10 +96,12 @@
             // comboBoxCategorie
             // 
             comboBoxCategorie.FormattingEnabled = true;
-            comboBoxCategorie.Location = new Point(628, 39);
+            comboBoxCategorie.Items.AddRange(new object[] { "ouvert", "en cours", "fermé" });
+            comboBoxCategorie.Location = new Point(780, 48);
             comboBoxCategorie.Name = "comboBoxCategorie";
             comboBoxCategorie.Size = new Size(151, 28);
             comboBoxCategorie.TabIndex = 51;
+            comboBoxCategorie.SelectedIndexChanged += comboBoxCategorie_SelectedIndexChanged;
             // 
             // label3
             // 
