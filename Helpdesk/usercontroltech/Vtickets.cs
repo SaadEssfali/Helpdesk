@@ -15,9 +15,15 @@ namespace Helpdesk.usercontroltech
     public partial class Vtickets : UserControl
     {
         public static SqlConnection cnx;
+        ticketflow tf = new ticketflow();
+ 
         public Vtickets()
         {
             InitializeComponent();
+           
+            
+
+
 
         }
 

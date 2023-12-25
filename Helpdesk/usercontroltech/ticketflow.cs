@@ -15,7 +15,9 @@ namespace Helpdesk.usercontroltech
     public partial class ticketflow : UserControl
 
 
-    {   
+    {
+        public  event EventHandler acceptert;
+        
 
 
         public ticketflow()
@@ -58,10 +60,13 @@ namespace Helpdesk.usercontroltech
                         MessageBox.Show("Ticket Acceptées");
 
                         transaction.Commit();
+
                     
                    
                 }
+
             }
+            acceptert?.Invoke(this, EventArgs.Empty);
         }
 
 
