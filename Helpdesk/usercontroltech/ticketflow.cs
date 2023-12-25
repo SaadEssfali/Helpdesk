@@ -66,7 +66,11 @@ namespace Helpdesk.usercontroltech
                 }
 
             }
-            acceptert?.Invoke(this, EventArgs.Empty);
+
+
+            ((Vtickets)this.Parent.Parent).RefreshTickets();
+
+
         }
 
 

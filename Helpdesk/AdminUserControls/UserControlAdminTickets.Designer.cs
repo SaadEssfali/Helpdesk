@@ -310,8 +310,8 @@
         private Button btnmettreajour;
         private Button btnsupprimer;
         private DataGridView datagridviewticket;
-        private TextBox txtemploye;
-        private ComboBox txtstatut;
+        private static TextBox txtemploye;
+        private static ComboBox txtstatut;
         private static TextBox txtdescription;
         private static ComboBox txtpriorite;
         private static DateTimePicker txtouvert;

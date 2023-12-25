@@ -15,16 +15,22 @@ namespace Helpdesk.usercontroltech
     public partial class Vtickets : UserControl
     {
         public static SqlConnection cnx;
-        ticketflow tf = new ticketflow();
+       
  
         public Vtickets()
         {
             InitializeComponent();
-           
-            
+            Ticketpicbox(flowLayoutTicket);
 
 
 
+
+
+        }
+        public void  RefreshTickets()
+        {
+            flowLayoutTicket.Controls.Clear();
+            Ticketpicbox(flowLayoutTicket);
         }
 
 
@@ -91,7 +97,7 @@ namespace Helpdesk.usercontroltech
 
         private void Vtickets_Load(object sender, EventArgs e)
         {
-            Ticketpicbox(flowLayoutTicket);
+            
 
         }
     }
