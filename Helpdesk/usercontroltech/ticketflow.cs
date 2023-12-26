@@ -23,6 +23,7 @@ namespace Helpdesk.usercontroltech
         public ticketflow()
         {
             InitializeComponent();
+            
         }
         public static SqlConnection GetConnection()
         {
@@ -35,7 +36,8 @@ namespace Helpdesk.usercontroltech
         {
             int idTicket = int.Parse(labelid.Text);
             int idTechnicien = Classtech.ID;
-
+            String NameTech = Classtech.Nom;
+            String prenomTech = Classtech.Prenom;
 
             using (SqlConnection cnx = GetConnection())
             {
@@ -43,19 +45,22 @@ namespace Helpdesk.usercontroltech
 
                 using (SqlTransaction transaction = cnx.BeginTransaction())
                 {
-                    
-                    
+
+
                         SqlCommand insertCommand = new SqlCommand($"INSERT INTO Intervention(TicketID, TechnicienID, DateDebut, DateFin, Commentaires, Evaluation) " +
-                                            $"VALUES (@TicketID , @TechnicienID, GETDATE(), NULL, NULL, NULL);update Ticket set Statut ='en cours' where TicketID= @TicketID", cnx, transaction);
+                                            $"VALUES (@TicketID , @TechnicienID, GETDATE(), NULL, NULL, NULL);update Ticket set Statut ='en cours' where TicketID= @TicketID;"+
+                                            $"Insert Into NotificationLog (TicketID,MessageNotif,Datenotif,IsRead) values (@TicketID,'Votre ticket ID= ' + CAST(@TicketID AS VARCHAR) + ' a été pris en charge par notre technicien ' + @TechName + ' ' + @Prenom,GETDATE(),0)", cnx, transaction);
 
                         insertCommand.Parameters.AddWithValue("@TicketID", idTicket);
                         insertCommand.Parameters.AddWithValue("@TechnicienID", idTechnicien);
+                         insertCommand.Parameters.AddWithValue("@TechName", NameTech);
+                    insertCommand.Parameters.AddWithValue("@Prenom", prenomTech);
 
 
 
-                        
-                        //executer les requetes
-                        insertCommand.ExecuteNonQuery();
+
+                    //executer les requetes
+                    insertCommand.ExecuteNonQuery();
 
                         MessageBox.Show("Ticket Acceptées");
 
