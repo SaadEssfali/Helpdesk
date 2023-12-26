@@ -33,6 +33,7 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(19, 68);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(750, 77);
@@ -42,6 +43,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             Controls.Add(flowLayoutPanel1);
             Name = "UserControlNotification";
             Size = new Size(800, 583);

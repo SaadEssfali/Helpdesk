@@ -58,7 +58,7 @@
             // date
             // 
             date.AutoSize = true;
-            date.Location = new Point(672, 41);
+            date.Location = new Point(632, 54);
             date.Name = "date";
             date.Size = new Size(50, 20);
             date.TabIndex = 2;

@@ -42,6 +42,13 @@ namespace Helpdesk.UserControls
             statuticket.Text = ticket.Statut;
 
         }
+        public int notification()
+        {
+            SqlConnection cnx= Program.GetConnection();
+            SqlCommand cmd = new SqlCommand("select COUNT(NotificationID)from NotificationLog  n Inner join Ticket t on n.TicketID=t.TicketID where EmployeID=@EEmployeID and IsRead=0");
+            int nbre =(int)cmd.ExecuteScalar();
+            return nbre;
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
