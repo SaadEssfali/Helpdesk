@@ -311,14 +311,13 @@
         private Button btnvider;
         private Button btnmettreajour;
         private DataGridView datagridviewticket;
-        private Button btnsupprimer;
-        private TextBox txtemploye;
-        private ComboBox txtstatut;
-        private TextBox txtdescription;
-        private ComboBox txtpriorite;
-        private DateTimePicker txtouvert;
-        private DateTimePicker txtcloture;
-        private Button btnajouter;
-        private TextBox txtcategorie;
+        private static TextBox txtemploye;
+        private static ComboBox txtstatut;
+        private static TextBox txtdescription;
+        private static ComboBox txtpriorite;
+        private static DateTimePicker txtouvert;
+        private static DateTimePicker txtcloture;
+        private static Button btnajouter;
+        private static TextBox txtcategorie;
     }
 }

@@ -143,6 +143,7 @@ namespace Helpdesk
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(ntf);
+            ntf.notiflow();
         }
 
         private void MainForm_Load(object sender, EventArgs e)

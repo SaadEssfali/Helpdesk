@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            asRead = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
             asRead = new Button();
             SuspendLayout();
@@ -42,13 +43,23 @@
             // 
             // asRead
             // 
-            asRead.Location = new Point(551, 18);
+            asRead.Location = new Point(551, 19);
             asRead.Name = "asRead";
             asRead.Size = new Size(208, 35);
             asRead.TabIndex = 1;
             asRead.Text = "marquer tout comme lu ✔️";
             asRead.UseVisualStyleBackColor = true;
             asRead.Click += button1_Click;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(0, 81);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(800, 113);
+            flowLayoutPanel1.TabIndex = 2;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint_1;
             // 
             // UserControlNotification
             // 
@@ -57,15 +68,18 @@
             AutoScroll = true;
             Controls.Add(asRead);
             Controls.Add(flowLayoutPanel1);
+            Controls.Add(asRead);
             Name = "UserControlNotification";
             Size = new Size(800, 583);
             Load += UserControlNotification_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private FlowLayoutPanel flowLayoutPanel1;
         private Button asRead;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

@@ -48,45 +48,45 @@
             // 
             txtmessagenotif.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtmessagenotif.AutoSize = true;
-            txtmessagenotif.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            txtmessagenotif.Location = new Point(13, 22);
+            txtmessagenotif.Location = new Point(26, 28);
             txtmessagenotif.Name = "txtmessagenotif";
-            txtmessagenotif.Size = new Size(59, 25);
-            txtmessagenotif.TabIndex = 1;
+            txtmessagenotif.Size = new Size(50, 20);
+            txtmessagenotif.TabIndex = 0;
             txtmessagenotif.Text = "label1";
             // 
             // date
             // 
             date.AutoSize = true;
-            date.Location = new Point(632, 54);
+            date.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            date.Location = new Point(533, 60);
             date.Name = "date";
-            date.Size = new Size(50, 20);
-            date.TabIndex = 2;
-            date.Text = "label1";
+            date.Size = new Size(39, 20);
+            date.TabIndex = 1;
+            date.Text = "date";
             // 
             // attention
             // 
             attention.Image = (Image)resources.GetObject("attention.Image");
-            attention.Location = new Point(713, 3);
+            attention.Location = new Point(611, 3);
             attention.Name = "attention";
-            attention.Size = new Size(34, 35);
+            attention.Size = new Size(35, 30);
             attention.SizeMode = PictureBoxSizeMode.Zoom;
-            attention.TabIndex = 3;
+            attention.TabIndex = 2;
             attention.TabStop = false;
+            attention.UseWaitCursor = true;
             attention.Visible = false;
             // 
             // flowyoutmessagenotif
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoSize = true;
+            Controls.Add(txtmessagenotif);
             Controls.Add(attention);
             Controls.Add(date);
             Controls.Add(txtmessagenotif);
             Controls.Add(panel1);
             Name = "flowyoutmessagenotif";
-            Size = new Size(750, 77);
-            Load += flowyoutmessagenotif_Load;
+            Size = new Size(660, 86);
             ((System.ComponentModel.ISupportInitialize)attention).EndInit();
             ResumeLayout(false);
             PerformLayout();
