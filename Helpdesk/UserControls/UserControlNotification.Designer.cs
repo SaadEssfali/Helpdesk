@@ -30,7 +30,16 @@
         {
             asRead = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            asRead = new Button();
             SuspendLayout();
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(19, 68);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(750, 77);
+            flowLayoutPanel1.TabIndex = 0;
             // 
             // asRead
             // 
@@ -57,6 +66,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            Controls.Add(asRead);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(asRead);
             Name = "UserControlNotification";
@@ -67,6 +77,8 @@
         }
 
         #endregion
+
+        private FlowLayoutPanel flowLayoutPanel1;
         private Button asRead;
         private FlowLayoutPanel flowLayoutPanel1;
     }
