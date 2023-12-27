@@ -28,7 +28,7 @@ namespace Helpdesk.UserControls
         }
         private void RefreshComboBox()
         {
-            
+
             DataTable categoryTable = Categorie.Category();
             comboBoxCat.DataSource = null;
             comboBoxCat.DataSource = categoryTable;
@@ -52,22 +52,22 @@ namespace Helpdesk.UserControls
         {
             caID = Categorie.catID(comboBoxCat);
 
-           
-                Form1.cnx = Program.GetConnection();
-                Form1.cnx.Open();
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO Ticket (Description, CategorieID, EmployeID, DateOuverture, DateCloture, Statut, Priorité) VALUES (@desc, @catgoryid, @employeid, @dateouverture, NULL, 'Ouvert', @Priorité)", Form1.cnx);
-                cmd.Parameters.AddWithValue("@desc", txtDescription.Text);
-                cmd.Parameters.AddWithValue("@catgoryid", caID);
-                cmd.Parameters.AddWithValue("@employeid", Employe.id);
-                cmd.Parameters.AddWithValue("@dateouverture", DateTime.Now); 
-                cmd.Parameters.AddWithValue("@Priorité", comboBoxP.SelectedItem.ToString());
-                cmd.ExecuteNonQuery();
+            Form1.cnx = Program.GetConnection();
+            Form1.cnx.Open();
 
-                TicketCreated?.Invoke(this, EventArgs.Empty);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Ticket (Description, CategorieID, EmployeID, DateOuverture, DateCloture, Statut, Priorité) VALUES (@desc, @catgoryid, @employeid, @dateouverture, NULL, 'Ouvert', @Priorité)", Form1.cnx);
+            cmd.Parameters.AddWithValue("@desc", txtDescription.Text);
+            cmd.Parameters.AddWithValue("@catgoryid", caID);
+            cmd.Parameters.AddWithValue("@employeid", Employe.id);
+            cmd.Parameters.AddWithValue("@dateouverture", DateTime.Now);
+            cmd.Parameters.AddWithValue("@Priorité", comboBoxP.SelectedItem.ToString());
+            cmd.ExecuteNonQuery();
 
-            MessageBox.Show("votre ticket a été créé avec success") ;
-            
+            TicketCreated?.Invoke(this, EventArgs.Empty);
+
+            MessageBox.Show("votre ticket a été créé avec success");
+
             RefreshComboBox();
         }
     }

@@ -27,9 +27,9 @@ namespace Helpdesk.UserControls
 
         private void UserControlTechniciens_Load(object sender, EventArgs e)
         {
-            Technicienpicbox(flowLayoutPanel1);
+            Technicienpicbox();
         }
-        public static void Technicienpicbox(FlowLayoutPanel flowLayoutPanel1)
+        public  void Technicienpicbox()
         {
 
 

@@ -16,13 +16,16 @@ namespace Helpdesk.UserControls
         public UserControlDashboard()
         {
             InitializeComponent();
+            notification();
             nticket.Parent = picnticket;
             dashID.Parent = picVotreID;
             statuticket.Parent = picnticket;
             nresolu.Parent = picRticket;
-            nresolu.Location = new(90,42);
+            nbrenotif.Parent = picNotif;
+            nresolu.Location = new(90, 42);
             dashID.Location = new Point(123, 42);
             nticket.Location = new Point(123, 37);
+            nbrenotif.Location = new Point(123, 42);
             hourlabel.Text = DateTime.Now.ToString("HH:mm:ss");
             monthLabel.Text = DateTime.Now.ToString("MMMM");
             dayOfMonthLabel.Text = DateTime.Now.ToString("dd");
@@ -41,6 +44,23 @@ namespace Helpdesk.UserControls
             nticket.Text = ticket.TicketID.ToString();
             statuticket.Text = ticket.Statut;
 
+        }
+        public void notification()
+        {
+            
+            SqlConnection cnx = Program.GetConnection();          
+            cnx.Open();
+            SqlCommand cmd = new SqlCommand("select COUNT(NotificationID)from NotificationLog  n Inner join Ticket t on n.TicketID=t.TicketID where EmployeID=@EmployeID and IsRead=0",cnx);
+            cmd.Parameters.AddWithValue("@EmployeID", Employe.id);
+            int nbre;
+           
+            if (cmd.ExecuteScalar() == null)
+            {
+                nbre = 0;
+            }
+            else { nbre= (int)cmd.ExecuteScalar(); }
+            
+            nbrenotif.Text = nbre.ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

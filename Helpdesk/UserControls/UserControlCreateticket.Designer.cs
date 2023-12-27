@@ -39,6 +39,7 @@
             // 
             // comboBoxCat
             // 
+            comboBoxCat.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxCat.FormattingEnabled = true;
             comboBoxCat.Location = new Point(198, 164);
             comboBoxCat.Name = "comboBoxCat";
@@ -84,6 +85,7 @@
             // 
             // comboBoxP
             // 
+            comboBoxP.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxP.FormattingEnabled = true;
             comboBoxP.Items.AddRange(new object[] { "Haute Priorité", "Moyenne Priorité", "Basse Priorité" });
             comboBoxP.Location = new Point(198, 110);
