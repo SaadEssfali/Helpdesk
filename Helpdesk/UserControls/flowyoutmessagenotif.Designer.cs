@@ -58,7 +58,7 @@
             // attention
             // 
             attention.Image = (Image)resources.GetObject("attention.Image");
-            attention.Location = new Point(611, 3);
+            attention.Location = new Point(678, 18);
             attention.Name = "attention";
             attention.Size = new Size(35, 30);
             attention.SizeMode = PictureBoxSizeMode.Zoom;
