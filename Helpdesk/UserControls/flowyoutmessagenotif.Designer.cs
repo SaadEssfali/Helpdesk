@@ -32,6 +32,7 @@
             txtmessagenotif = new Label();
             date = new Label();
             attention = new PictureBox();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)attention).BeginInit();
             SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             // 
             date.AutoSize = true;
             date.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            date.Location = new Point(533, 60);
+            date.Location = new Point(601, 64);
             date.Name = "date";
             date.Size = new Size(39, 20);
             date.TabIndex = 1;
@@ -66,6 +67,14 @@
             attention.UseWaitCursor = true;
             attention.Visible = false;
             // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Location = new Point(3, 74);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(725, 10);
+            panel1.TabIndex = 3;
+            // 
             // flowyoutmessagenotif
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -73,8 +82,9 @@
             Controls.Add(txtmessagenotif);
             Controls.Add(attention);
             Controls.Add(date);
+            Controls.Add(panel1);
             Name = "flowyoutmessagenotif";
-            Size = new Size(660, 86);
+            Size = new Size(728, 86);
             ((System.ComponentModel.ISupportInitialize)attention).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -85,5 +95,6 @@
         public Label txtmessagenotif;
         public Label date;
         public PictureBox attention;
+        private Panel panel1;
     }
 }
