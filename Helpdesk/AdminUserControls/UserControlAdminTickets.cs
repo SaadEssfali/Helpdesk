@@ -17,6 +17,9 @@ namespace Helpdesk.AdminUserControls
         public UserControlAdminTickets()
         {
             InitializeComponent();
+           actualiserticket();
+
+
         }
 
         private void UserControlAdminTickets_Load(object sender, EventArgs e)
@@ -61,7 +64,7 @@ namespace Helpdesk.AdminUserControls
         {
 
         }
-        public static void insertticket()
+        public  void insertticket()
         {
             cnx = Program.GetConnection();
             cnx.Open();
@@ -83,12 +86,12 @@ namespace Helpdesk.AdminUserControls
             adapter.Fill(dticket);
             return dticket;
         }
-        public static DataGridView actualiserticket(DataGridView datagridviewticket)
+        public  DataGridView actualiserticket()
         {
             datagridviewticket.DataSource = dataticket();
             return datagridviewticket;
         }
-        public static void deleteticket(DataGridView datagridviewticket)
+        public  void deleteticket()
         {
             cnx = Program.GetConnection();
             if (datagridviewticket.SelectedRows.Count >= 0)
@@ -100,7 +103,7 @@ namespace Helpdesk.AdminUserControls
                 cmd.ExecuteNonQuery();
             }
         }
-        public static void updateticket(DataGridView datagridviewticket)
+        public  void updateticket(DataGridView datagridviewticket)
         {
             if (datagridviewticket.SelectedRows.Count > 0)
             {
@@ -119,11 +122,18 @@ namespace Helpdesk.AdminUserControls
                 cnx.Close();
             }
         }
-        public static void viderboxes()
+        public  void viderboxes()
         {
             txtcategorie.Clear();
             txtdescription.Clear();
             txtemploye.Clear();
+            txtpriorite.SelectedIndex=-1;
+            txtstatut.SelectedIndex = -1;
+            
+
+
+
+
 
         }
         private void btnajouter_Click(object sender, EventArgs e)

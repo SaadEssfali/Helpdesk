@@ -87,7 +87,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(736, 45);
+            label2.Location = new Point(715, 45);
             label2.Name = "label2";
             label2.Size = new Size(76, 21);
             label2.TabIndex = 50;
@@ -95,9 +95,10 @@
             // 
             // txtstatut
             // 
+            txtstatut.DropDownStyle = ComboBoxStyle.DropDownList;
             txtstatut.FormattingEnabled = true;
             txtstatut.Items.AddRange(new object[] { "ouvert", "en cours", "fermé" });
-            txtstatut.Location = new Point(830, 43);
+            txtstatut.Location = new Point(809, 43);
             txtstatut.Name = "txtstatut";
             txtstatut.Size = new Size(151, 28);
             txtstatut.TabIndex = 51;
@@ -126,9 +127,10 @@
             // 
             // txtpriorite
             // 
+            txtpriorite.DropDownStyle = ComboBoxStyle.DropDownList;
             txtpriorite.FormattingEnabled = true;
             txtpriorite.Items.AddRange(new object[] { "Haute Priorité", "Moyenne Priorité", "Basse Priorité" });
-            txtpriorite.Location = new Point(830, 99);
+            txtpriorite.Location = new Point(809, 99);
             txtpriorite.Name = "txtpriorite";
             txtpriorite.Size = new Size(151, 28);
             txtpriorite.TabIndex = 56;
@@ -139,7 +141,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(740, 106);
+            label4.Location = new Point(719, 106);
             label4.Name = "label4";
             label4.Size = new Size(75, 21);
             label4.TabIndex = 55;
@@ -308,15 +310,15 @@
         private static TextBox txtEmploye;
         private Button btnvider;
         private Button btnmettreajour;
-        private Button btnsupprimer;
         private DataGridView datagridviewticket;
+        private Button btnsupprimer;
         private TextBox txtemploye;
         private ComboBox txtstatut;
-        private static TextBox txtdescription;
-        private static ComboBox txtpriorite;
-        private static DateTimePicker txtouvert;
-        private static DateTimePicker txtcloture;
-        private static Button btnajouter;
-        private static TextBox txtcategorie;
+        private TextBox txtdescription;
+        private ComboBox txtpriorite;
+        private DateTimePicker txtouvert;
+        private DateTimePicker txtcloture;
+        private Button btnajouter;
+        private TextBox txtcategorie;
     }
 }
