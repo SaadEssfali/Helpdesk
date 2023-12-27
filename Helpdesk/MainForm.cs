@@ -61,6 +61,7 @@ namespace Helpdesk
             //changer le panel vers dashbord(control)
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(dashboard);
+            dashboard.notification();
             dashboard.Dock = DockStyle.Fill;
 
         }

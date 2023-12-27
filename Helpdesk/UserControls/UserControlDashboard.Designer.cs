@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlDashboard));
             picnticket = new PictureBox();
             picRticket = new PictureBox();
-            pictureBox3 = new PictureBox();
+            picNotif = new PictureBox();
             pictureBox4 = new PictureBox();
             hourlabel = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
@@ -47,9 +47,10 @@
             nticket = new Label();
             statuticket = new Label();
             nresolu = new Label();
+            nbrenotif = new Label();
             ((System.ComponentModel.ISupportInitialize)picnticket).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picRticket).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picNotif).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picVotreID).BeginInit();
@@ -79,15 +80,15 @@
             picRticket.TabIndex = 1;
             picRticket.TabStop = false;
             // 
-            // pictureBox3
+            // picNotif
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(126, 38);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(246, 114);
-            pictureBox3.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
+            picNotif.Image = (Image)resources.GetObject("picNotif.Image");
+            picNotif.Location = new Point(126, 38);
+            picNotif.Name = "picNotif";
+            picNotif.Size = new Size(246, 114);
+            picNotif.SizeMode = PictureBoxSizeMode.AutoSize;
+            picNotif.TabIndex = 2;
+            picNotif.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -246,11 +247,24 @@
             nresolu.TabIndex = 15;
             nresolu.Text = "label2";
             // 
+            // nbrenotif
+            // 
+            nbrenotif.AutoSize = true;
+            nbrenotif.BackColor = Color.Transparent;
+            nbrenotif.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            nbrenotif.ForeColor = SystemColors.ButtonFace;
+            nbrenotif.Location = new Point(510, 79);
+            nbrenotif.Name = "nbrenotif";
+            nbrenotif.Size = new Size(113, 46);
+            nbrenotif.TabIndex = 16;
+            nbrenotif.Text = "label2";
+            // 
             // UserControlDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(239, 240, 242);
+            Controls.Add(nbrenotif);
             Controls.Add(nresolu);
             Controls.Add(dashID);
             Controls.Add(statuticket);
@@ -263,7 +277,7 @@
             Controls.Add(label1);
             Controls.Add(hourlabel);
             Controls.Add(pictureBox4);
-            Controls.Add(pictureBox3);
+            Controls.Add(picNotif);
             Controls.Add(picRticket);
             Controls.Add(picnticket);
             Controls.Add(picVotreID);
@@ -272,7 +286,7 @@
             Load += UserControlDashboard_Load;
             ((System.ComponentModel.ISupportInitialize)picnticket).EndInit();
             ((System.ComponentModel.ISupportInitialize)picRticket).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picNotif).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)picVotreID).EndInit();
@@ -284,7 +298,7 @@
 
         private PictureBox picnticket;
         private PictureBox picRticket;
-        private PictureBox pictureBox3;
+        private PictureBox picNotif;
         private PictureBox pictureBox4;
         private Label hourlabel;
         private System.Windows.Forms.Timer timer1;
@@ -299,5 +313,6 @@
         private Label nticket;
         private Label statuticket;
         private Label nresolu;
+        private Label nbrenotif;
     }
 }
