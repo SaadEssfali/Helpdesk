@@ -318,6 +318,7 @@
         private static DateTimePicker txtouvert;
         private static DateTimePicker txtcloture;
         private static Button btnajouter;
+        private static Button btnsupprimer;
         private static TextBox txtcategorie;
     }
 }
