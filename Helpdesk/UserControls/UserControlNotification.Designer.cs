@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             flowLayoutPanel1 = new FlowLayoutPanel();
+            asRead = new Button();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -39,11 +40,22 @@
             flowLayoutPanel1.Size = new Size(750, 77);
             flowLayoutPanel1.TabIndex = 0;
             // 
+            // asRead
+            // 
+            asRead.Location = new Point(551, 18);
+            asRead.Name = "asRead";
+            asRead.Size = new Size(208, 35);
+            asRead.TabIndex = 1;
+            asRead.Text = "marquer tout comme lu ✔️";
+            asRead.UseVisualStyleBackColor = true;
+            asRead.Click += button1_Click;
+            // 
             // UserControlNotification
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            Controls.Add(asRead);
             Controls.Add(flowLayoutPanel1);
             Name = "UserControlNotification";
             Size = new Size(800, 583);
@@ -54,5 +66,6 @@
         #endregion
 
         private FlowLayoutPanel flowLayoutPanel1;
+        private Button asRead;
     }
 }

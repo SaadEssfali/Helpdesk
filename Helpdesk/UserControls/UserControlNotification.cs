@@ -13,6 +13,8 @@ namespace Helpdesk.UserControls
 {
     public partial class UserControlNotification : UserControl
     {
+        SqlConnection cnx = Program.GetConnection();
+
         public UserControlNotification()
         {
             InitializeComponent();
@@ -25,7 +27,7 @@ namespace Helpdesk.UserControls
         }
         public void notiflow()
         {
-            SqlConnection cnx = Program.GetConnection();
+            flowLayoutPanel1.Controls.Clear();
             SqlCommand cmd = new SqlCommand("select n.TicketID,MessageNotif,n.Datenotif,IsRead   from NotificationLog n Inner join Ticket t on n.TicketID=t.TicketID where  EmployeID=@EmployeID", cnx);
             cmd.Parameters.AddWithValue("@EmployeID", Employe.id);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -47,6 +49,7 @@ namespace Helpdesk.UserControls
                         flownotif.BackColor = Color.Gray;
                         flownotif.attention.Visible = true;
                     }
+                    
 
                 }
 
@@ -57,6 +60,24 @@ namespace Helpdesk.UserControls
 
 
             }
+
+        }
+
+        public void asread()
+        {
+            cnx.Open();
+            SqlCommand cmd = new SqlCommand("Update NotificationLog set IsRead=1 from NotificationLog n inner join Ticket t on n.TicketID=t.TicketID where EmployeID=@EmployeID",cnx);
+            cmd.Parameters.AddWithValue("@EmployeID", Employe.id);
+            cmd.ExecuteNonQuery();
+            cnx.Close();
+        
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            asread();
+            notiflow();
+
+
 
         }
     }
