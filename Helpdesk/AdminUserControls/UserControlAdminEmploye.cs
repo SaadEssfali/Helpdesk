@@ -67,6 +67,7 @@ namespace Helpdesk.AdminUserControls
             cmd.Parameters.Add(new SqlParameter("@Etage", txtEtage.Text));
             cmd.Parameters.Add(new SqlParameter("@NumBureau", txtBureau.Text));
             cmd.ExecuteNonQuery();
+            cnx.Close();
         }
         public static DataTable dataemp()
         {

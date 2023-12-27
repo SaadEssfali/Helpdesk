@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(flowyoutmessagenotif));
+            panel1 = new Panel();
             txtmessagenotif = new Label();
             date = new Label();
             attention = new PictureBox();
@@ -36,8 +37,17 @@
             ((System.ComponentModel.ISupportInitialize)attention).BeginInit();
             SuspendLayout();
             // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Location = new Point(3, 64);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(744, 10);
+            panel1.TabIndex = 0;
+            // 
             // txtmessagenotif
             // 
+            txtmessagenotif.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtmessagenotif.AutoSize = true;
             txtmessagenotif.Location = new Point(26, 28);
             txtmessagenotif.Name = "txtmessagenotif";
@@ -92,6 +102,7 @@
 
         #endregion
 
+        private Panel panel1;
         public Label txtmessagenotif;
         public Label date;
         public PictureBox attention;
