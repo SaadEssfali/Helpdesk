@@ -32,7 +32,7 @@
             txtmessagenotif = new Label();
             date = new Label();
             attention = new PictureBox();
-            panel1 = new Panel();
+            panelnotif = new Panel();
             ((System.ComponentModel.ISupportInitialize)attention).BeginInit();
             SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             // attention
             // 
             attention.Image = (Image)resources.GetObject("attention.Image");
-            attention.Location = new Point(611, 3);
+            attention.Location = new Point(678, 18);
             attention.Name = "attention";
             attention.Size = new Size(35, 30);
             attention.SizeMode = PictureBoxSizeMode.Zoom;
@@ -67,13 +67,13 @@
             attention.UseWaitCursor = true;
             attention.Visible = false;
             // 
-            // panel1
+            // panelnotif
             // 
-            panel1.BackColor = SystemColors.ActiveCaption;
-            panel1.Location = new Point(3, 74);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(725, 10);
-            panel1.TabIndex = 3;
+            panelnotif.BackColor = SystemColors.ActiveCaption;
+            panelnotif.Location = new Point(3, 74);
+            panelnotif.Name = "panelnotif";
+            panelnotif.Size = new Size(725, 10);
+            panelnotif.TabIndex = 3;
             // 
             // flowyoutmessagenotif
             // 
@@ -82,7 +82,7 @@
             Controls.Add(txtmessagenotif);
             Controls.Add(attention);
             Controls.Add(date);
-            Controls.Add(panel1);
+            Controls.Add(panelnotif);
             Name = "flowyoutmessagenotif";
             Size = new Size(728, 86);
             ((System.ComponentModel.ISupportInitialize)attention).EndInit();
@@ -95,6 +95,6 @@
         public Label txtmessagenotif;
         public Label date;
         public PictureBox attention;
-        private Panel panel1;
+        private Panel panelnotif;
     }
 }

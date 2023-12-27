@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             asRead = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            flowyoutaffichenotif = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // asRead
@@ -42,22 +42,22 @@
             asRead.UseVisualStyleBackColor = true;
             asRead.Click += button1_Click;
             // 
-            // flowLayoutPanel1
+            // flowyoutaffichenotif
             // 
-            flowLayoutPanel1.AutoSize = true;
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(0, 81);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(800, 113);
-            flowLayoutPanel1.TabIndex = 2;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint_1;
+            flowyoutaffichenotif.AutoSize = true;
+            flowyoutaffichenotif.FlowDirection = FlowDirection.TopDown;
+            flowyoutaffichenotif.Location = new Point(15, 81);
+            flowyoutaffichenotif.Name = "flowyoutaffichenotif";
+            flowyoutaffichenotif.Size = new Size(764, 113);
+            flowyoutaffichenotif.TabIndex = 2;
+            flowyoutaffichenotif.Paint += flowLayoutPanel1_Paint_1;
             // 
             // UserControlNotification
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(flowyoutaffichenotif);
             Controls.Add(asRead);
             Name = "UserControlNotification";
             Size = new Size(800, 583);
@@ -68,6 +68,6 @@
 
         #endregion
         private Button asRead;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel flowyoutaffichenotif;
     }
 }

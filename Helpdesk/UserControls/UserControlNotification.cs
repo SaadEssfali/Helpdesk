@@ -27,7 +27,7 @@ namespace Helpdesk.UserControls
         }
         public void notiflow()
         {
-            flowLayoutPanel1.Controls.Clear();
+            flowyoutaffichenotif.Controls.Clear();
             SqlCommand cmd = new SqlCommand("select n.TicketID,MessageNotif,n.Datenotif,IsRead   from NotificationLog n Inner join Ticket t on n.TicketID=t.TicketID where  EmployeID=@EmployeID order BY Datenotif DESC", cnx);
             cmd.Parameters.AddWithValue("@EmployeID", Employe.id);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -54,7 +54,7 @@ namespace Helpdesk.UserControls
                 }
 
 
-                flowLayoutPanel1.Controls.Add(flownotif);
+                flowyoutaffichenotif.Controls.Add(flownotif);
 
 
 
