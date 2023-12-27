@@ -16,10 +16,5 @@ namespace Helpdesk.UserControls
         {
             InitializeComponent();
         }
-
-        private void flowyoutmessagenotif_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
