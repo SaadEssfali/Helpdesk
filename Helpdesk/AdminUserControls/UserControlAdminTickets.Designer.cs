@@ -46,7 +46,7 @@
             btnsupprimer = new Button();
             btnajouter = new Button();
             datagridviewticket = new DataGridView();
-            txtcategorie = new TextBox();
+            txtcategorie = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)datagridviewticket).BeginInit();
             SuspendLayout();
             // 
@@ -98,7 +98,7 @@
             txtstatut.DropDownStyle = ComboBoxStyle.DropDownList;
             txtstatut.FormattingEnabled = true;
             txtstatut.Items.AddRange(new object[] { "ouvert", "en cours", "fermé" });
-            txtstatut.Location = new Point(809, 43);
+            txtstatut.Location = new Point(791, 43);
             txtstatut.Name = "txtstatut";
             txtstatut.Size = new Size(151, 28);
             txtstatut.TabIndex = 51;
@@ -130,7 +130,7 @@
             txtpriorite.DropDownStyle = ComboBoxStyle.DropDownList;
             txtpriorite.FormattingEnabled = true;
             txtpriorite.Items.AddRange(new object[] { "Haute Priorité", "Moyenne Priorité", "Basse Priorité" });
-            txtpriorite.Location = new Point(809, 99);
+            txtpriorite.Location = new Point(791, 99);
             txtpriorite.Name = "txtpriorite";
             txtpriorite.Size = new Size(151, 28);
             txtpriorite.TabIndex = 56;
@@ -248,22 +248,30 @@
             // 
             // datagridviewticket
             // 
+            datagridviewticket.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            datagridviewticket.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            datagridviewticket.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             datagridviewticket.BackgroundColor = Color.FromArgb(41, 75, 93);
             datagridviewticket.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             datagridviewticket.Location = new Point(3, 310);
             datagridviewticket.Name = "datagridviewticket";
+            datagridviewticket.ReadOnly = true;
+            datagridviewticket.RowHeadersVisible = false;
             datagridviewticket.RowHeadersWidth = 51;
             datagridviewticket.RowTemplate.Height = 29;
+            datagridviewticket.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             datagridviewticket.Size = new Size(989, 273);
             datagridviewticket.TabIndex = 65;
             datagridviewticket.CellContentClick += datagridviewticket_CellContentClick;
             // 
             // txtcategorie
             // 
-            txtcategorie.Location = new Point(166, 44);
+            txtcategorie.FormattingEnabled = true;
+            txtcategorie.Items.AddRange(new object[] { "1", "2" });
+            txtcategorie.Location = new Point(166, 40);
             txtcategorie.Name = "txtcategorie";
-            txtcategorie.Size = new Size(96, 27);
-            txtcategorie.TabIndex = 66;
+            txtcategorie.Size = new Size(173, 28);
+            txtcategorie.TabIndex = 67;
             // 
             // UserControlAdminTickets
             // 
@@ -311,14 +319,14 @@
         private Button btnvider;
         private Button btnmettreajour;
         private DataGridView datagridviewticket;
-        private static TextBox txtemploye;
-        private static ComboBox txtstatut;
-        private static TextBox txtdescription;
-        private static ComboBox txtpriorite;
-        private static DateTimePicker txtouvert;
-        private static DateTimePicker txtcloture;
-        private static Button btnajouter;
-        private static Button btnsupprimer;
-        private static TextBox txtcategorie;
+        private TextBox txtemploye;
+        private ComboBox txtstatut;
+        private TextBox txtdescription;
+        private ComboBox txtpriorite;
+        private DateTimePicker txtouvert;
+        private DateTimePicker txtcloture;
+        private Button btnajouter;
+        private Button btnsupprimer;
+        private ComboBox txtcategorie;
     }
 }

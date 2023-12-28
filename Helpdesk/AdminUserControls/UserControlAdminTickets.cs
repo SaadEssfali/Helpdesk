@@ -17,7 +17,7 @@ namespace Helpdesk.AdminUserControls
         public UserControlAdminTickets()
         {
             InitializeComponent();
-           actualiserticket();
+            actualiserticket();
 
 
         }
@@ -64,7 +64,7 @@ namespace Helpdesk.AdminUserControls
         {
 
         }
-        public  void insertticket()
+        public void insertticket()
         {
             cnx = Program.GetConnection();
             cnx.Open();
@@ -86,30 +86,30 @@ namespace Helpdesk.AdminUserControls
             adapter.Fill(dticket);
             return dticket;
         }
-        public  DataGridView actualiserticket()
+        public DataGridView actualiserticket()
         {
             datagridviewticket.DataSource = dataticket();
             return datagridviewticket;
         }
-        public  void deleteticket()
+        public void deleteticket()
         {
             cnx = Program.GetConnection();
             if (datagridviewticket.SelectedRows.Count >= 0)
             {
                 cnx.Open();
-                int id = (int)datagridviewticket.SelectedRows[0].Cells["ID"].Value;
-                SqlCommand cmd = new SqlCommand(" delete from Ticket where ID =@id", cnx);
+                int id = (int)datagridviewticket.SelectedRows[0].Cells["TicketID"].Value;
+                SqlCommand cmd = new SqlCommand(" delete from Ticket where TicketID =@id", cnx);
                 cmd.Parameters.Add(new SqlParameter("@id", id));
                 cmd.ExecuteNonQuery();
             }
         }
-        public  void updateticket(DataGridView datagridviewticket)
+        public void updateticket()
         {
             if (datagridviewticket.SelectedRows.Count > 0)
             {
                 cnx.Open();
-                int id = (int)datagridviewticket.SelectedRows[0].Cells["ID"].Value;
-                SqlCommand cmd = new SqlCommand("UPDATE Ticket SET CategorieID= @CategorieID,Description= @Description, Employe= @EmployeID,DateOuverture= @DateOuverture,DateCloture= @DateCloture, Statut=@Statut,Priorité= @Priorité where ID = @id", cnx);
+                int id = (int)datagridviewticket.SelectedRows[0].Cells["TicketID"].Value;
+                SqlCommand cmd = new SqlCommand("UPDATE Ticket SET CategorieID= @CategorieID,Description= @Description, EmployeID= @EmployeID,DateOuverture= @DateOuverture,DateCloture= @DateCloture, Statut=@Statut,Priorité= @Priorité where TicketID = @id", cnx);
                 cmd.Parameters.Add(new SqlParameter("@id", id));
                 cmd.Parameters.AddWithValue("@CategorieID", txtcategorie.Text);
                 cmd.Parameters.AddWithValue("@Description", txtdescription.Text);
@@ -122,14 +122,14 @@ namespace Helpdesk.AdminUserControls
                 cnx.Close();
             }
         }
-        public  void viderboxes()
+        public void viderboxes()
         {
-            txtcategorie.Clear();
+            txtcategorie.SelectedIndex = -1;
             txtdescription.Clear();
             txtemploye.Clear();
-            txtpriorite.SelectedIndex=-1;
+            txtpriorite.SelectedIndex = -1;
             txtstatut.SelectedIndex = -1;
-            
+
 
 
 
@@ -139,6 +139,7 @@ namespace Helpdesk.AdminUserControls
         private void btnajouter_Click(object sender, EventArgs e)
         {
             insertticket();
+            actualiserticket();
         }
 
         private void btnvider_Click(object sender, EventArgs e)
@@ -148,16 +149,36 @@ namespace Helpdesk.AdminUserControls
 
         private void btnmettreajour_Click(object sender, EventArgs e)
         {
-            updateticket(datagridviewticket);
+            updateticket();
+            actualiserticket();
         }
 
         private void btnsupprimer_Click(object sender, EventArgs e)
         {
+            deleteticket();
+            actualiserticket() ;
         }
 
         private void datagridviewticket_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+             DataGridViewRow row = this.datagridviewticket.Rows[e.RowIndex];
                 
+                txtcategorie.Text = row.Cells["CategorieID"].Value.ToString();
+                txtemploye.Text = row.Cells["EmployeID"].Value.ToString();
+                txtstatut.Text = row.Cells["Statut"].Value.ToString();
+                txtstatut.Text = row.Cells["Statut"].Value.ToString();
+                txtstatut.Text = row.Cells["Statut"].Value.ToString();
+                txtdescription.Text = row.Cells["Description"].Value.ToString();
+                txtpriorite.Text = row.Cells["Priorité"].Value.ToString();
+                txtouvert.Text = row.Cells["DateOuverture"].Value.ToString();
+                txtcloture.Text = row.Cells["DateCloture"].Value.ToString() ;
+
+
+
+
+            }
 
 
 
@@ -167,7 +188,12 @@ namespace Helpdesk.AdminUserControls
 
 
 
-            
+
+        }
+
+        private void txtcategorie_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
