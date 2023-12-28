@@ -148,6 +148,7 @@
             Controls.Add(TickResPicture);
             Name = "UserControlAdminDash";
             Size = new Size(998, 601);
+            Load += UserControlAdminDash_Load;
             ((System.ComponentModel.ISupportInitialize)TickResPicture).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
