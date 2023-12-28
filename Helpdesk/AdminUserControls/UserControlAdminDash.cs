@@ -13,10 +13,13 @@ namespace Helpdesk.AdminUserControls
 {
     public partial class UserControlAdminDash : UserControl
     {
-        public static SqlConnection cnx = Program.GetConnection();
+        public static SqlConnection cnx ;
+
         public UserControlAdminDash()
         {
+
             InitializeComponent();
+           
             ticketresolut.Text = TicketResolueadmin().ToString();
             nombretech.Text = nombretech1().ToString();
             nombreticket.Text = nombreticket1().ToString(); 
@@ -32,31 +35,41 @@ namespace Helpdesk.AdminUserControls
         }
         public static int TicketResolueadmin()
         {
+            cnx = Program.GetConnection();
             cnx.Open();
             SqlCommand cmd = new SqlCommand("select count(TicketID) from Ticket where Statut ='résolue';", cnx);
             int nombreTicketsResolus = (int)cmd.ExecuteScalar();
+               
             return nombreTicketsResolus;
+           
 
         }
         public static int nombretech1()
         {
-
+            cnx = Program.GetConnection();
+            cnx.Open();
             SqlCommand cmd = new SqlCommand("select count(Id) from Technicien", cnx);
             int nombreteech = (int)cmd.ExecuteScalar();
             return nombreteech;
+            
         }
         public static int nombreticket1()
         {
+            cnx = Program.GetConnection();
+            cnx.Open();
             SqlCommand cmd = new SqlCommand("select count(TicketID) from Ticket", cnx);
             int nombreticket1 = (int)cmd.ExecuteScalar();
             return nombreticket1;
-
+            
         }
-        public static int nombreemploye1() 
+        public static int nombreemploye1()
         {
+            cnx = Program.GetConnection();
+            cnx.Open();
             SqlCommand cmd = new SqlCommand("select count(ID) from Employe", cnx);
             int nombreemploye1 = (int)cmd.ExecuteScalar();
             return nombreemploye1;
+           
         }
 
         private void nombretech_Click(object sender, EventArgs e)

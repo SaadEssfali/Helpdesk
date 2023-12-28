@@ -40,16 +40,20 @@
             panel5 = new Panel();
             btnticket = new Button();
             MAINpanel = new Panel();
+            panel8 = new Panel();
+            btnlogout = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
+            panel8.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 74, 173);
+            panel1.Controls.Add(panel8);
             panel1.Controls.Add(panel6);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
@@ -194,6 +198,36 @@
             MAINpanel.TabIndex = 6;
             MAINpanel.Paint += MAINpanel_Paint;
             // 
+            // panel8
+            // 
+            panel8.BackColor = Color.FromArgb(0, 74, 173);
+            panel8.Controls.Add(btnlogout);
+            panel8.Location = new Point(1, 554);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(234, 45);
+            panel8.TabIndex = 9;
+            // 
+            // btnlogout
+            // 
+            btnlogout.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnlogout.BackColor = Color.FromArgb(0, 74, 173);
+            btnlogout.FlatAppearance.BorderSize = 0;
+            btnlogout.FlatAppearance.MouseDownBackColor = Color.Black;
+            btnlogout.FlatAppearance.MouseOverBackColor = Color.Black;
+            btnlogout.FlatStyle = FlatStyle.Flat;
+            btnlogout.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnlogout.ForeColor = SystemColors.ControlLightLight;
+            btnlogout.Image = (Image)resources.GetObject("btnlogout.Image");
+            btnlogout.Location = new Point(-77, -17);
+            btnlogout.Name = "btnlogout";
+            btnlogout.Padding = new Padding(0, 15, 70, 11);
+            btnlogout.Size = new Size(311, 75);
+            btnlogout.TabIndex = 1;
+            btnlogout.Text = "Log out";
+            btnlogout.TextAlign = ContentAlignment.MiddleRight;
+            btnlogout.UseVisualStyleBackColor = false;
+            btnlogout.Click += btnlogout_Click_1;
+            // 
             // AdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -211,6 +245,7 @@
             panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
+            panel8.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -227,5 +262,7 @@
         private Button btnticket;
         private Panel panel6;
         private Panel MAINpanel;
+        private Panel panel8;
+        private Button btnlogout;
     }
 }

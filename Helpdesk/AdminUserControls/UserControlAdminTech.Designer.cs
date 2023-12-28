@@ -278,11 +278,14 @@
             dataGridViewtech.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewtech.Location = new Point(3, 310);
             dataGridViewtech.Name = "dataGridViewtech";
+            dataGridViewtech.ReadOnly = true;
             dataGridViewtech.RowHeadersVisible = false;
             dataGridViewtech.RowHeadersWidth = 51;
             dataGridViewtech.RowTemplate.Height = 29;
+            dataGridViewtech.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewtech.Size = new Size(933, 273);
             dataGridViewtech.TabIndex = 41;
+            dataGridViewtech.CellContentClick += dataGridViewtech_CellContentClick;
             // 
             // txtPass
             // 
@@ -353,14 +356,14 @@
         private Label Specialite;
         private Label Bureau;
         private DataGridView dataGridViewtech;
-        private static TextBox txtName;
-        private static TextBox txtUsername;
-        private static TextBox txtPrenom;
-        private static TextBox txtTelephone;
-        private static TextBox txtDepartement;
-        private static TextBox txtService;
-        private static TextBox txtBureau;
-        private static TextBox txtPass;
-        private static TextBox txtspecialite;
+        private TextBox txtName;
+        private TextBox txtUsername;
+        private TextBox txtPrenom;
+        private TextBox txtTelephone;
+        private TextBox txtDepartement;
+        private TextBox txtService;
+        private TextBox txtBureau;
+        private TextBox txtPass;
+        private TextBox txtspecialite;
     }
 }

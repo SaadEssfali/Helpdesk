@@ -15,8 +15,9 @@ namespace Helpdesk
     {
         UserControlAdminEmploye Ae = new UserControlAdminEmploye();
         UserControlAdminTech At = new UserControlAdminTech();
-        UserControlAdminTickets Ct = new UserControlAdminTickets(); 
+        UserControlAdminTickets Ct = new UserControlAdminTickets();
         UserControlAdminDash dash = new UserControlAdminDash();
+      
         public AdminForm()
         {
             InitializeComponent();
@@ -76,6 +77,20 @@ namespace Helpdesk
         private void MAINpanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnlogout_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+
+            Form1 form = new Form1();
+
+            form.Show();
         }
     }
 }

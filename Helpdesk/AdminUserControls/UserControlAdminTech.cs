@@ -89,7 +89,7 @@ namespace Helpdesk.AdminUserControls
 
 
         }
-        public static void inserttechinfo()
+        public void inserttechinfo()
         {
             cnx = Program.GetConnection();
             cnx.Open();
@@ -105,7 +105,7 @@ namespace Helpdesk.AdminUserControls
             cmd.Parameters.Add(new SqlParameter("@Specialite", txtspecialite.Text));
             cmd.ExecuteNonQuery();
         }
-        public static DataTable datatech()
+        public DataTable datatech()
         {
             cnx = Program.GetConnection();
             DataTable dl = new DataTable();
@@ -113,7 +113,7 @@ namespace Helpdesk.AdminUserControls
             adapter.Fill(dl);
             return dl;
         }
-        public static DataGridView actualisertech(DataGridView datagridviewtech)
+        public DataGridView actualisertech(DataGridView datagridviewtech)
         {
             datagridviewtech.DataSource = datatech();
             return datagridviewtech;
@@ -133,7 +133,7 @@ namespace Helpdesk.AdminUserControls
 
 
         }
-        public static void updatetech(DataGridView dataGridViewtech)
+        public void updatetech()
         {
             if (dataGridViewtech.SelectedRows.Count > 0)
             {
@@ -161,7 +161,7 @@ namespace Helpdesk.AdminUserControls
             deletetech(dataGridViewtech);
             actualisertech(dataGridViewtech);
         }
-        public static void viderboxes()
+        public void viderboxes()
         {
             txtName.Clear();
             txtPrenom.Clear();
@@ -187,13 +187,31 @@ namespace Helpdesk.AdminUserControls
 
         private void btnmettreajour_Click_1(object sender, EventArgs e)
         {
-            updatetech(dataGridViewtech);
+            updatetech();
             actualisertech(dataGridViewtech);
         }
 
         private void btnvider_Click(object sender, EventArgs e)
         {
             viderboxes();
+        }
+
+        private void dataGridViewtech_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >= 0) {
+                DataGridViewRow row = this.dataGridViewtech.Rows[e.RowIndex];
+                txtName.Text = row.Cells["Nom"].Value.ToString();
+                txtPrenom.Text = row.Cells["Prenom"].Value.ToString();
+                txtUsername.Text = row.Cells["UserName"].Value.ToString();
+                txtPass.Text = row.Cells["MotDepasse"].Value.ToString();
+                txtTelephone.Text = row.Cells["NumTel"].Value.ToString();
+                txtDepartement.Text = row.Cells["Departement"].Value.ToString(); 
+                txtspecialite.Text = row.Cells["specialite"].Value.ToString();
+                txtService.Text = row.Cells["N_service"].Value.ToString();
+                txtBureau.Text = row.Cells["NumBureau"].Value.ToString();
+
+
+            }
         }
     }
 }
