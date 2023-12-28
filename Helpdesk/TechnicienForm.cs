@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,7 @@ namespace Helpdesk
         MaficheUsControl mafiche = new MaficheUsControl();
         TechTickHis HisTick = new TechTickHis();
         Vtickets VT = new Vtickets();
+     
 
         public TechnicienForm()
         {
@@ -28,6 +30,8 @@ namespace Helpdesk
             mainpanel_tech.Controls.Clear();
             mainpanel_tech.Controls.Add(techdash);
             techdash.Dock = DockStyle.Fill;
+
+
 
 
 
@@ -83,11 +87,19 @@ namespace Helpdesk
             mainpanel_tech.Controls.Clear();
             mainpanel_tech.Controls.Add(techdash);
             techdash.Dock = DockStyle.Fill;
+           
             //changelent de color lors du click sur button 
             dashboardButton.BackColor = Color.Black;
             ficheBtn.BackColor = ColorTranslator.FromHtml("#004AAD");
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+            techdash.refreshinfo();
+
+
+
+         
+
+
 
 
         }

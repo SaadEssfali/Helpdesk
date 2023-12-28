@@ -17,11 +17,11 @@ namespace Helpdesk
         public static DateTime? DateOuverture;
         public static DateTime? DateCloture;
         public static string Statut;
-        public static SqlConnection cnx;
+        public static SqlConnection cnx = Program.GetConnection();
 
         public static  int TicketInformation()
         {
-            cnx = Program.GetConnection();
+            
             DataTable dataTable = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT TicketID FROM Ticket WHERE Statut = 'ouvert'", cnx);
             adapter.Fill(dataTable);
@@ -32,10 +32,11 @@ namespace Helpdesk
         }
 
         public static int TicketResolue2() {
-            cnx.Open();
+             cnx.Open();
             SqlCommand cmd = new SqlCommand("select count (Ticket.TicketID) from Ticket inner join Intervention on Ticket.TicketID =Intervention.TicketID where Statut = 'resolu' and TechnicienID=@id", cnx);
             cmd.Parameters.AddWithValue("@id", Classtech.ID);
             int nombreTicketsResolus = (int)cmd.ExecuteScalar();
+            cnx.Close();
             return nombreTicketsResolus;
         
 

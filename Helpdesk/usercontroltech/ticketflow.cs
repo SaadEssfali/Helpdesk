@@ -16,7 +16,7 @@ namespace Helpdesk.usercontroltech
 
 
     {
-        public  event EventHandler acceptert;
+       
         
 
 

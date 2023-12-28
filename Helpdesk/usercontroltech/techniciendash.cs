@@ -27,13 +27,12 @@ namespace Helpdesk.usercontroltech
             idlabel.ForeColor = System.Drawing.Color.White;
 
 
-            tickOuvLabel.Text = Classtechtick.TicketID.ToString();
+            refreshinfo();
             tickOuvLabel.ForeColor = System.Drawing.Color.White;
             tickOuvLabel.Text = Classtechtick.TicketInformation().ToString();
 
 
 
-            TickResLabel.Text = Classtechtick.TicketResolue2().ToString();
             TickResLabel.ForeColor = System.Drawing.Color.White;
 
 
@@ -44,11 +43,12 @@ namespace Helpdesk.usercontroltech
 
 
 
-        private void techniciendash_Load(object sender, EventArgs e)
+
+
+        public void refreshinfo ()
         {
-            InitializeComponent();
-
-
+            tickOuvLabel.Text = Classtechtick.TicketID.ToString();
+            TickResLabel.Text = Classtechtick.TicketResolue2().ToString();
 
 
 
@@ -73,6 +73,10 @@ namespace Helpdesk.usercontroltech
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void techniciendash_Load(object sender, EventArgs e)
         {
 
         }
