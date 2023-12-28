@@ -25,20 +25,13 @@ namespace Helpdesk.usercontroltech
             tickOuvLabel.Parent = TIckOuvPicture;
             idlabel.Text = Classtech.ID.ToString();
             idlabel.ForeColor = System.Drawing.Color.White;
-
-
             refreshinfo();
             tickOuvLabel.ForeColor = System.Drawing.Color.White;
-            tickOuvLabel.Text = Classtechtick.TicketInformation().ToString();
-
-
-
             TickResLabel.ForeColor = System.Drawing.Color.White;
 
 
 
-
-
+                  
         }
 
 
@@ -47,9 +40,10 @@ namespace Helpdesk.usercontroltech
 
         public void refreshinfo ()
         {
-            tickOuvLabel.Text = Classtechtick.TicketID.ToString();
-            TickResLabel.Text = Classtechtick.TicketResolue2().ToString();
+            tickOuvLabel.Text = Classtechtick.TicketInformation().ToString();
 
+            TickResLabel.Text = Classtechtick.TicketResolue2().ToString();
+          
 
 
 

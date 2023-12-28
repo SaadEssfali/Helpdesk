@@ -26,10 +26,12 @@ namespace Helpdesk
         public TechnicienForm()
         {
             InitializeComponent();
-
+            techdash.refreshinfo();
             mainpanel_tech.Controls.Clear();
             mainpanel_tech.Controls.Add(techdash);
             techdash.Dock = DockStyle.Fill;
+          
+
 
 
 

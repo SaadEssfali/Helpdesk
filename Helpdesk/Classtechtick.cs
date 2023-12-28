@@ -42,7 +42,16 @@ namespace Helpdesk
 
 
         }
+        public static int tickref ()
+        {
+            cnx.Open();
+            SqlCommand cmd = new SqlCommand("SELECT COUNT(TicketID) FROM Ticket WHERE Statut = 'ouvert';", cnx);
+            int nombreTicketsRef = (int)cmd.ExecuteScalar();
+            cnx.Close();
+            return nombreTicketsRef;
 
+
+        }
 
     }
 
