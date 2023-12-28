@@ -21,6 +21,7 @@ namespace Helpdesk
         public AdminForm()
         {
             InitializeComponent();
+            MAINpanel.Controls.Add(dash);
         }
 
         private void AdminForm_Load(object sender, EventArgs e)

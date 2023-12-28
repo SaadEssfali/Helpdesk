@@ -52,7 +52,7 @@ namespace Helpdesk.AdminUserControls
         {
 
         }
-        public static void insertempinfo()
+        public  void insertempinfo()
         {
             cnx = Program.GetConnection();
             cnx.Open();
@@ -100,7 +100,7 @@ namespace Helpdesk.AdminUserControls
             return dataGridViewemp;
 
         }
-        public static void updatetable(DataGridView dataGridViewemp)
+        public  void updatetable()
         {
             if (dataGridViewemp.SelectedRows.Count > 0)
             {
@@ -123,7 +123,7 @@ namespace Helpdesk.AdminUserControls
             }
         }
 
-        public static void clearboxes()
+        public  void clearboxes()
         {
             txtName.Clear();
             txtPrenom.Clear();
@@ -159,7 +159,7 @@ namespace Helpdesk.AdminUserControls
 
         private void btnmettreajour_Click(object sender, EventArgs e)
         {
-            updatetable(dataGridViewemp);
+            updatetable();
             refresh(dataGridViewemp);
         }
     }

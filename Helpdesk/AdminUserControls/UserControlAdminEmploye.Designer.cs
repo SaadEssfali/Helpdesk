@@ -165,6 +165,7 @@
             // 
             txtPass.Location = new Point(662, 42);
             txtPass.Name = "txtPass";
+            txtPass.PasswordChar = '*';
             txtPass.Size = new Size(123, 27);
             txtPass.TabIndex = 47;
             // 
@@ -348,14 +349,14 @@
         private Button btnajouter;
         private Label labeletage;
         private DataGridView dataGridViewemp;
-        private static TextBox txtEtage;
-        private static TextBox txtBureau;
-        private static TextBox txtService;
-        private static TextBox txtDepartement;
-        private static TextBox txtTelephone;
-        private static TextBox txtPrenom;
-        private static TextBox txtPass;
-        private static TextBox txtUsername;
-        private static TextBox txtName;
+        private TextBox txtEtage;
+        private TextBox txtBureau;
+        private TextBox txtService;
+        private TextBox txtDepartement;
+        private TextBox txtTelephone;
+        private TextBox txtPrenom;
+        private TextBox txtPass;
+        private TextBox txtUsername;
+        private TextBox txtName;
     }
 }
