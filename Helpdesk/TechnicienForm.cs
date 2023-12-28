@@ -21,7 +21,8 @@ namespace Helpdesk
         MaficheUsControl mafiche = new MaficheUsControl();
         TechTickHis HisTick = new TechTickHis();
         Vtickets VT = new Vtickets();
-     
+        ticteccontrole tictec = new ticteccontrole();
+
 
         public TechnicienForm()
         {
@@ -30,7 +31,7 @@ namespace Helpdesk
             mainpanel_tech.Controls.Clear();
             mainpanel_tech.Controls.Add(techdash);
             techdash.Dock = DockStyle.Fill;
-          
+
 
 
 
@@ -89,17 +90,18 @@ namespace Helpdesk
             mainpanel_tech.Controls.Clear();
             mainpanel_tech.Controls.Add(techdash);
             techdash.Dock = DockStyle.Fill;
-           
+
             //changelent de color lors du click sur button 
             dashboardButton.BackColor = Color.Black;
             ficheBtn.BackColor = ColorTranslator.FromHtml("#004AAD");
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+            buttoncontrole.BackColor = ColorTranslator.FromHtml("#004AAD");
             techdash.refreshinfo();
 
 
 
-         
+
 
 
 
@@ -129,6 +131,8 @@ namespace Helpdesk
             dashboardButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+            buttoncontrole.BackColor = ColorTranslator.FromHtml("#004AAD");
+
         }
 
         private void ticketsButton_Click_1(object sender, EventArgs e)
@@ -137,6 +141,8 @@ namespace Helpdesk
             dashboardButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             ficheBtn.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+            buttoncontrole.BackColor = ColorTranslator.FromHtml("#004AAD");
+
 
             mainpanel_tech.Controls.Clear();
             mainpanel_tech.Controls.Add(VT);
@@ -152,10 +158,26 @@ namespace Helpdesk
             dashboardButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             ficheBtn.BackColor = ColorTranslator.FromHtml("#004AAD");
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+            buttoncontrole.BackColor = ColorTranslator.FromHtml("#004AAD");
+
 
             mainpanel_tech.Controls.Clear();
             mainpanel_tech.Controls.Add(HisTick);
             HisTick.Dock = DockStyle.Fill;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            mainpanel_tech.Controls.Clear();
+            mainpanel_tech.Controls.Add(tictec);
+            tictec.Dock = DockStyle.Fill;
+
+            buttoncontrole.BackColor = Color.Black;
+            dashboardButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+            ficheBtn.BackColor = ColorTranslator.FromHtml("#004AAD");
+            ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+            HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
         }
     }
 }

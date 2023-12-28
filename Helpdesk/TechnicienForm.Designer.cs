@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TechnicienForm));
             panel1 = new Panel();
+            buttoncontrole = new Button();
             panel8 = new Panel();
             btnlogout = new Button();
             panel6 = new Panel();
@@ -52,6 +53,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 74, 173);
+            panel1.Controls.Add(buttoncontrole);
             panel1.Controls.Add(panel8);
             panel1.Controls.Add(panel6);
             panel1.Controls.Add(panel2);
@@ -61,6 +63,27 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(232, 604);
             panel1.TabIndex = 0;
+            // 
+            // buttoncontrole
+            // 
+            buttoncontrole.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            buttoncontrole.BackColor = Color.FromArgb(0, 74, 173);
+            buttoncontrole.FlatAppearance.BorderSize = 0;
+            buttoncontrole.FlatAppearance.MouseDownBackColor = Color.Black;
+            buttoncontrole.FlatAppearance.MouseOverBackColor = Color.Black;
+            buttoncontrole.FlatStyle = FlatStyle.Flat;
+            buttoncontrole.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncontrole.ForeColor = SystemColors.ControlLightLight;
+            buttoncontrole.Image = (Image)resources.GetObject("buttoncontrole.Image");
+            buttoncontrole.Location = new Point(-91, 274);
+            buttoncontrole.Name = "buttoncontrole";
+            buttoncontrole.Padding = new Padding(0, 15, 70, 11);
+            buttoncontrole.Size = new Size(350, 50);
+            buttoncontrole.TabIndex = 13;
+            buttoncontrole.Text = "Controle tickets";
+            buttoncontrole.TextAlign = ContentAlignment.MiddleRight;
+            buttoncontrole.UseVisualStyleBackColor = false;
+            buttoncontrole.Click += button1_Click;
             // 
             // panel8
             // 
@@ -253,5 +276,6 @@
         private Panel panel8;
         private Button btnlogout;
         private Panel mainpanel_tech;
+        private Button buttoncontrole;
     }
 }
