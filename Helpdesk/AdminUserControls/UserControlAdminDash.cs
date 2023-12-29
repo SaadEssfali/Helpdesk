@@ -24,6 +24,17 @@ namespace Helpdesk.AdminUserControls
             nombretech.Text = nombretech1().ToString();
             nombreticket.Text = nombreticket1().ToString();
             nombreemploye.Text = nombreemploye1().ToString();
+            ticketresolut.Parent = TickResPicture;
+            ticketresolut.BackColor = Color.Transparent;
+            nombreticket.Parent = pictureBox2;
+            nombreticket.BackColor = Color.Transparent;
+            nombreemploye.Parent = pictureBox3;
+            nombreemploye.BackColor = Color.Transparent;
+            nombretech.Parent = pictureBox1;
+            nombretech.BackColor = Color.Transparent;
+            nombretech.ForeColor = Color.White;
+            nombreticket.ForeColor = Color.White;
+
 
 
 
@@ -83,6 +94,17 @@ namespace Helpdesk.AdminUserControls
         }
 
         private void UserControlAdminDash_Load(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nombreemploye_Click(object sender, EventArgs e)
         {
 
         }
