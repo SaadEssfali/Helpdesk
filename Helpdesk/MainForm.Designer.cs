@@ -33,6 +33,7 @@
             panel8 = new Panel();
             btnlogout = new Button();
             panel7 = new Panel();
+            attentionred = new PictureBox();
             NotificationButton = new Button();
             panel6 = new Panel();
             HistoryButton = new Button();
@@ -48,6 +49,7 @@
             panel1.SuspendLayout();
             panel8.SuspendLayout();
             panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)attentionred).BeginInit();
             panel6.SuspendLayout();
             panel2.SuspendLayout();
             panel5.SuspendLayout();
@@ -105,11 +107,23 @@
             // panel7
             // 
             panel7.BackColor = Color.FromArgb(0, 74, 173);
+            panel7.Controls.Add(attentionred);
             panel7.Controls.Add(NotificationButton);
             panel7.Location = new Point(0, 343);
             panel7.Name = "panel7";
             panel7.Size = new Size(234, 45);
             panel7.TabIndex = 7;
+            // 
+            // attentionred
+            // 
+            attentionred.Image = (Image)resources.GetObject("attentionred.Image");
+            attentionred.Location = new Point(162, 7);
+            attentionred.Name = "attentionred";
+            attentionred.Size = new Size(47, 31);
+            attentionred.SizeMode = PictureBoxSizeMode.Zoom;
+            attentionred.TabIndex = 0;
+            attentionred.TabStop = false;
+            attentionred.Visible = false;
             // 
             // NotificationButton
             // 
@@ -305,6 +319,7 @@
             panel1.ResumeLayout(false);
             panel8.ResumeLayout(false);
             panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)attentionred).EndInit();
             panel6.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel5.ResumeLayout(false);
@@ -331,5 +346,6 @@
         private Panel mainPanel;
         private Panel panel8;
         private Button btnlogout;
+        private PictureBox attentionred;
     }
 }

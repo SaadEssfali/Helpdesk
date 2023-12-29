@@ -13,6 +13,8 @@ namespace Helpdesk.UserControls
 {
     public partial class UserControlDashboard : UserControl
     {
+
+        public event EventHandler NotificationUpdated;
         public UserControlDashboard()
         {
             InitializeComponent();
@@ -59,9 +61,16 @@ namespace Helpdesk.UserControls
                 nbre = 0;
             }
             else { nbre= (int)cmd.ExecuteScalar(); }
+
+            if (nbre > 0) {
+                NotificationUpdated?.Invoke(this, EventArgs.Empty);
+            }
+            
             
             nbrenotif.Text = nbre.ToString();
         }
+
+       
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -91,6 +100,9 @@ namespace Helpdesk.UserControls
             dayOfMonthLabel.Text = DateTime.Now.ToString("dd");
             dayOfWeekLabel.Text = DateTime.Now.ToString("dddd");
             YearLabel.Text = DateTime.Now.ToString("yyyy");
+            notification();
+        
+
         }
 
         private void dayOfMonthLabel_Click(object sender, EventArgs e)

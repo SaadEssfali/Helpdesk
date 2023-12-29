@@ -13,6 +13,7 @@ namespace Helpdesk.UserControls
 {
     public partial class UserControlNotification : UserControl
     {
+        public event EventHandler redflaghide;
         SqlConnection cnx = Program.GetConnection();
 
         public UserControlNotification()
@@ -76,6 +77,7 @@ namespace Helpdesk.UserControls
         {
             asread();
             notiflow();
+            redflaghide?.Invoke(this, EventArgs.Empty);
 
 
 

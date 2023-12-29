@@ -31,10 +31,12 @@ namespace Helpdesk
             mainPanel.Controls.Add(dashboard);
             dashboard.Dock = DockStyle.Fill;
             cre.TicketCreated += updatedatarefresh;
+            dashboard.NotificationUpdated += affichered;
+            ntf.redflaghide +=hideit;
 
 
         }
-
+       
         private void updatedatarefresh(object sender, EventArgs e)
         {
             his.Displaydata();
@@ -87,7 +89,7 @@ namespace Helpdesk
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(techniciens);
             dashboard.Dock = DockStyle.Fill;
-            
+
         }
 
         private void employeButton_Click(object sender, EventArgs e)
@@ -144,8 +146,16 @@ namespace Helpdesk
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(ntf);
             ntf.notiflow();
+            attentionred.BackColor = Color.Black;
         }
-
+        private void affichered(object sender, EventArgs e)
+        {
+            attentionred.Visible = true;
+        }
+        private void hideit(object sender, EventArgs e)
+        {
+            attentionred.Visible = false;
+        }
         private void MainForm_Load(object sender, EventArgs e)
         {
 
