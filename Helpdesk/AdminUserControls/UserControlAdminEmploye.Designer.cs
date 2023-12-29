@@ -263,7 +263,7 @@
             // dataGridViewemp
             // 
             dataGridViewemp.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridViewemp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewemp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewemp.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewemp.BackgroundColor = Color.FromArgb(44, 63, 102);
             dataGridViewemp.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -274,7 +274,7 @@
             dataGridViewemp.RowHeadersWidth = 51;
             dataGridViewemp.RowTemplate.Height = 29;
             dataGridViewemp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewemp.Size = new Size(989, 273);
+            dataGridViewemp.Size = new Size(1021, 344);
             dataGridViewemp.TabIndex = 65;
             dataGridViewemp.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -326,7 +326,7 @@
             Controls.Add(Nom);
             Controls.Add(txtName);
             Name = "UserControlAdminEmploye";
-            Size = new Size(998, 601);
+            Size = new Size(1030, 672);
             Load += UserControlAdminEmploye_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewemp).EndInit();
             ResumeLayout(false);

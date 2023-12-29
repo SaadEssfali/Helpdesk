@@ -249,7 +249,7 @@
             // datagridviewticket
             // 
             datagridviewticket.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            datagridviewticket.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            datagridviewticket.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             datagridviewticket.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             datagridviewticket.BackgroundColor = Color.FromArgb(41, 75, 93);
             datagridviewticket.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -260,7 +260,7 @@
             datagridviewticket.RowHeadersWidth = 51;
             datagridviewticket.RowTemplate.Height = 29;
             datagridviewticket.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            datagridviewticket.Size = new Size(989, 273);
+            datagridviewticket.Size = new Size(1021, 344);
             datagridviewticket.TabIndex = 65;
             datagridviewticket.CellContentClick += datagridviewticket_CellContentClick;
             // 
@@ -298,7 +298,7 @@
             Controls.Add(txtemploye);
             Controls.Add(Categorie);
             Name = "UserControlAdminTickets";
-            Size = new Size(998, 601);
+            Size = new Size(1030, 672);
             Load += UserControlAdminTickets_Load;
             ((System.ComponentModel.ISupportInitialize)datagridviewticket).EndInit();
             ResumeLayout(false);

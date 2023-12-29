@@ -276,14 +276,14 @@
             dataGridViewtech.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewtech.BackgroundColor = Color.FromArgb(11, 29, 36);
             dataGridViewtech.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewtech.Location = new Point(3, 310);
+            dataGridViewtech.Location = new Point(12, 310);
             dataGridViewtech.Name = "dataGridViewtech";
             dataGridViewtech.ReadOnly = true;
             dataGridViewtech.RowHeadersVisible = false;
             dataGridViewtech.RowHeadersWidth = 51;
             dataGridViewtech.RowTemplate.Height = 29;
             dataGridViewtech.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewtech.Size = new Size(933, 273);
+            dataGridViewtech.Size = new Size(1015, 341);
             dataGridViewtech.TabIndex = 41;
             dataGridViewtech.CellContentClick += dataGridViewtech_CellContentClick;
             // 
@@ -334,7 +334,7 @@
             Controls.Add(txtName);
             ForeColor = SystemColors.HotTrack;
             Name = "UserControlAdminTech";
-            Size = new Size(953, 601);
+            Size = new Size(1030, 672);
             Load += UserControlAdminTech_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewtech).EndInit();
             ResumeLayout(false);
