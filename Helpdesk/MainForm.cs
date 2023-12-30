@@ -32,11 +32,11 @@ namespace Helpdesk
             dashboard.Dock = DockStyle.Fill;
             cre.TicketCreated += updatedatarefresh;
             dashboard.NotificationUpdated += affichered;
-            ntf.redflaghide +=hideit;
+            ntf.redflaghide += hideit;
 
 
         }
-       
+
         private void updatedatarefresh(object sender, EventArgs e)
         {
             his.Displaydata();
@@ -134,7 +134,7 @@ namespace Helpdesk
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(his);
             dashboard.Dock = DockStyle.Fill;
-            
+
         }
 
         private void NotificationButton_Click(object sender, EventArgs e)

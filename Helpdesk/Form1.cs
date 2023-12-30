@@ -61,7 +61,7 @@ namespace Helpdesk
             }
 
             //a l aide des fonctions on verifie le type de l'utilisateur
-         
+
 
             if (IsValidEmploye(txtUser, txtPass))
             {
@@ -79,10 +79,10 @@ namespace Helpdesk
                 this.Hide();
 
             }
-            else if (txtUser.Text=="admin" && txtPass.Text=="admin")
+            else if (txtUser.Text == "admin" && txtPass.Text == "admin")
             {
                 //affichage de adminform
-                AdminForm adminForm =new AdminForm();
+                AdminForm adminForm = new AdminForm();
                 adminForm.Show();
                 this.Hide();
 
@@ -100,13 +100,13 @@ namespace Helpdesk
 
 
         //fonction qui verfie si les valeurs entré par utilisateir se trouve dans table employe si c'est vrai on stock les informations dans class Employe
-         public static bool IsValidEmploye(TextBox txtUser, TextBox txtPass)
+        public static bool IsValidEmploye(TextBox txtUser, TextBox txtPass)
         {
 
             cnx = Program.GetConnection();
             cnx.Open();
             int Count = 0;
-           
+
 
             ds = new DataSet();
             adapter = new SqlDataAdapter("select * from Employe where UserName = @username and MotDePasse = @password", cnx);
@@ -117,15 +117,15 @@ namespace Helpdesk
             if (ds.Tables["valid"].Rows.Count > 0)
             {
                 Count = 1;
-                Employe.id= (int)ds.Tables["valid"].Rows[0]["ID"];
+                Employe.id = (int)ds.Tables["valid"].Rows[0]["ID"];
                 Employe.nom = (string)ds.Tables["valid"].Rows[0]["Nom"];
                 Employe.prenom = (string)ds.Tables["valid"].Rows[0]["Prenom"];
-                Employe.departement= (string)ds.Tables["valid"].Rows[0]["Departement"];
-                Employe.service= (string)ds.Tables["valid"].Rows[0]["N_Service"];
+                Employe.departement = (string)ds.Tables["valid"].Rows[0]["Departement"];
+                Employe.service = (string)ds.Tables["valid"].Rows[0]["N_Service"];
                 Employe.numbureau = (string)ds.Tables["valid"].Rows[0]["NumBureau"];
-                Employe.numtel= (string)ds.Tables["valid"].Rows[0]["NumTel"];
-                Employe.etage= (int)ds.Tables["valid"].Rows[0]["Etage"];
-               
+                Employe.numtel = (string)ds.Tables["valid"].Rows[0]["NumTel"];
+                Employe.etage = (int)ds.Tables["valid"].Rows[0]["Etage"];
+
 
 
 
@@ -161,7 +161,7 @@ namespace Helpdesk
                 Classtech.Service = (string)ds.Tables["Technicien"].Rows[0]["N_Service"];
                 Classtech.Nbureau = (string)ds.Tables["Technicien"].Rows[0]["NumBureau"];
                 Classtech.Ntel = (string)ds.Tables["Technicien"].Rows[0]["NumTel"];
-                Classtech.Specialité= (string)ds.Tables["Technicien"].Rows[0]["Specialite"];
+                Classtech.Specialité = (string)ds.Tables["Technicien"].Rows[0]["Specialite"];
 
                 Count = 1;
             }

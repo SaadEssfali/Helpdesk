@@ -58,8 +58,9 @@
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(1, 0);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(232, 672);
+            panel1.Size = new Size(203, 504);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -67,9 +68,10 @@
             // 
             panel8.BackColor = Color.FromArgb(0, 74, 173);
             panel8.Controls.Add(btnlogout);
-            panel8.Location = new Point(1, 554);
+            panel8.Location = new Point(1, 416);
+            panel8.Margin = new Padding(3, 2, 3, 2);
             panel8.Name = "panel8";
-            panel8.Size = new Size(234, 45);
+            panel8.Size = new Size(205, 34);
             panel8.TabIndex = 9;
             // 
             // btnlogout
@@ -83,10 +85,11 @@
             btnlogout.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnlogout.ForeColor = SystemColors.ControlLightLight;
             btnlogout.Image = (Image)resources.GetObject("btnlogout.Image");
-            btnlogout.Location = new Point(-77, -17);
+            btnlogout.Location = new Point(-67, -13);
+            btnlogout.Margin = new Padding(3, 2, 3, 2);
             btnlogout.Name = "btnlogout";
-            btnlogout.Padding = new Padding(0, 15, 70, 11);
-            btnlogout.Size = new Size(311, 75);
+            btnlogout.Padding = new Padding(0, 11, 61, 8);
+            btnlogout.Size = new Size(272, 56);
             btnlogout.TabIndex = 1;
             btnlogout.Text = "Log out";
             btnlogout.TextAlign = ContentAlignment.MiddleRight;
@@ -95,18 +98,20 @@
             // 
             // panel6
             // 
-            panel6.Location = new Point(229, 0);
+            panel6.Location = new Point(200, 0);
+            panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(794, 604);
+            panel6.Size = new Size(695, 453);
             panel6.TabIndex = 6;
             // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(0, 74, 173);
             panel3.Controls.Add(btntechnicien);
-            panel3.Location = new Point(0, 107);
+            panel3.Location = new Point(0, 80);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(234, 45);
+            panel3.Size = new Size(205, 34);
             panel3.TabIndex = 4;
             // 
             // btntechnicien
@@ -120,10 +125,11 @@
             btntechnicien.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btntechnicien.ForeColor = SystemColors.ControlLightLight;
             btntechnicien.Image = (Image)resources.GetObject("btntechnicien.Image");
-            btntechnicien.Location = new Point(-58, -17);
+            btntechnicien.Location = new Point(-51, -13);
+            btntechnicien.Margin = new Padding(3, 2, 3, 2);
             btntechnicien.Name = "btntechnicien";
-            btntechnicien.Padding = new Padding(0, 15, 87, 11);
-            btntechnicien.Size = new Size(293, 75);
+            btntechnicien.Padding = new Padding(0, 11, 76, 8);
+            btntechnicien.Size = new Size(256, 56);
             btntechnicien.TabIndex = 1;
             btntechnicien.Text = "Technicien";
             btntechnicien.TextAlign = ContentAlignment.MiddleRight;
@@ -134,9 +140,10 @@
             // 
             panel2.BackColor = Color.FromArgb(0, 74, 173);
             panel2.Controls.Add(btndash);
-            panel2.Location = new Point(0, 31);
+            panel2.Location = new Point(0, 23);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(234, 45);
+            panel2.Size = new Size(205, 34);
             panel2.TabIndex = 3;
             // 
             // btndash
@@ -150,10 +157,11 @@
             btndash.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btndash.ForeColor = SystemColors.ControlLightLight;
             btndash.Image = (Image)resources.GetObject("btndash.Image");
-            btndash.Location = new Point(-77, -17);
+            btndash.Location = new Point(-67, -13);
+            btndash.Margin = new Padding(3, 2, 3, 2);
             btndash.Name = "btndash";
-            btndash.Padding = new Padding(0, 15, 70, 11);
-            btndash.Size = new Size(311, 75);
+            btndash.Padding = new Padding(0, 11, 61, 8);
+            btndash.Size = new Size(272, 56);
             btndash.TabIndex = 1;
             btndash.Text = "Dashboard";
             btndash.TextAlign = ContentAlignment.MiddleRight;
@@ -164,9 +172,10 @@
             // 
             panel4.BackColor = Color.FromArgb(0, 74, 173);
             panel4.Controls.Add(btnemploye);
-            panel4.Location = new Point(1, 181);
+            panel4.Location = new Point(1, 136);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(234, 45);
+            panel4.Size = new Size(205, 34);
             panel4.TabIndex = 4;
             // 
             // btnemploye
@@ -180,10 +189,11 @@
             btnemploye.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnemploye.ForeColor = SystemColors.ControlLightLight;
             btnemploye.Image = (Image)resources.GetObject("btnemploye.Image");
-            btnemploye.Location = new Point(-58, -17);
+            btnemploye.Location = new Point(-51, -13);
+            btnemploye.Margin = new Padding(3, 2, 3, 2);
             btnemploye.Name = "btnemploye";
-            btnemploye.Padding = new Padding(0, 15, 87, 11);
-            btnemploye.Size = new Size(293, 75);
+            btnemploye.Padding = new Padding(0, 11, 76, 8);
+            btnemploye.Size = new Size(256, 56);
             btnemploye.TabIndex = 1;
             btnemploye.Text = "Employé";
             btnemploye.TextAlign = ContentAlignment.MiddleRight;
@@ -194,9 +204,10 @@
             // 
             panel5.BackColor = Color.FromArgb(0, 74, 173);
             panel5.Controls.Add(btnticket);
-            panel5.Location = new Point(1, 258);
+            panel5.Location = new Point(1, 194);
+            panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(234, 45);
+            panel5.Size = new Size(205, 34);
             panel5.TabIndex = 5;
             // 
             // btnticket
@@ -210,10 +221,11 @@
             btnticket.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnticket.ForeColor = SystemColors.ControlLightLight;
             btnticket.Image = (Image)resources.GetObject("btnticket.Image");
-            btnticket.Location = new Point(-58, -17);
+            btnticket.Location = new Point(-51, -13);
+            btnticket.Margin = new Padding(3, 2, 3, 2);
             btnticket.Name = "btnticket";
-            btnticket.Padding = new Padding(0, 15, 87, 11);
-            btnticket.Size = new Size(293, 75);
+            btnticket.Padding = new Padding(0, 11, 76, 8);
+            btnticket.Size = new Size(256, 56);
             btnticket.TabIndex = 1;
             btnticket.Text = "Tickets";
             btnticket.TextAlign = ContentAlignment.MiddleRight;
@@ -222,22 +234,25 @@
             // 
             // MAINpanel
             // 
-            MAINpanel.Location = new Point(233, 0);
+            MAINpanel.Location = new Point(204, 0);
+            MAINpanel.Margin = new Padding(3, 2, 3, 2);
             MAINpanel.Name = "MAINpanel";
-            MAINpanel.Size = new Size(1030, 672);
+            MAINpanel.Size = new Size(901, 504);
             MAINpanel.TabIndex = 6;
             MAINpanel.Paint += MAINpanel_Paint;
             // 
             // AdminForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1264, 674);
+            ClientSize = new Size(1106, 506);
             Controls.Add(MAINpanel);
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "AdminForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminForm";
             Load += AdminForm_Load;
             panel1.ResumeLayout(false);

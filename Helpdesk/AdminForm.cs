@@ -17,7 +17,7 @@ namespace Helpdesk
         UserControlAdminTech At = new UserControlAdminTech();
         UserControlAdminTickets Ct = new UserControlAdminTickets();
         UserControlAdminDash dash = new UserControlAdminDash();
-      
+
         public AdminForm()
         {
             InitializeComponent();
@@ -82,7 +82,7 @@ namespace Helpdesk
 
         private void btnlogout_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnlogout_Click_1(object sender, EventArgs e)

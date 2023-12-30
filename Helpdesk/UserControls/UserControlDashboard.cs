@@ -71,6 +71,7 @@ namespace Helpdesk.UserControls
             
             
             nbrenotif.Text = nbre.ToString();
+            cnx.Close();
         }
 
        
