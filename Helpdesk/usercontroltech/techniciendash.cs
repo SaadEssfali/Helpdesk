@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
@@ -37,10 +38,10 @@ namespace Helpdesk.usercontroltech
 
 
 
-
+        //actulisation des information de dashboard
         public void refreshinfo ()
         {
-            tickOuvLabel.Text = Classtechtick.TicketInformation().ToString();
+            tickOuvLabel.Text = nbreticketouv().ToString();
 
             TickResLabel.Text = Classtechtick.TicketResolue2().ToString();
           
@@ -49,7 +50,16 @@ namespace Helpdesk.usercontroltech
 
         }
 
-
+        //fonction pour rendre le nombre de ticket ouvert en cours
+        private int nbreticketouv()
+        {
+            SqlConnection cnx =Program.GetConnection();
+            cnx.Open();
+            SqlCommand cmd = new SqlCommand("select COUNT(t.TicketID) from Ticket t  full outer join Intervention I on t.TicketID = I.TicketID inner join Employe e on t.EmployeID=e.ID where i.TicketID IS NULL", cnx);
+            int nombreTicketsResolus = (int)cmd.ExecuteScalar();
+            cnx.Close();
+            return nombreTicketsResolus;
+        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
