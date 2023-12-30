@@ -5,10 +5,9 @@ namespace Helpdesk
 {
     internal class Categorie
     {
-        public int Categoryid;
-        public string Name;
-        public string Description;
+      
 
+        //avoir les information des categories
         public static DataTable Category()
         {
             DataTable categoryTable = new DataTable();
@@ -17,6 +16,7 @@ namespace Helpdesk
             return categoryTable;
         }
 
+        //fonction pour savoir Categorie Id depuis le nom de Category
         public static int catID(ComboBox comboBox)
         {
             string nom = comboBox.GetItemText(comboBox.SelectedItem);

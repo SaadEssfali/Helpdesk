@@ -26,6 +26,8 @@ namespace Helpdesk.UserControls
             RefreshComboBox();
 
         }
+
+        //actualisation des informations de combo box de Categorie
         private void RefreshComboBox()
         {
 
@@ -50,6 +52,7 @@ namespace Helpdesk.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //appel de la fonction qui permet de convertir CategorieNom a son ID
             caID = Categorie.catID(comboBoxCat);
 
 

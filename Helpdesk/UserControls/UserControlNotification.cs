@@ -26,8 +26,10 @@ namespace Helpdesk.UserControls
         {
 
         }
+        //affichage des notifications sous forme de flowyout
         public void notiflow()
         {
+            //importaion des informations de la base de données
             flowyoutaffichenotif.Controls.Clear();
             SqlCommand cmd = new SqlCommand("select n.TicketID,MessageNotif,n.Datenotif,IsRead   from NotificationLog n Inner join Ticket t on n.TicketID=t.TicketID where  EmployeID=@EmployeID order BY Datenotif DESC", cnx);
             cmd.Parameters.AddWithValue("@EmployeID", Employe.id);

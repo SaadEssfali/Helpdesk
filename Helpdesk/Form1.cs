@@ -60,12 +60,12 @@ namespace Helpdesk
                 MessageBox.Show("Entrer Password  !");
             }
 
-            //a l aide de fonction
+            //a l aide des fonctions on verifie le type de l'utilisateur
          
 
             if (IsValidEmploye(txtUser, txtPass))
             {
-
+                // affichage de (mainform) form qui correspendant a l employee
                 ticket.ticketfun();
                 MainForm = new MainForm();
                 MainForm.Show();
@@ -73,6 +73,7 @@ namespace Helpdesk
             }
             else if (isValidTechnicien(txtUser, txtPass))
             {
+                //afffichage de technicien form 
                 TechnicienForm = new TechnicienForm();
                 TechnicienForm.Show();
                 this.Hide();
@@ -80,6 +81,7 @@ namespace Helpdesk
             }
             else if (txtUser.Text=="admin" && txtPass.Text=="admin")
             {
+                //affichage de adminform
                 AdminForm adminForm =new AdminForm();
                 adminForm.Show();
                 this.Hide();
@@ -89,7 +91,7 @@ namespace Helpdesk
 
             else
             {
-
+                // si aucune fontion n'est validé (meessage d erreur)
                 MessageBox.Show("Invalid username ou password");
             }
 
@@ -97,8 +99,8 @@ namespace Helpdesk
         }
 
 
-
-        public static bool IsValidEmploye(TextBox txtUser, TextBox txtPass)
+        //fonction qui verfie si les valeurs entré par utilisateir se trouve dans table employe si c'est vrai on stock les informations dans class Employe
+         public static bool IsValidEmploye(TextBox txtUser, TextBox txtPass)
         {
 
             cnx = Program.GetConnection();
@@ -136,7 +138,8 @@ namespace Helpdesk
 
 
         }
-        
+
+        //fonction qui verifie si les valeurs entré par utilisateur se trouve dans table Technicien si c'est vrai on stock les informations dans class Classtech
         public static bool isValidTechnicien(TextBox txtUser, TextBox txtPass)
 
         {

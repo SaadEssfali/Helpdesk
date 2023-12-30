@@ -19,6 +19,7 @@ namespace Helpdesk
         public static string Ntel;
         public static string Specialité;
 
+        //rendre les informations des techniciens
     public static DataTable technicienInformation() { 
         
             DataTable dataTable = new DataTable();

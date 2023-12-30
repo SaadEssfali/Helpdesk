@@ -89,6 +89,7 @@ namespace Helpdesk
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(techniciens);
             dashboard.Dock = DockStyle.Fill;
+            techniciens.Technicienpicbox();
 
         }
 
@@ -133,6 +134,7 @@ namespace Helpdesk
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(his);
             dashboard.Dock = DockStyle.Fill;
+            
         }
 
         private void NotificationButton_Click(object sender, EventArgs e)

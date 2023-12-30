@@ -19,7 +19,7 @@ namespace Helpdesk.UserControls
             InitializeComponent();
             Displaydata();
         }
-
+        //affichage historique de ticket
         public void Displaydata()
         {
             Form1.cnx = Program.GetConnection();

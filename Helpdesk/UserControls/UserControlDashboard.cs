@@ -34,19 +34,21 @@ namespace Helpdesk.UserControls
             dayOfWeekLabel.Text = DateTime.Now.ToString("dddd");
             YearLabel.Text = DateTime.Now.ToString("yyyy");
             dashID.Text = Employe.id.ToString();
-            nresolu.Text = ticket.resolvedticket().ToString();
             refreshntciket();
 
 
 
 
         }
+        //statistique pour dashboard de  employee
         public void refreshntciket()
         {
             nticket.Text = ticket.TicketID.ToString();
             statuticket.Text = ticket.Statut;
-
+            nresolu.Text = ticket.resolvedticket().ToString();
         }
+
+        //verification si se trouve des notifications non lus dans la table notificatiionLog
         public void notification()
         {
             
@@ -63,6 +65,7 @@ namespace Helpdesk.UserControls
             else { nbre= (int)cmd.ExecuteScalar(); }
 
             if (nbre > 0) {
+                // si se trouve notification non lu un event est declenché pour afficher symbol rouge de notification
                 NotificationUpdated?.Invoke(this, EventArgs.Empty);
             }
             
