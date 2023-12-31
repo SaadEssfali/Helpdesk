@@ -81,10 +81,11 @@
             // 
             Departement.AutoSize = true;
             Departement.BackColor = Color.FromArgb(21, 101, 192);
+            Departement.Font = new Font("Roboto Condensed", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             Departement.ForeColor = SystemColors.Control;
             Departement.Location = new Point(320, 285);
             Departement.Name = "Departement";
-            Departement.Size = new Size(50, 20);
+            Departement.Size = new Size(49, 20);
             Departement.TabIndex = 3;
             Departement.Text = "label1";
             // 
@@ -92,10 +93,11 @@
             // 
             sevice.AutoSize = true;
             sevice.BackColor = Color.FromArgb(21, 101, 192);
+            sevice.Font = new Font("Roboto Condensed", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             sevice.ForeColor = SystemColors.Control;
             sevice.Location = new Point(267, 331);
             sevice.Name = "sevice";
-            sevice.Size = new Size(50, 20);
+            sevice.Size = new Size(49, 20);
             sevice.TabIndex = 4;
             sevice.Text = "label2";
             sevice.Click += sevice_Click;
@@ -104,21 +106,24 @@
             // 
             netage.AutoSize = true;
             netage.BackColor = Color.FromArgb(21, 101, 192);
+            netage.Font = new Font("Roboto Condensed", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             netage.ForeColor = SystemColors.Control;
             netage.Location = new Point(288, 375);
             netage.Name = "netage";
-            netage.Size = new Size(50, 20);
+            netage.Size = new Size(49, 20);
             netage.TabIndex = 5;
             netage.Text = "label3";
+            netage.Click += netage_Click;
             // 
             // nbureau
             // 
             nbureau.AutoSize = true;
             nbureau.BackColor = Color.FromArgb(21, 101, 192);
+            nbureau.Font = new Font("Roboto Condensed", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             nbureau.ForeColor = SystemColors.Control;
             nbureau.Location = new Point(294, 415);
             nbureau.Name = "nbureau";
-            nbureau.Size = new Size(50, 20);
+            nbureau.Size = new Size(49, 20);
             nbureau.TabIndex = 6;
             nbureau.Text = "label4";
             // 
@@ -126,10 +131,11 @@
             // 
             ntel.AutoSize = true;
             ntel.BackColor = Color.FromArgb(21, 101, 192);
+            ntel.Font = new Font("Roboto Condensed", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             ntel.ForeColor = SystemColors.Control;
             ntel.Location = new Point(267, 459);
             ntel.Name = "ntel";
-            ntel.Size = new Size(50, 20);
+            ntel.Size = new Size(49, 20);
             ntel.TabIndex = 7;
             ntel.Text = "label5";
             ntel.Click += ntel_Click;

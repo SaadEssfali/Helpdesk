@@ -51,32 +51,33 @@ namespace Helpdesk.UserControls
         //verification si se trouve des notifications non lus dans la table notificatiionLog
         public void notification()
         {
-            
-            SqlConnection cnx = Program.GetConnection();          
+
+            SqlConnection cnx = Program.GetConnection();
             cnx.Open();
-            SqlCommand cmd = new SqlCommand("select COUNT(NotificationID)from NotificationLog  n Inner join Ticket t on n.TicketID=t.TicketID where EmployeID=@EmployeID and IsRead=0",cnx);
+            SqlCommand cmd = new SqlCommand("select COUNT(NotificationID)from NotificationLog  n Inner join Ticket t on n.TicketID=t.TicketID where EmployeID=@EmployeID and IsRead=0", cnx);
             cmd.Parameters.AddWithValue("@EmployeID", Employe.id);
             int nbre;
-         
-            cmd.CommandTimeout = 60; 
+
+            cmd.CommandTimeout = 60;
 
             if (cmd.ExecuteScalar() == null)
             {
                 nbre = 0;
             }
-            else { nbre= (int)cmd.ExecuteScalar(); }
+            else { nbre = (int)cmd.ExecuteScalar(); }
 
-            if (nbre > 0) {
+            if (nbre > 0)
+            {
                 // si se trouve notification non lu un event est declenché pour afficher symbol rouge de notification
                 NotificationUpdated?.Invoke(this, EventArgs.Empty);
             }
             cnx.Close();
 
             nbrenotif.Text = nbre.ToString();
-          
+
         }
 
-       
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -107,7 +108,7 @@ namespace Helpdesk.UserControls
             dayOfWeekLabel.Text = DateTime.Now.ToString("dddd");
             YearLabel.Text = DateTime.Now.ToString("yyyy");
             notification();
-        
+
 
         }
 

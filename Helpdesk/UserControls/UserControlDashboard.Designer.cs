@@ -169,7 +169,7 @@
             monthLabel.AutoSize = true;
             monthLabel.BackColor = Color.White;
             monthLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            monthLabel.Location = new Point(552, 349);
+            monthLabel.Location = new Point(545, 349);
             monthLabel.Name = "monthLabel";
             monthLabel.Size = new Size(81, 31);
             monthLabel.TabIndex = 7;

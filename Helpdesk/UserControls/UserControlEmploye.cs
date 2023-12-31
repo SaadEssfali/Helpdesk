@@ -74,5 +74,10 @@ namespace Helpdesk.UserControls
         {
 
         }
+
+        private void netage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

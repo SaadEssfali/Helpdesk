@@ -49,7 +49,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(94, 23, 235);
+            label1.BackColor = Color.FromArgb(21, 101, 192);
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Control;
             label1.Location = new Point(200, 32);
@@ -62,7 +62,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(94, 23, 235);
+            label2.BackColor = Color.FromArgb(21, 101, 192);
             label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.Control;
             label2.Location = new Point(200, 67);
@@ -74,7 +74,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.MediumSlateBlue;
+            label3.BackColor = Color.FromArgb(0, 60, 128);
             label3.Font = new Font("Roboto Condensed", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ControlLightLight;
             label3.Location = new Point(504, 41);

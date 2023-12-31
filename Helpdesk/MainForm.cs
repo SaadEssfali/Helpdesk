@@ -89,7 +89,7 @@ namespace Helpdesk
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(techniciens);
             dashboard.Dock = DockStyle.Fill;
-         
+
 
         }
 
@@ -176,6 +176,11 @@ namespace Helpdesk
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
