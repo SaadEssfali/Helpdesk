@@ -93,17 +93,29 @@ namespace Helpdesk.AdminUserControls
         {
             cnx = Program.GetConnection();
             cnx.Open();
-            SqlCommand cmd = new SqlCommand("insert into Technicien(Nom,Prenom,UserName,MotDePasse,Departement,N_Service,NumBureau,NumTel,Specialite) values(@Nom,@Prenom,@UserName,@MotDePasse,@Departement,@N_Service,@NumBureau,@NumTel,@specialite)", cnx);
-            cmd.Parameters.Add(new SqlParameter("@Nom", txtName.Text));
-            cmd.Parameters.Add(new SqlParameter("@Prenom", txtPrenom.Text));
-            cmd.Parameters.Add(new SqlParameter("@UserName", txtUsername.Text));
-            cmd.Parameters.Add(new SqlParameter("@MotDePasse", txtPass.Text));
-            cmd.Parameters.Add(new SqlParameter("@NumTel", txtTelephone.Text));
-            cmd.Parameters.Add(new SqlParameter("@N_Service", txtService.Text));
-            cmd.Parameters.Add(new SqlParameter("@Departement", txtDepartement.Text));
-            cmd.Parameters.Add(new SqlParameter("@NumBureau", txtBureau.Text));
-            cmd.Parameters.Add(new SqlParameter("@Specialite", txtspecialite.Text));
-            cmd.ExecuteNonQuery();
+            SqlCommand commande = new SqlCommand("SELECT COUNT (ID) FROM Technicien where UserName=@UserName", cnx);
+            commande.Parameters.Add(new SqlParameter("@UserName", txtUsername.Text));
+            int nbre = (int)commande.ExecuteScalar();
+            if (nbre > 0)
+            {
+                MessageBox.Show($"Le nom d'utilisateur '{txtUsername.Text}' est déjà utilisé. Veuillez choisir un nom d'utilisateur différent.", "Nom d'utilisateur existant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return;
+            }
+            else
+            {
+                SqlCommand cmd = new SqlCommand("insert into Technicien(Nom,Prenom,UserName,MotDePasse,Departement,N_Service,NumBureau,NumTel,Specialite) values(@Nom,@Prenom,@UserName,@MotDePasse,@Departement,@N_Service,@NumBureau,@NumTel,@specialite)", cnx);
+                cmd.Parameters.Add(new SqlParameter("@Nom", txtName.Text));
+                cmd.Parameters.Add(new SqlParameter("@Prenom", txtPrenom.Text));
+                cmd.Parameters.Add(new SqlParameter("@UserName", txtUsername.Text));
+                cmd.Parameters.Add(new SqlParameter("@MotDePasse", txtPass.Text));
+                cmd.Parameters.Add(new SqlParameter("@NumTel", txtTelephone.Text));
+                cmd.Parameters.Add(new SqlParameter("@N_Service", txtService.Text));
+                cmd.Parameters.Add(new SqlParameter("@Departement", txtDepartement.Text));
+                cmd.Parameters.Add(new SqlParameter("@NumBureau", txtBureau.Text));
+                cmd.Parameters.Add(new SqlParameter("@Specialite", txtspecialite.Text));
+                cmd.ExecuteNonQuery();
+            }
         }
         public DataTable datatech()
         {
