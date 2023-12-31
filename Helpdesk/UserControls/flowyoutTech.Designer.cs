@@ -49,6 +49,8 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(94, 23, 235);
+            label1.ForeColor = SystemColors.Control;
             label1.Location = new Point(200, 32);
             label1.Name = "label1";
             label1.Size = new Size(50, 20);
@@ -59,6 +61,8 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.FromArgb(94, 23, 235);
+            label2.ForeColor = SystemColors.Control;
             label2.Location = new Point(200, 67);
             label2.Name = "label2";
             label2.Size = new Size(50, 20);
@@ -68,6 +72,8 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.FromArgb(94, 23, 235);
+            label3.ForeColor = SystemColors.Control;
             label3.Location = new Point(504, 41);
             label3.Name = "label3";
             label3.Size = new Size(50, 20);
