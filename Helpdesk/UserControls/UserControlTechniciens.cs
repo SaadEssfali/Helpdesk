@@ -28,7 +28,9 @@ namespace Helpdesk.UserControls
 
         private void UserControlTechniciens_Load(object sender, EventArgs e)
         {
-            
+            Technicienpicbox();
+
+
         }
 
         //affichage des lines de datatable sous form de flowyout

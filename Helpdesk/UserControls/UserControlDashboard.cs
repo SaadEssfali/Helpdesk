@@ -57,7 +57,9 @@ namespace Helpdesk.UserControls
             SqlCommand cmd = new SqlCommand("select COUNT(NotificationID)from NotificationLog  n Inner join Ticket t on n.TicketID=t.TicketID where EmployeID=@EmployeID and IsRead=0",cnx);
             cmd.Parameters.AddWithValue("@EmployeID", Employe.id);
             int nbre;
-           
+         
+            cmd.CommandTimeout = 60; 
+
             if (cmd.ExecuteScalar() == null)
             {
                 nbre = 0;
@@ -68,10 +70,10 @@ namespace Helpdesk.UserControls
                 // si se trouve notification non lu un event est declenché pour afficher symbol rouge de notification
                 NotificationUpdated?.Invoke(this, EventArgs.Empty);
             }
-            
-            
-            nbrenotif.Text = nbre.ToString();
             cnx.Close();
+
+            nbrenotif.Text = nbre.ToString();
+          
         }
 
        
