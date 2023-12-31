@@ -330,10 +330,11 @@
             ClientSize = new Size(891, 451);
             Controls.Add(panel1);
             Controls.Add(mainPanel);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MainForm";
+            Text = "Helpdesk";
             Load += MainForm_Load;
             panel1.ResumeLayout(false);
             panel8.ResumeLayout(false);
