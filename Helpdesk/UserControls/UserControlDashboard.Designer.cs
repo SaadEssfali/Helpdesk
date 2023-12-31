@@ -246,6 +246,7 @@
             nresolu.Size = new Size(113, 46);
             nresolu.TabIndex = 15;
             nresolu.Text = "label2";
+            nresolu.Click += nresolu_Click;
             // 
             // nbrenotif
             // 

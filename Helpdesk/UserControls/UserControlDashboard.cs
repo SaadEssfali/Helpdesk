@@ -13,7 +13,7 @@ namespace Helpdesk.UserControls
 {
     public partial class UserControlDashboard : UserControl
     {
-
+        SqlConnection cnx = Program.GetConnection();
         public event EventHandler NotificationUpdated;
         public UserControlDashboard()
         {
@@ -45,14 +45,14 @@ namespace Helpdesk.UserControls
         {
             nticket.Text = ticket.TicketID.ToString();
             statuticket.Text = ticket.Statut;
-            nresolu.Text = ticket.resolvedticket().ToString();
+            nresolu.Text = ticketresoluEmploye().ToString();
         }
 
         //verification si se trouve des notifications non lus dans la table notificatiionLog
         public void notification()
         {
 
-            SqlConnection cnx = Program.GetConnection();
+           
             cnx.Open();
             SqlCommand cmd = new SqlCommand("select COUNT(NotificationID)from NotificationLog  n Inner join Ticket t on n.TicketID=t.TicketID where EmployeID=@EmployeID and IsRead=0", cnx);
             cmd.Parameters.AddWithValue("@EmployeID", Employe.id);
@@ -76,7 +76,15 @@ namespace Helpdesk.UserControls
             nbrenotif.Text = nbre.ToString();
 
         }
+        private int ticketresoluEmploye() {
 
+            cnx.Open();
+            SqlCommand cmd = new SqlCommand("select count(*) from Ticket t Inner join Employe e on t.EmployeID=e.ID where  t.EmployeID=@emplyeid  and t.Statut='résolu'", cnx);
+           cmd.Parameters.AddWithValue("@emplyeid", Employe.id);
+            int nombreTicketsResolus = (int)cmd.ExecuteScalar();
+             cnx.Close();
+            return nombreTicketsResolus;
+                 }
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -133,6 +141,11 @@ namespace Helpdesk.UserControls
         }
 
         private void nticket_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nresolu_Click(object sender, EventArgs e)
         {
 
         }

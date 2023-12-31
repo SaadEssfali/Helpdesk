@@ -49,7 +49,7 @@ namespace Helpdesk.UserControls
                     bool isread = (bool)row["IsRead"];
                     if (isread == false)
                     {
-                        flownotif.BackColor = Color.Gray;
+                        flownotif.BackColor = Color.LightSteelBlue;
                         flownotif.attention.Visible = true;
                     }
 
@@ -65,7 +65,7 @@ namespace Helpdesk.UserControls
             }
 
         }
-
+        //marquer notification comme lu
         public void asread()
         {
             cnx.Open();

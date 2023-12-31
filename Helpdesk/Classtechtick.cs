@@ -33,7 +33,7 @@ namespace Helpdesk
 
         public static int TicketResolue2() {
              cnx.Open();
-            SqlCommand cmd = new SqlCommand("select count (Ticket.TicketID) from Ticket inner join Intervention on Ticket.TicketID =Intervention.TicketID where Statut = 'resolu' and TechnicienID=@id", cnx);
+            SqlCommand cmd = new SqlCommand("select count (Ticket.TicketID) from Ticket inner join Intervention on Ticket.TicketID =Intervention.TicketID where Statut = 'résolu' and TechnicienID=@id", cnx);
             cmd.Parameters.AddWithValue("@id", Classtech.ID);
             int nombreTicketsResolus = (int)cmd.ExecuteScalar();
             cnx.Close();

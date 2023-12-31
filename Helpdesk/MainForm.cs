@@ -65,6 +65,7 @@ namespace Helpdesk
             mainPanel.Controls.Add(dashboard);
             dashboard.notification();
             dashboard.Dock = DockStyle.Fill;
+            attentionred.BackColor = ColorTranslator.FromHtml("#004AAD");
 
         }
 
@@ -89,7 +90,7 @@ namespace Helpdesk
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(techniciens);
             dashboard.Dock = DockStyle.Fill;
-
+            attentionred.BackColor = ColorTranslator.FromHtml("#004AAD");
 
         }
 
@@ -106,6 +107,7 @@ namespace Helpdesk
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(employe);
             dashboard.Dock = DockStyle.Fill;
+            attentionred.BackColor = ColorTranslator.FromHtml("#004AAD");
 
         }
 
@@ -117,7 +119,7 @@ namespace Helpdesk
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             NotificationButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             employeButton.BackColor = ColorTranslator.FromHtml("#004AAD");
-
+            attentionred.BackColor = ColorTranslator.FromHtml("#004AAD");
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(cre);
             dashboard.Dock = DockStyle.Fill;
@@ -134,6 +136,7 @@ namespace Helpdesk
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(his);
             dashboard.Dock = DockStyle.Fill;
+            attentionred.BackColor = ColorTranslator.FromHtml("#004AAD");
 
         }
 
