@@ -60,7 +60,7 @@
             Bureau.BackColor = Color.Transparent;
             Bureau.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Bureau.ForeColor = Color.White;
-            Bureau.Location = new Point(252, 163);
+            Bureau.Location = new Point(303, 159);
             Bureau.Name = "Bureau";
             Bureau.Size = new Size(106, 21);
             Bureau.TabIndex = 59;
@@ -68,9 +68,9 @@
             // 
             // txtBureau
             // 
-            txtBureau.Location = new Point(368, 161);
+            txtBureau.Location = new Point(419, 157);
             txtBureau.Name = "txtBureau";
-            txtBureau.Size = new Size(135, 27);
+            txtBureau.Size = new Size(196, 27);
             txtBureau.TabIndex = 58;
             // 
             // Service
@@ -79,7 +79,7 @@
             Service.BackColor = Color.Transparent;
             Service.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Service.ForeColor = Color.White;
-            Service.Location = new Point(516, 163);
+            Service.Location = new Point(688, 157);
             Service.Name = "Service";
             Service.Size = new Size(84, 21);
             Service.TabIndex = 56;
@@ -87,9 +87,9 @@
             // 
             // txtService
             // 
-            txtService.Location = new Point(662, 161);
+            txtService.Location = new Point(782, 157);
             txtService.Name = "txtService";
-            txtService.Size = new Size(123, 27);
+            txtService.Size = new Size(196, 27);
             txtService.TabIndex = 55;
             // 
             // Departement
@@ -98,7 +98,7 @@
             Departement.BackColor = Color.Transparent;
             Departement.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Departement.ForeColor = Color.White;
-            Departement.Location = new Point(516, 106);
+            Departement.Location = new Point(636, 102);
             Departement.Name = "Departement";
             Departement.Size = new Size(140, 21);
             Departement.TabIndex = 54;
@@ -106,9 +106,9 @@
             // 
             // txtDepartement
             // 
-            txtDepartement.Location = new Point(662, 104);
+            txtDepartement.Location = new Point(782, 100);
             txtDepartement.Name = "txtDepartement";
-            txtDepartement.Size = new Size(123, 27);
+            txtDepartement.Size = new Size(196, 27);
             txtDepartement.TabIndex = 53;
             // 
             // Telephone
@@ -117,7 +117,7 @@
             Telephone.BackColor = Color.Transparent;
             Telephone.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Telephone.ForeColor = Color.White;
-            Telephone.Location = new Point(252, 106);
+            Telephone.Location = new Point(303, 102);
             Telephone.Name = "Telephone";
             Telephone.Size = new Size(113, 21);
             Telephone.TabIndex = 52;
@@ -125,9 +125,9 @@
             // 
             // txtTelephone
             // 
-            txtTelephone.Location = new Point(368, 104);
+            txtTelephone.Location = new Point(419, 100);
             txtTelephone.Name = "txtTelephone";
-            txtTelephone.Size = new Size(135, 27);
+            txtTelephone.Size = new Size(196, 27);
             txtTelephone.TabIndex = 51;
             // 
             // Prenom
@@ -144,9 +144,9 @@
             // 
             // txtPrenom
             // 
-            txtPrenom.Location = new Point(110, 104);
+            txtPrenom.Location = new Point(91, 104);
             txtPrenom.Name = "txtPrenom";
-            txtPrenom.Size = new Size(117, 27);
+            txtPrenom.Size = new Size(196, 27);
             txtPrenom.TabIndex = 49;
             // 
             // Passe
@@ -155,7 +155,7 @@
             Passe.BackColor = Color.Transparent;
             Passe.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             Passe.ForeColor = Color.White;
-            Passe.Location = new Point(516, 44);
+            Passe.Location = new Point(636, 40);
             Passe.Name = "Passe";
             Passe.Size = new Size(136, 21);
             Passe.TabIndex = 48;
@@ -163,10 +163,10 @@
             // 
             // txtPass
             // 
-            txtPass.Location = new Point(662, 42);
+            txtPass.Location = new Point(782, 38);
             txtPass.Name = "txtPass";
             txtPass.PasswordChar = '*';
-            txtPass.Size = new Size(123, 27);
+            txtPass.Size = new Size(196, 27);
             txtPass.TabIndex = 47;
             // 
             // Usename
@@ -175,7 +175,7 @@
             Usename.BackColor = Color.Transparent;
             Usename.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Usename.ForeColor = Color.White;
-            Usename.Location = new Point(252, 44);
+            Usename.Location = new Point(303, 40);
             Usename.Name = "Usename";
             Usename.Size = new Size(110, 21);
             Usename.TabIndex = 46;
@@ -183,9 +183,9 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(368, 38);
+            txtUsername.Location = new Point(419, 34);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(135, 27);
+            txtUsername.Size = new Size(196, 27);
             txtUsername.TabIndex = 45;
             // 
             // Nom
@@ -202,9 +202,9 @@
             // 
             // txtName
             // 
-            txtName.Location = new Point(110, 38);
+            txtName.Location = new Point(91, 38);
             txtName.Name = "txtName";
-            txtName.Size = new Size(117, 27);
+            txtName.Size = new Size(196, 27);
             txtName.TabIndex = 43;
             // 
             // btnvider
@@ -292,9 +292,9 @@
             // 
             // txtEtage
             // 
-            txtEtage.Location = new Point(110, 157);
+            txtEtage.Location = new Point(91, 157);
             txtEtage.Name = "txtEtage";
-            txtEtage.Size = new Size(117, 27);
+            txtEtage.Size = new Size(196, 27);
             txtEtage.TabIndex = 67;
             // 
             // UserControlAdminEmploye

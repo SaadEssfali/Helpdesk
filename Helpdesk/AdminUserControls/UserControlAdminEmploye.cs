@@ -56,6 +56,15 @@ namespace Helpdesk.AdminUserControls
         {
             cnx = Program.GetConnection();
             cnx.Open();
+            SqlCommand commande = new SqlCommand("SELECT COUNT (ID) FROM Employe where UserName=@UserName",cnx);
+            commande.Parameters.Add(new SqlParameter("@UserName", txtUsername.Text));
+            int nbre = (int)commande.ExecuteScalar();
+            if (nbre > 0) {
+                MessageBox.Show($"Le nom d'utilisateur '{txtUsername.Text}' est déjà utilisé. Veuillez choisir un nom d'utilisateur différent.", "Nom d'utilisateur existant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return;
+            }
+            else { 
             SqlCommand cmd = new SqlCommand("insert into Employe(Nom,Prenom,UserName,MotDePasse,Departement,N_Service,NumBureau,NumTel,Etage) values(@Nom,@Prenom,@UserName,@MotDePasse,@Departement,@N_Service,@NumBureau,@NumTel,@Etage)", cnx);
             cmd.Parameters.Add(new SqlParameter("@Nom", txtName.Text));
             cmd.Parameters.Add(new SqlParameter("@Prenom", txtPrenom.Text));
@@ -68,6 +77,7 @@ namespace Helpdesk.AdminUserControls
             cmd.Parameters.Add(new SqlParameter("@NumBureau", txtBureau.Text));
             cmd.ExecuteNonQuery();
             cnx.Close();
+            }
         }
         public static DataTable dataemp()
         {

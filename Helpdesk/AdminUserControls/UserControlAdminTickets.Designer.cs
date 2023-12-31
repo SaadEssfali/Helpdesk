@@ -68,7 +68,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(419, 45);
+            label1.Location = new Point(373, 45);
             label1.Name = "label1";
             label1.Size = new Size(116, 21);
             label1.TabIndex = 48;
@@ -76,9 +76,9 @@
             // 
             // txtemploye
             // 
-            txtemploye.Location = new Point(555, 40);
+            txtemploye.Location = new Point(500, 40);
             txtemploye.Name = "txtemploye";
-            txtemploye.Size = new Size(117, 27);
+            txtemploye.Size = new Size(209, 27);
             txtemploye.TabIndex = 47;
             // 
             // label2
@@ -87,7 +87,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(715, 45);
+            label2.Location = new Point(743, 45);
             label2.Name = "label2";
             label2.Size = new Size(76, 21);
             label2.TabIndex = 50;
@@ -98,9 +98,9 @@
             txtstatut.DropDownStyle = ComboBoxStyle.DropDownList;
             txtstatut.FormattingEnabled = true;
             txtstatut.Items.AddRange(new object[] { "ouvert", "en cours", "fermé" });
-            txtstatut.Location = new Point(791, 43);
+            txtstatut.Location = new Point(828, 46);
             txtstatut.Name = "txtstatut";
-            txtstatut.Size = new Size(151, 28);
+            txtstatut.Size = new Size(196, 28);
             txtstatut.TabIndex = 51;
             txtstatut.SelectedIndexChanged += comboBoxCategorie_SelectedIndexChanged;
             // 
@@ -130,9 +130,9 @@
             txtpriorite.DropDownStyle = ComboBoxStyle.DropDownList;
             txtpriorite.FormattingEnabled = true;
             txtpriorite.Items.AddRange(new object[] { "Haute Priorité", "Moyenne Priorité", "Basse Priorité" });
-            txtpriorite.Location = new Point(791, 99);
+            txtpriorite.Location = new Point(828, 102);
             txtpriorite.Name = "txtpriorite";
-            txtpriorite.Size = new Size(151, 28);
+            txtpriorite.Size = new Size(196, 28);
             txtpriorite.TabIndex = 56;
             // 
             // label4
@@ -141,7 +141,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(719, 106);
+            label4.Location = new Point(747, 106);
             label4.Name = "label4";
             label4.Size = new Size(75, 21);
             label4.TabIndex = 55;
@@ -153,7 +153,7 @@
             txtouvert.Format = DateTimePickerFormat.Custom;
             txtouvert.Location = new Point(166, 182);
             txtouvert.Name = "txtouvert";
-            txtouvert.Size = new Size(173, 27);
+            txtouvert.Size = new Size(201, 27);
             txtouvert.TabIndex = 57;
             txtouvert.ValueChanged += DateOuverture_ValueChanged;
             txtouvert.KeyDown += DateOuverture_KeyDown;
@@ -188,7 +188,7 @@
             txtcloture.Format = DateTimePickerFormat.Custom;
             txtcloture.Location = new Point(555, 182);
             txtcloture.Name = "txtcloture";
-            txtcloture.Size = new Size(173, 27);
+            txtcloture.Size = new Size(208, 27);
             txtcloture.TabIndex = 60;
             txtcloture.ValueChanged += DateCloture_ValueChanged;
             txtcloture.KeyDown += DateCloture_KeyDown;
@@ -198,7 +198,7 @@
             btnvider.BackColor = Color.Black;
             btnvider.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnvider.ForeColor = Color.OldLace;
-            btnvider.Location = new Point(619, 226);
+            btnvider.Location = new Point(700, 246);
             btnvider.Name = "btnvider";
             btnvider.Size = new Size(168, 58);
             btnvider.TabIndex = 64;
@@ -211,7 +211,7 @@
             btnmettreajour.BackColor = Color.White;
             btnmettreajour.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnmettreajour.ForeColor = Color.Black;
-            btnmettreajour.Location = new Point(419, 226);
+            btnmettreajour.Location = new Point(500, 246);
             btnmettreajour.Name = "btnmettreajour";
             btnmettreajour.Size = new Size(168, 58);
             btnmettreajour.TabIndex = 63;
@@ -224,7 +224,7 @@
             btnsupprimer.BackColor = Color.FromArgb(240, 30, 44);
             btnsupprimer.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnsupprimer.ForeColor = Color.White;
-            btnsupprimer.Location = new Point(216, 226);
+            btnsupprimer.Location = new Point(297, 246);
             btnsupprimer.Name = "btnsupprimer";
             btnsupprimer.Size = new Size(168, 58);
             btnsupprimer.TabIndex = 62;
@@ -238,7 +238,7 @@
             btnajouter.FlatAppearance.BorderSize = 0;
             btnajouter.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnajouter.ForeColor = Color.White;
-            btnajouter.Location = new Point(12, 226);
+            btnajouter.Location = new Point(93, 246);
             btnajouter.Name = "btnajouter";
             btnajouter.Size = new Size(168, 58);
             btnajouter.TabIndex = 61;
@@ -270,7 +270,7 @@
             txtcategorie.Items.AddRange(new object[] { "1", "2" });
             txtcategorie.Location = new Point(166, 40);
             txtcategorie.Name = "txtcategorie";
-            txtcategorie.Size = new Size(173, 28);
+            txtcategorie.Size = new Size(201, 28);
             txtcategorie.TabIndex = 67;
             // 
             // UserControlAdminTickets
