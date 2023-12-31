@@ -81,7 +81,7 @@
             btnajouter.FlatAppearance.BorderSize = 0;
             btnajouter.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnajouter.ForeColor = Color.White;
-            btnajouter.Location = new Point(97, 226);
+            btnajouter.Location = new Point(36, 225);
             btnajouter.Name = "btnajouter";
             btnajouter.Size = new Size(168, 58);
             btnajouter.TabIndex = 21;
@@ -94,7 +94,7 @@
             btnsupprimer.BackColor = Color.FromArgb(240, 30, 44);
             btnsupprimer.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnsupprimer.ForeColor = Color.White;
-            btnsupprimer.Location = new Point(301, 226);
+            btnsupprimer.Location = new Point(240, 225);
             btnsupprimer.Name = "btnsupprimer";
             btnsupprimer.Size = new Size(168, 58);
             btnsupprimer.TabIndex = 22;
@@ -107,7 +107,7 @@
             btnmettreajour.BackColor = Color.White;
             btnmettreajour.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnmettreajour.ForeColor = Color.Black;
-            btnmettreajour.Location = new Point(504, 226);
+            btnmettreajour.Location = new Point(443, 225);
             btnmettreajour.Name = "btnmettreajour";
             btnmettreajour.Size = new Size(168, 58);
             btnmettreajour.TabIndex = 23;
@@ -120,7 +120,7 @@
             btnvider.BackColor = Color.Black;
             btnvider.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnvider.ForeColor = Color.OldLace;
-            btnvider.Location = new Point(704, 226);
+            btnvider.Location = new Point(643, 225);
             btnvider.Name = "btnvider";
             btnvider.Size = new Size(168, 58);
             btnvider.TabIndex = 24;

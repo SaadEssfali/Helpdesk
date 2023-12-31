@@ -20,7 +20,38 @@ namespace Helpdesk.AdminUserControls
         {
             InitializeComponent();
             refresh(dataGridViewemp);
+            searchboxcombo.SelectedIndex = 0;
+            searchbox.TextChanged += searchfunction;
+
         }
+        //cette fonction permet de filtrer datagridview  selon le search box
+        private void searchfunction(object sender, EventArgs e) 
+        {
+        DataView dv = new DataView(dataemp());
+            if (!string.IsNullOrEmpty(searchbox.Text))
+            {
+                if (searchboxcombo.SelectedIndex == 0)
+                {
+                    try
+                    {
+                        dv.RowFilter = $"ID = {searchbox.Text}";
+                    }
+                    catch {
+                        MessageBox.Show("Veuillez entrer un nombre valide comme ID.", "Erreur de saisie", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+
+                else
+                {
+                    dv.RowFilter = $"{searchboxcombo.SelectedItem} LIKE '%{searchbox.Text}%'";
+                }
+
+                
+            }
+            dataGridViewemp.DataSource = dv;
+
+        }
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -52,31 +83,33 @@ namespace Helpdesk.AdminUserControls
         {
 
         }
-        public  void insertempinfo()
+        public void insertempinfo()
         {
             cnx = Program.GetConnection();
             cnx.Open();
-            SqlCommand commande = new SqlCommand("SELECT COUNT (ID) FROM Employe where UserName=@UserName",cnx);
+            SqlCommand commande = new SqlCommand("SELECT COUNT (ID) FROM Employe where UserName=@UserName", cnx);
             commande.Parameters.Add(new SqlParameter("@UserName", txtUsername.Text));
             int nbre = (int)commande.ExecuteScalar();
-            if (nbre > 0) {
+            if (nbre > 0)
+            {
                 MessageBox.Show($"Le nom d'utilisateur '{txtUsername.Text}' est déjà utilisé. Veuillez choisir un nom d'utilisateur différent.", "Nom d'utilisateur existant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 return;
             }
-            else { 
-            SqlCommand cmd = new SqlCommand("insert into Employe(Nom,Prenom,UserName,MotDePasse,Departement,N_Service,NumBureau,NumTel,Etage) values(@Nom,@Prenom,@UserName,@MotDePasse,@Departement,@N_Service,@NumBureau,@NumTel,@Etage)", cnx);
-            cmd.Parameters.Add(new SqlParameter("@Nom", txtName.Text));
-            cmd.Parameters.Add(new SqlParameter("@Prenom", txtPrenom.Text));
-            cmd.Parameters.Add(new SqlParameter("@UserName", txtUsername.Text));
-            cmd.Parameters.Add(new SqlParameter("@MotDePasse", txtPass.Text));
-            cmd.Parameters.Add(new SqlParameter("@NumTel", txtTelephone.Text));
-            cmd.Parameters.Add(new SqlParameter("@N_Service", txtService.Text));
-            cmd.Parameters.Add(new SqlParameter("@Departement", txtDepartement.Text));
-            cmd.Parameters.Add(new SqlParameter("@Etage", txtEtage.Text));
-            cmd.Parameters.Add(new SqlParameter("@NumBureau", txtBureau.Text));
-            cmd.ExecuteNonQuery();
-            cnx.Close();
+            else
+            {
+                SqlCommand cmd = new SqlCommand("insert into Employe(Nom,Prenom,UserName,MotDePasse,Departement,N_Service,NumBureau,NumTel,Etage) values(@Nom,@Prenom,@UserName,@MotDePasse,@Departement,@N_Service,@NumBureau,@NumTel,@Etage)", cnx);
+                cmd.Parameters.Add(new SqlParameter("@Nom", txtName.Text));
+                cmd.Parameters.Add(new SqlParameter("@Prenom", txtPrenom.Text));
+                cmd.Parameters.Add(new SqlParameter("@UserName", txtUsername.Text));
+                cmd.Parameters.Add(new SqlParameter("@MotDePasse", txtPass.Text));
+                cmd.Parameters.Add(new SqlParameter("@NumTel", txtTelephone.Text));
+                cmd.Parameters.Add(new SqlParameter("@N_Service", txtService.Text));
+                cmd.Parameters.Add(new SqlParameter("@Departement", txtDepartement.Text));
+                cmd.Parameters.Add(new SqlParameter("@Etage", txtEtage.Text));
+                cmd.Parameters.Add(new SqlParameter("@NumBureau", txtBureau.Text));
+                cmd.ExecuteNonQuery();
+                cnx.Close();
             }
         }
         public static DataTable dataemp()
@@ -110,7 +143,7 @@ namespace Helpdesk.AdminUserControls
             return dataGridViewemp;
 
         }
-        public  void updatetable()
+        public void updatetable()
         {
             if (dataGridViewemp.SelectedRows.Count > 0)
             {
@@ -133,7 +166,7 @@ namespace Helpdesk.AdminUserControls
             }
         }
 
-        public  void clearboxes()
+        public void clearboxes()
         {
             txtName.Clear();
             txtPrenom.Clear();
@@ -171,6 +204,11 @@ namespace Helpdesk.AdminUserControls
         {
             updatetable();
             refresh(dataGridViewemp);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

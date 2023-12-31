@@ -51,6 +51,9 @@
             dataGridViewemp = new DataGridView();
             labeletage = new Label();
             txtEtage = new TextBox();
+            searchboxcombo = new ComboBox();
+            searchbox = new TextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewemp).BeginInit();
             SuspendLayout();
             // 
@@ -60,7 +63,7 @@
             Bureau.BackColor = Color.Transparent;
             Bureau.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Bureau.ForeColor = Color.White;
-            Bureau.Location = new Point(303, 159);
+            Bureau.Location = new Point(303, 133);
             Bureau.Name = "Bureau";
             Bureau.Size = new Size(106, 21);
             Bureau.TabIndex = 59;
@@ -68,7 +71,7 @@
             // 
             // txtBureau
             // 
-            txtBureau.Location = new Point(419, 157);
+            txtBureau.Location = new Point(419, 131);
             txtBureau.Name = "txtBureau";
             txtBureau.Size = new Size(196, 27);
             txtBureau.TabIndex = 58;
@@ -79,7 +82,7 @@
             Service.BackColor = Color.Transparent;
             Service.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Service.ForeColor = Color.White;
-            Service.Location = new Point(688, 157);
+            Service.Location = new Point(688, 131);
             Service.Name = "Service";
             Service.Size = new Size(84, 21);
             Service.TabIndex = 56;
@@ -87,7 +90,7 @@
             // 
             // txtService
             // 
-            txtService.Location = new Point(782, 157);
+            txtService.Location = new Point(782, 131);
             txtService.Name = "txtService";
             txtService.Size = new Size(196, 27);
             txtService.TabIndex = 55;
@@ -98,7 +101,7 @@
             Departement.BackColor = Color.Transparent;
             Departement.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Departement.ForeColor = Color.White;
-            Departement.Location = new Point(636, 102);
+            Departement.Location = new Point(636, 76);
             Departement.Name = "Departement";
             Departement.Size = new Size(140, 21);
             Departement.TabIndex = 54;
@@ -106,7 +109,7 @@
             // 
             // txtDepartement
             // 
-            txtDepartement.Location = new Point(782, 100);
+            txtDepartement.Location = new Point(782, 74);
             txtDepartement.Name = "txtDepartement";
             txtDepartement.Size = new Size(196, 27);
             txtDepartement.TabIndex = 53;
@@ -117,7 +120,7 @@
             Telephone.BackColor = Color.Transparent;
             Telephone.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Telephone.ForeColor = Color.White;
-            Telephone.Location = new Point(303, 102);
+            Telephone.Location = new Point(303, 76);
             Telephone.Name = "Telephone";
             Telephone.Size = new Size(113, 21);
             Telephone.TabIndex = 52;
@@ -125,7 +128,7 @@
             // 
             // txtTelephone
             // 
-            txtTelephone.Location = new Point(419, 100);
+            txtTelephone.Location = new Point(419, 74);
             txtTelephone.Name = "txtTelephone";
             txtTelephone.Size = new Size(196, 27);
             txtTelephone.TabIndex = 51;
@@ -136,7 +139,7 @@
             Prenom.BackColor = Color.Transparent;
             Prenom.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
             Prenom.ForeColor = Color.White;
-            Prenom.Location = new Point(3, 106);
+            Prenom.Location = new Point(3, 80);
             Prenom.Name = "Prenom";
             Prenom.Size = new Size(82, 21);
             Prenom.TabIndex = 50;
@@ -144,7 +147,7 @@
             // 
             // txtPrenom
             // 
-            txtPrenom.Location = new Point(91, 104);
+            txtPrenom.Location = new Point(91, 78);
             txtPrenom.Name = "txtPrenom";
             txtPrenom.Size = new Size(196, 27);
             txtPrenom.TabIndex = 49;
@@ -155,7 +158,7 @@
             Passe.BackColor = Color.Transparent;
             Passe.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             Passe.ForeColor = Color.White;
-            Passe.Location = new Point(636, 40);
+            Passe.Location = new Point(636, 14);
             Passe.Name = "Passe";
             Passe.Size = new Size(136, 21);
             Passe.TabIndex = 48;
@@ -163,7 +166,7 @@
             // 
             // txtPass
             // 
-            txtPass.Location = new Point(782, 38);
+            txtPass.Location = new Point(782, 12);
             txtPass.Name = "txtPass";
             txtPass.PasswordChar = '*';
             txtPass.Size = new Size(196, 27);
@@ -175,7 +178,7 @@
             Usename.BackColor = Color.Transparent;
             Usename.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             Usename.ForeColor = Color.White;
-            Usename.Location = new Point(303, 40);
+            Usename.Location = new Point(303, 14);
             Usename.Name = "Usename";
             Usename.Size = new Size(110, 21);
             Usename.TabIndex = 46;
@@ -183,7 +186,7 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(419, 34);
+            txtUsername.Location = new Point(419, 8);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(196, 27);
             txtUsername.TabIndex = 45;
@@ -194,7 +197,7 @@
             Nom.BackColor = Color.Transparent;
             Nom.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
             Nom.ForeColor = Color.White;
-            Nom.Location = new Point(12, 44);
+            Nom.Location = new Point(12, 18);
             Nom.Name = "Nom";
             Nom.Size = new Size(59, 21);
             Nom.TabIndex = 44;
@@ -202,7 +205,7 @@
             // 
             // txtName
             // 
-            txtName.Location = new Point(91, 38);
+            txtName.Location = new Point(91, 12);
             txtName.Name = "txtName";
             txtName.Size = new Size(196, 27);
             txtName.TabIndex = 43;
@@ -212,7 +215,7 @@
             btnvider.BackColor = Color.Black;
             btnvider.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnvider.ForeColor = Color.OldLace;
-            btnvider.Location = new Point(619, 226);
+            btnvider.Location = new Point(619, 236);
             btnvider.Name = "btnvider";
             btnvider.Size = new Size(168, 58);
             btnvider.TabIndex = 64;
@@ -225,7 +228,7 @@
             btnmettreajour.BackColor = Color.White;
             btnmettreajour.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnmettreajour.ForeColor = Color.Black;
-            btnmettreajour.Location = new Point(419, 226);
+            btnmettreajour.Location = new Point(419, 236);
             btnmettreajour.Name = "btnmettreajour";
             btnmettreajour.Size = new Size(168, 58);
             btnmettreajour.TabIndex = 63;
@@ -238,7 +241,7 @@
             btnsupprimer.BackColor = Color.FromArgb(240, 30, 44);
             btnsupprimer.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnsupprimer.ForeColor = Color.White;
-            btnsupprimer.Location = new Point(216, 226);
+            btnsupprimer.Location = new Point(216, 236);
             btnsupprimer.Name = "btnsupprimer";
             btnsupprimer.Size = new Size(168, 58);
             btnsupprimer.TabIndex = 62;
@@ -252,7 +255,7 @@
             btnajouter.FlatAppearance.BorderSize = 0;
             btnajouter.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnajouter.ForeColor = Color.White;
-            btnajouter.Location = new Point(12, 226);
+            btnajouter.Location = new Point(12, 236);
             btnajouter.Name = "btnajouter";
             btnajouter.Size = new Size(168, 58);
             btnajouter.TabIndex = 61;
@@ -284,7 +287,7 @@
             labeletage.BackColor = Color.Transparent;
             labeletage.Font = new Font("Century Gothic", 10F, FontStyle.Regular, GraphicsUnit.Point);
             labeletage.ForeColor = Color.White;
-            labeletage.Location = new Point(12, 163);
+            labeletage.Location = new Point(12, 137);
             labeletage.Name = "labeletage";
             labeletage.Size = new Size(70, 21);
             labeletage.TabIndex = 66;
@@ -292,16 +295,47 @@
             // 
             // txtEtage
             // 
-            txtEtage.Location = new Point(91, 157);
+            txtEtage.Location = new Point(91, 131);
             txtEtage.Name = "txtEtage";
             txtEtage.Size = new Size(196, 27);
             txtEtage.TabIndex = 67;
+            // 
+            // searchboxcombo
+            // 
+            searchboxcombo.FormattingEnabled = true;
+            searchboxcombo.Items.AddRange(new object[] { "ID", "Nom", "Prenom", "UserName", "Departement", "N_Service", "NumBureau", "NumTel", "Specialite" });
+            searchboxcombo.Location = new Point(308, 191);
+            searchboxcombo.Name = "searchboxcombo";
+            searchboxcombo.Size = new Size(196, 28);
+            searchboxcombo.TabIndex = 68;
+            searchboxcombo.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // searchbox
+            // 
+            searchbox.Location = new Point(636, 191);
+            searchbox.Name = "searchbox";
+            searchbox.Size = new Size(196, 27);
+            searchbox.TabIndex = 69;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(227, 192);
+            label1.Name = "label1";
+            label1.Size = new Size(75, 23);
+            label1.TabIndex = 70;
+            label1.Text = "Search : ";
             // 
             // UserControlAdminEmploye
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(44, 63, 102);
+            Controls.Add(label1);
+            Controls.Add(searchbox);
+            Controls.Add(searchboxcombo);
             Controls.Add(txtEtage);
             Controls.Add(labeletage);
             Controls.Add(dataGridViewemp);
@@ -358,5 +392,8 @@
         private TextBox txtPass;
         private TextBox txtUsername;
         private TextBox txtName;
+        private ComboBox searchboxcombo;
+        private TextBox searchbox;
+        private Label label1;
     }
 }
