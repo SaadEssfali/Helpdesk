@@ -69,7 +69,8 @@ namespace Helpdesk.UserControls
 
             TicketCreated?.Invoke(this, EventArgs.Empty);
 
-            MessageBox.Show("votre ticket a été créé avec success");
+            MessageBox.Show("votre ticket a été créé avec succès",   "Confirmation",  MessageBoxButtons.OK,  MessageBoxIcon.Information,  MessageBoxDefaultButton.Button1); // Default button
+
 
             RefreshComboBox();
         }

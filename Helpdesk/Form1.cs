@@ -53,12 +53,12 @@ namespace Helpdesk
         {    //si l'user laisse les champs vide
             if (txtUser.Text == "")
             {
-                MessageBox.Show("Veuillez saisir votre nom d'utilisateur.", "Connexion requise");
+                MessageBox.Show("Veuillez saisir votre nom d'utilisateur.", "Connexion requise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             else if (txtPass.Text == "")
             {
-                MessageBox.Show("Veuillez saisir votre mot de passe.", "Connexion requise");
+                MessageBox.Show("Veuillez saisir votre mot de passe.", "Connexion requise", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -94,7 +94,7 @@ namespace Helpdesk
             else
             {
                 // si aucune fontion n'est validé (meessage d erreur)
-                MessageBox.Show("Nom d'utilisateur ou mot de passe invalide. Veuillez réessayer.", "Erreur de connexion");
+                MessageBox.Show("Nom d'utilisateur ou mot de passe invalide. Veuillez réessayer.", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
