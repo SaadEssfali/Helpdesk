@@ -53,11 +53,13 @@ namespace Helpdesk
         {    //si l'user laisse les champs vide
             if (txtUser.Text == "")
             {
-                MessageBox.Show("Entrer Usename  !");
+                MessageBox.Show("Veuillez saisir votre nom d'utilisateur.", "Connexion requise");
+                return;
             }
             else if (txtPass.Text == "")
             {
-                MessageBox.Show("Entrer Password  !");
+                MessageBox.Show("Veuillez saisir votre mot de passe.", "Connexion requise");
+                return;
             }
 
             //a l aide des fonctions on verifie le type de l'utilisateur
@@ -92,7 +94,7 @@ namespace Helpdesk
             else
             {
                 // si aucune fontion n'est validé (meessage d erreur)
-                MessageBox.Show("Invalid username ou password");
+                MessageBox.Show("Nom d'utilisateur ou mot de passe invalide. Veuillez réessayer.", "Erreur de connexion");
             }
 
 
