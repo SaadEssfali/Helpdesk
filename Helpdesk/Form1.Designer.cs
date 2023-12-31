@@ -169,10 +169,11 @@
             ClientSize = new Size(828, 443);
             Controls.Add(panel1);
             Controls.Add(pictureBox2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Login";
             Load += Form1_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
