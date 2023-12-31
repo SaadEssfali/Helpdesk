@@ -42,7 +42,6 @@
             // 
             // Id_card
             // 
-        
             Id_card.Image = (Image)resources.GetObject("Id_card.Image");
             Id_card.Location = new Point(129, 75);
             Id_card.Name = "Id_card";
@@ -55,9 +54,10 @@
             // Nom
             // 
             Nom.AutoSize = true;
-            Nom.BackColor = Color.MintCream;
+            Nom.BackColor = Color.FromArgb(21, 101, 192);
             Nom.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            Nom.Location = new Point(185, 75);
+            Nom.ForeColor = SystemColors.Control;
+            Nom.Location = new Point(118, 74);
             Nom.Name = "Nom";
             Nom.Size = new Size(96, 46);
             Nom.TabIndex = 1;
@@ -67,9 +67,10 @@
             // Prnm
             // 
             Prnm.AutoSize = true;
-            Prnm.BackColor = Color.MintCream;
+            Prnm.BackColor = Color.FromArgb(21, 101, 192);
             Prnm.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            Prnm.Location = new Point(185, 121);
+            Prnm.ForeColor = SystemColors.Control;
+            Prnm.Location = new Point(118, 120);
             Prnm.Name = "Prnm";
             Prnm.Size = new Size(141, 46);
             Prnm.TabIndex = 2;
@@ -79,6 +80,8 @@
             // Departement
             // 
             Departement.AutoSize = true;
+            Departement.BackColor = Color.FromArgb(21, 101, 192);
+            Departement.ForeColor = SystemColors.Control;
             Departement.Location = new Point(320, 285);
             Departement.Name = "Departement";
             Departement.Size = new Size(50, 20);
@@ -88,16 +91,21 @@
             // sevice
             // 
             sevice.AutoSize = true;
+            sevice.BackColor = Color.FromArgb(21, 101, 192);
+            sevice.ForeColor = SystemColors.Control;
             sevice.Location = new Point(267, 331);
             sevice.Name = "sevice";
             sevice.Size = new Size(50, 20);
             sevice.TabIndex = 4;
             sevice.Text = "label2";
+            sevice.Click += sevice_Click;
             // 
             // netage
             // 
             netage.AutoSize = true;
-            netage.Location = new Point(252, 375);
+            netage.BackColor = Color.FromArgb(21, 101, 192);
+            netage.ForeColor = SystemColors.Control;
+            netage.Location = new Point(288, 375);
             netage.Name = "netage";
             netage.Size = new Size(50, 20);
             netage.TabIndex = 5;
@@ -106,6 +114,8 @@
             // nbureau
             // 
             nbureau.AutoSize = true;
+            nbureau.BackColor = Color.FromArgb(21, 101, 192);
+            nbureau.ForeColor = SystemColors.Control;
             nbureau.Location = new Point(294, 415);
             nbureau.Name = "nbureau";
             nbureau.Size = new Size(50, 20);
@@ -115,6 +125,8 @@
             // ntel
             // 
             ntel.AutoSize = true;
+            ntel.BackColor = Color.FromArgb(21, 101, 192);
+            ntel.ForeColor = SystemColors.Control;
             ntel.Location = new Point(267, 459);
             ntel.Name = "ntel";
             ntel.Size = new Size(50, 20);

@@ -52,7 +52,7 @@ namespace Helpdesk.UserControls
 
         private void UserControlEmploye_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -66,6 +66,11 @@ namespace Helpdesk.UserControls
         }
 
         private void Id_card_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sevice_Click(object sender, EventArgs e)
         {
 
         }
