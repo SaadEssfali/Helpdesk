@@ -50,10 +50,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(94, 23, 235);
+            label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Control;
             label1.Location = new Point(200, 32);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(53, 23);
             label1.TabIndex = 1;
             label1.Text = "label1";
             label1.Click += label1_Click;
@@ -62,21 +63,23 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.FromArgb(94, 23, 235);
+            label2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.Control;
             label2.Location = new Point(200, 67);
             label2.Name = "label2";
-            label2.Size = new Size(50, 20);
+            label2.Size = new Size(55, 23);
             label2.TabIndex = 2;
             label2.Text = "label2";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(94, 23, 235);
-            label3.ForeColor = SystemColors.Control;
+            label3.BackColor = Color.MediumSlateBlue;
+            label3.Font = new Font("Roboto Condensed", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ControlLightLight;
             label3.Location = new Point(504, 41);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
+            label3.Size = new Size(45, 18);
             label3.TabIndex = 3;
             label3.Text = "label3";
             // 
