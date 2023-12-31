@@ -16,7 +16,7 @@ namespace Helpdesk.usercontroltech
         public TechTickHis()
         {
             InitializeComponent();
-            HistoriqueGridView.DataSource = historique();
+            historique();
 
         }
 
@@ -29,14 +29,14 @@ namespace Helpdesk.usercontroltech
         {
 
         }
-        public static DataTable historique()
+        public  void historique()
         {
             SqlConnection cnx = Program.GetConnection();
             DataTable dt = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter("select  InterventionID , TicketID ,DateDebut, Datefin , Commentaires from Intervention inner join Technicien on Intervention.TechnicienID = Technicien.ID where ID = @id ", cnx);
             adapter.SelectCommand.Parameters.AddWithValue("@id", Classtech.ID);
             adapter.Fill(dt);
-            return dt;
+            HistoriqueGridView.DataSource=dt;   
 
 
         }

@@ -159,11 +159,10 @@ namespace Helpdesk
             ficheBtn.BackColor = ColorTranslator.FromHtml("#004AAD");
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             buttoncontrole.BackColor = ColorTranslator.FromHtml("#004AAD");
-
-
             mainpanel_tech.Controls.Clear();
             mainpanel_tech.Controls.Add(HisTick);
             HisTick.Dock = DockStyle.Fill;
+            HisTick.historique();
         }
 
         private void button1_Click(object sender, EventArgs e)
