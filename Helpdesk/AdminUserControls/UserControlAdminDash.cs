@@ -95,7 +95,7 @@ namespace Helpdesk.AdminUserControls
 
         private void UserControlAdminDash_Load(object sender, EventArgs e)
         {
-            
+
 
         }
 

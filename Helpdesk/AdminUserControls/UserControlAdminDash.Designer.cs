@@ -46,19 +46,20 @@
             // TickResPicture
             // 
             TickResPicture.Image = (Image)resources.GetObject("TickResPicture.Image");
-            TickResPicture.Location = new Point(482, 93);
+            TickResPicture.Location = new Point(568, 42);
             TickResPicture.Name = "TickResPicture";
-            TickResPicture.Size = new Size(335, 150);
+            TickResPicture.Size = new Size(393, 233);
+            TickResPicture.SizeMode = PictureBoxSizeMode.AutoSize;
             TickResPicture.TabIndex = 2;
             TickResPicture.TabStop = false;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(105, 93);
+            pictureBox1.Location = new Point(100, 42);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(335, 150);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.Size = new Size(393, 233);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -66,7 +67,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(104, 282);
+            pictureBox2.Location = new Point(127, 396);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(335, 150);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -76,7 +77,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(482, 282);
+            pictureBox3.Location = new Point(568, 359);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(335, 150);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -88,7 +89,7 @@
             nombretech.AutoSize = true;
             nombretech.BackColor = Color.Transparent;
             nombretech.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            nombretech.ForeColor = SystemColors.ControlText;
+            nombretech.ForeColor = SystemColors.ActiveCaptionText;
             nombretech.Location = new Point(169, 68);
             nombretech.Name = "nombretech";
             nombretech.Size = new Size(113, 46);
@@ -101,8 +102,8 @@
             ticketresolut.AutoSize = true;
             ticketresolut.BackColor = Color.Transparent;
             ticketresolut.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            ticketresolut.ForeColor = SystemColors.ButtonFace;
-            ticketresolut.Location = new Point(100, 68);
+            ticketresolut.ForeColor = SystemColors.ButtonHighlight;
+            ticketresolut.Location = new Point(169, 68);
             ticketresolut.Name = "ticketresolut";
             ticketresolut.Size = new Size(113, 46);
             ticketresolut.TabIndex = 14;
@@ -114,7 +115,7 @@
             nombreticket.AutoSize = true;
             nombreticket.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             nombreticket.ForeColor = SystemColors.ActiveCaptionText;
-            nombreticket.Location = new Point(182, 71);
+            nombreticket.Location = new Point(277, 57);
             nombreticket.Name = "nombreticket";
             nombreticket.Size = new Size(113, 46);
             nombreticket.TabIndex = 15;
@@ -127,7 +128,7 @@
             nombreemploye.BackColor = Color.Transparent;
             nombreemploye.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             nombreemploye.ForeColor = SystemColors.ButtonFace;
-            nombreemploye.Location = new Point(172, 68);
+            nombreemploye.Location = new Point(127, 42);
             nombreemploye.Name = "nombreemploye";
             nombreemploye.Size = new Size(113, 46);
             nombreemploye.TabIndex = 16;
@@ -141,12 +142,12 @@
             BackColor = SystemColors.Control;
             Controls.Add(nombreemploye);
             Controls.Add(nombreticket);
-            Controls.Add(ticketresolut);
-            Controls.Add(nombretech);
             Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
             Controls.Add(TickResPicture);
             Controls.Add(pictureBox3);
+            Controls.Add(ticketresolut);
+            Controls.Add(nombretech);
+            Controls.Add(pictureBox1);
             Name = "UserControlAdminDash";
             Size = new Size(1030, 672);
             Load += UserControlAdminDash_Load;
