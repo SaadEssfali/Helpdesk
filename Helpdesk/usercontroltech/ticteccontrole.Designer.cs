@@ -46,6 +46,7 @@
             Controls.Add(flowLayoutPanel1);
             Name = "ticteccontrole";
             Size = new Size(800, 583);
+            Load += ticteccontrole_Load_1;
             ResumeLayout(false);
         }
 

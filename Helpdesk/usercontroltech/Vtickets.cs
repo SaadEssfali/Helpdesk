@@ -42,13 +42,6 @@ namespace Helpdesk.usercontroltech
 
 
 
-
-
-
-
-
-
-
             foreach (DataRow row in TicketTable.Rows)
             {
                 ticketflow flowt = new ticketflow();

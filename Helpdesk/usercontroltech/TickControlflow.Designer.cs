@@ -178,12 +178,12 @@
         #endregion
 
         private PictureBox pictureBox1;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
+        public Label label1;
+        public Label label2;
+        public Label label3;
+        public Label label4;
+        public Label label5;
+        public Label label6;
         private TextBox textBox1;
         private Label label7;
         private ComboBox comboBox1;
