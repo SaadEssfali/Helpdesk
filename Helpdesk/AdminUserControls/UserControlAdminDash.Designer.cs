@@ -67,20 +67,20 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(127, 396);
+            pictureBox2.Location = new Point(100, 374);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(335, 150);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.Size = new Size(393, 233);
+            pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(568, 359);
+            pictureBox3.Location = new Point(568, 374);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(335, 150);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.Size = new Size(393, 233);
+            pictureBox3.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
             // 
@@ -90,7 +90,7 @@
             nombretech.BackColor = Color.Transparent;
             nombretech.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             nombretech.ForeColor = SystemColors.ActiveCaptionText;
-            nombretech.Location = new Point(169, 68);
+            nombretech.Location = new Point(165, 64);
             nombretech.Name = "nombretech";
             nombretech.Size = new Size(113, 46);
             nombretech.TabIndex = 13;
@@ -115,7 +115,7 @@
             nombreticket.AutoSize = true;
             nombreticket.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             nombreticket.ForeColor = SystemColors.ActiveCaptionText;
-            nombreticket.Location = new Point(277, 57);
+            nombreticket.Location = new Point(165, 68);
             nombreticket.Name = "nombreticket";
             nombreticket.Size = new Size(113, 46);
             nombreticket.TabIndex = 15;
@@ -128,7 +128,7 @@
             nombreemploye.BackColor = Color.Transparent;
             nombreemploye.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             nombreemploye.ForeColor = SystemColors.ButtonFace;
-            nombreemploye.Location = new Point(127, 42);
+            nombreemploye.Location = new Point(169, 68);
             nombreemploye.Name = "nombreemploye";
             nombreemploye.Size = new Size(113, 46);
             nombreemploye.TabIndex = 16;
@@ -140,14 +140,14 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            Controls.Add(nombreemploye);
-            Controls.Add(nombreticket);
             Controls.Add(pictureBox2);
             Controls.Add(TickResPicture);
             Controls.Add(pictureBox3);
             Controls.Add(ticketresolut);
-            Controls.Add(nombretech);
+            Controls.Add(nombreemploye);
             Controls.Add(pictureBox1);
+            Controls.Add(nombretech);
+            Controls.Add(nombreticket);
             Name = "UserControlAdminDash";
             Size = new Size(1030, 672);
             Load += UserControlAdminDash_Load;

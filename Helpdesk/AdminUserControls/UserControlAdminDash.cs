@@ -48,7 +48,7 @@ namespace Helpdesk.AdminUserControls
         {
             cnx = Program.GetConnection();
             cnx.Open();
-            SqlCommand cmd = new SqlCommand("select count(TicketID) from Ticket where Statut ='résolue';", cnx);
+            SqlCommand cmd = new SqlCommand("select count(TicketID) from Ticket where Statut ='résolu';", cnx);
             int nombreTicketsResolus = (int)cmd.ExecuteScalar();
 
             return nombreTicketsResolus;
