@@ -97,7 +97,7 @@
             // 
             txtstatut.DropDownStyle = ComboBoxStyle.DropDownList;
             txtstatut.FormattingEnabled = true;
-            txtstatut.Items.AddRange(new object[] { "ouvert", "en cours", "fermé", "Résolut" });
+            txtstatut.Items.AddRange(new object[] { "ouvert", "en cours", "fermé", "résolu" });
             txtstatut.Location = new Point(828, 46);
             txtstatut.Name = "txtstatut";
             txtstatut.Size = new Size(196, 28);

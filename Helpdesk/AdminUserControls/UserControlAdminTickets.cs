@@ -156,15 +156,15 @@ namespace Helpdesk.AdminUserControls
         private void btnsupprimer_Click(object sender, EventArgs e)
         {
             deleteticket();
-            actualiserticket() ;
+            actualiserticket();
         }
 
         private void datagridviewticket_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-             DataGridViewRow row = this.datagridviewticket.Rows[e.RowIndex];
-                
+                DataGridViewRow row = this.datagridviewticket.Rows[e.RowIndex];
+
                 txtcategorie.Text = row.Cells["CategorieID"].Value.ToString();
                 txtemploye.Text = row.Cells["EmployeID"].Value.ToString();
                 txtstatut.Text = row.Cells["Statut"].Value.ToString();
@@ -173,7 +173,7 @@ namespace Helpdesk.AdminUserControls
                 txtdescription.Text = row.Cells["Description"].Value.ToString();
                 txtpriorite.Text = row.Cells["Priorité"].Value.ToString();
                 txtouvert.Text = row.Cells["DateOuverture"].Value.ToString();
-                txtcloture.Text = row.Cells["DateCloture"].Value.ToString() ;
+                txtcloture.Text = row.Cells["DateCloture"].Value.ToString();
 
 
 
