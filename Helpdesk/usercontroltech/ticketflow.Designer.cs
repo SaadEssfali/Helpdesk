@@ -125,7 +125,7 @@
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             textBox1.ScrollBars = ScrollBars.Both;
-            textBox1.Size = new Size(361, 191);
+            textBox1.Size = new Size(364, 191);
             textBox1.TabIndex = 7;
             textBox1.TextChanged += textBox1_TextChanged;
             // 

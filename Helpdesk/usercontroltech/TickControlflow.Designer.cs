@@ -52,6 +52,7 @@
             pictureBox1.Size = new Size(735, 218);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label1
             // 
@@ -169,7 +170,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Name = "TickControlflow";
-            Size = new Size(732, 215);
+            Size = new Size(711, 215);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

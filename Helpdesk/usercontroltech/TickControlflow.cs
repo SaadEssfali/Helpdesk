@@ -21,5 +21,10 @@ namespace Helpdesk.usercontroltech
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

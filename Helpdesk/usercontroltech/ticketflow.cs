@@ -16,14 +16,14 @@ namespace Helpdesk.usercontroltech
 
 
     {
-       
-        
+
+
 
 
         public ticketflow()
         {
             InitializeComponent();
-            
+
         }
         public static SqlConnection GetConnection()
         {
@@ -47,13 +47,13 @@ namespace Helpdesk.usercontroltech
                 {
 
 
-                        SqlCommand insertCommand = new SqlCommand($"INSERT INTO Intervention(TicketID, TechnicienID, DateDebut, DateFin, Commentaires, Evaluation) " +
-                                            $"VALUES (@TicketID , @TechnicienID, GETDATE(), NULL, NULL, NULL);update Ticket set Statut ='en cours' where TicketID= @TicketID;"+
-                                            $"Insert Into NotificationLog (TicketID,MessageNotif,Datenotif,IsRead) values (@TicketID,'Votre ticket ID= ' + CAST(@TicketID AS VARCHAR) + ' a été pris en charge par notre technicien ' + @TechName + ' ' + @Prenom,GETDATE(),0)", cnx, transaction);
+                    SqlCommand insertCommand = new SqlCommand($"INSERT INTO Intervention(TicketID, TechnicienID, DateDebut, DateFin, Commentaires, Evaluation) " +
+                                        $"VALUES (@TicketID , @TechnicienID, GETDATE(), NULL, NULL, NULL);update Ticket set Statut ='en cours' where TicketID= @TicketID;" +
+                                        $"Insert Into NotificationLog (TicketID,MessageNotif,Datenotif,IsRead) values (@TicketID,'Votre ticket ID= ' + CAST(@TicketID AS VARCHAR) + ' a été pris en charge par notre technicien ' + @TechName + ' ' + @Prenom,GETDATE(),0)", cnx, transaction);
 
-                        insertCommand.Parameters.AddWithValue("@TicketID", idTicket);
-                        insertCommand.Parameters.AddWithValue("@TechnicienID", idTechnicien);
-                         insertCommand.Parameters.AddWithValue("@TechName", NameTech);
+                    insertCommand.Parameters.AddWithValue("@TicketID", idTicket);
+                    insertCommand.Parameters.AddWithValue("@TechnicienID", idTechnicien);
+                    insertCommand.Parameters.AddWithValue("@TechName", NameTech);
                     insertCommand.Parameters.AddWithValue("@Prenom", prenomTech);
 
 
@@ -62,12 +62,12 @@ namespace Helpdesk.usercontroltech
                     //executer les requetes
                     insertCommand.ExecuteNonQuery();
 
-                        MessageBox.Show("Ticket Acceptées");
+                    MessageBox.Show("Ticket Acceptées");
 
-                        transaction.Commit();
+                    transaction.Commit();
 
-                    
-                   
+
+
                 }
 
             }

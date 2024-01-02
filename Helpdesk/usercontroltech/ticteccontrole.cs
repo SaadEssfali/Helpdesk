@@ -30,26 +30,26 @@ namespace Helpdesk.usercontroltech
             Ticketbox();
         }
 
-        public  void Ticketbox()
+        public void Ticketbox()
         {
             DataTable ticontrol = new DataTable();
             ticontrol = datat();
-
+            
 
 
             foreach (DataRow row in ticontrol.Rows)
             {
                 TickControlflow flowt = new TickControlflow();
-               
-                {
-                    flowt.label1.Text = row["TicketID"].ToString();
-                    flowt.label2.Text = row["ID"].ToString();
-                    flowt.label3.Text = row["Departement"].ToString();
-                    flowt.label4.Text = row["N_Service"].ToString();
-                    flowt.label5.Text = row["Etage"].ToString();
-                    flowt.label6.Text = row["NumBureau"].ToString();
-         
-                }
+
+
+                flowt.label1.Text = row["TicketID"].ToString();
+                flowt.label2.Text = row["ID"].ToString();
+                flowt.label3.Text = row["Departement"].ToString();
+                flowt.label4.Text = row["N_Service"].ToString();
+                flowt.label5.Text = row["Etage"].ToString();
+                flowt.label6.Text = row["NumBureau"].ToString();
+
+
                 flowLayoutPanel1.Controls.Add(flowt);
 
             }
@@ -76,6 +76,11 @@ namespace Helpdesk.usercontroltech
         }
 
         private void ticteccontrole_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

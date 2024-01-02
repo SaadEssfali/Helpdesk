@@ -33,6 +33,8 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(31, 29);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(732, 215);
@@ -43,11 +45,13 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             Controls.Add(flowLayoutPanel1);
             Name = "ticteccontrole";
             Size = new Size(800, 583);
             Load += ticteccontrole_Load_1;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
