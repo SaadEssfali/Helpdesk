@@ -15,38 +15,43 @@ namespace Helpdesk.usercontroltech
     public partial class Vtickets : UserControl
     {
         public static SqlConnection cnx;
-       
- 
+
+
         public Vtickets()
         {
             InitializeComponent();
-            Ticketpicbox(flowLayoutTicket);
+            Ticketpicbox();
 
 
 
 
 
         }
-        public void  RefreshTickets()
+        public void RefreshTickets()
         {
             flowLayoutTicket.Controls.Clear();
-            Ticketpicbox(flowLayoutTicket);
+            Ticketpicbox();
         }
 
 
-        public static void Ticketpicbox(FlowLayoutPanel flowLayoutTicket)
+        public  void Ticketpicbox()
         {
-
             DataTable TicketTable = new DataTable();
             TicketTable = tic();
 
 
-
-            foreach (DataRow row in TicketTable.Rows)
+            if (TicketTable.Rows.Count == 0)
             {
-                ticketflow flowt = new ticketflow();
-
+                tichinv.Visible = true;
+                return;
+            }
+            else
+            {
+                foreach (DataRow row in TicketTable.Rows)
                 {
+                    ticketflow flowt = new ticketflow();
+
+                    // Assurez-vous d'initialiser chaque propriété de l'instance flowt à chaque itération
                     flowt.labelid.Text = row["TicketID"].ToString();
                     flowt.label2.Text = row["ID"].ToString();
                     flowt.label3.Text = row["Departement"].ToString();
@@ -55,24 +60,11 @@ namespace Helpdesk.usercontroltech
                     flowt.label6.Text = row["NumBureau"].ToString();
                     flowt.textBox1.Text = row["Description"].ToString();
 
-
-
-
-
+                    flowLayoutTicket.Controls.Add(flowt);
                 }
-
-
-                flowLayoutTicket.Controls.Add(flowt);
-
-
-
-
-
             }
-
-
-
         }
+
 
         public static DataTable tic()
         {
@@ -90,8 +82,19 @@ namespace Helpdesk.usercontroltech
 
         private void Vtickets_Load(object sender, EventArgs e)
         {
-            
+
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+       
     }
+
+
+
 }

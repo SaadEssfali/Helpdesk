@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             flowLayoutTicket = new FlowLayoutPanel();
+            tichinv = new Label();
             SuspendLayout();
             // 
             // flowLayoutTicket
@@ -41,11 +42,24 @@
             flowLayoutTicket.TabIndex = 0;
             flowLayoutTicket.Paint += flowLayoutPanel1_Paint;
             // 
+            // tichinv
+            // 
+            tichinv.AutoSize = true;
+            tichinv.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
+            tichinv.Location = new Point(174, 275);
+            tichinv.Name = "tichinv";
+            tichinv.Size = new Size(430, 46);
+            tichinv.TabIndex = 1;
+            tichinv.Text = "Aucun Ticket est disponible";
+            tichinv.Visible = false;
+            tichinv.Click += label1_Click;
+            // 
             // Vtickets
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            Controls.Add(tichinv);
             Controls.Add(flowLayoutTicket);
             Name = "Vtickets";
             Size = new Size(800, 583);
@@ -57,5 +71,6 @@
         #endregion
 
         private FlowLayoutPanel flowLayoutTicket;
+        public static Label tichinv;
     }
 }

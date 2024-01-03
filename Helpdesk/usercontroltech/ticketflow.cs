@@ -62,7 +62,9 @@ namespace Helpdesk.usercontroltech
                     //executer les requetes
                     insertCommand.ExecuteNonQuery();
 
-                    MessageBox.Show("Ticket Acceptées");
+                   // MessageBox.Show("Ticket Acceptées");
+                    MessageBox.Show("Ticket Acceptées", "Acceptation", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1); // Default button
+
 
                     transaction.Commit();
 
