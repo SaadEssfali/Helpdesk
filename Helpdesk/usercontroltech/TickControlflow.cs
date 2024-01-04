@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Transactions;
 using System.Windows.Forms;
@@ -78,13 +79,17 @@ namespace Helpdesk.usercontroltech
             using (SqlConnection cnx = GetConnection())
             {
                 cnx.Open();
-
-                SqlCommand UpdateCommand = new SqlCommand($"UPDATE Intervention SET Commentaires = @Commentaires WHERE TicketID = @TicketID; " +
-                                                           $"UPDATE Ticket SET Statut = @Statut WHERE TicketID = @TicketID;", cnx);
+                SqlCommand UpdateCommand = new SqlCommand(
+                    $"UPDATE Intervention SET Commentaires = @Commentaires WHERE TicketID = @TicketID; " +
+                    $"UPDATE Ticket SET Statut = @Statut WHERE TicketID = @TicketID;" +
+                    $"INSERT INTO NotificationLog (TicketID, MessageNotif, Datenotif, IsRead) " +
+                    $"VALUES (@TicketID, 'Votre ticket ID= ' + CAST(@TicketID AS VARCHAR) + ' a été ' + @Statut, GETDATE(), 0) ", cnx) ;
 
                 UpdateCommand.Parameters.AddWithValue("@Commentaires", textBox1.Text);
                 UpdateCommand.Parameters.AddWithValue("@Statut", comboBox1.Text);
                 UpdateCommand.Parameters.AddWithValue("@TicketID", idTicket);
+
+
 
                 // exécuter les requêtes
                 UpdateCommand.ExecuteNonQuery();
