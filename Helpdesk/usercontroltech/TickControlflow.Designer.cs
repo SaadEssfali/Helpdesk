@@ -138,12 +138,14 @@
             // 
             // comboBox1
             // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Resolue", "Ouvert", "Fermée" });
             comboBox1.Location = new Point(592, 41);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(113, 28);
             comboBox1.TabIndex = 10;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label8
             // 
@@ -164,6 +166,7 @@
             button1.TabIndex = 12;
             button1.Text = "Valider";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // TickControlflow
             // 

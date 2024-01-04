@@ -43,13 +43,12 @@ namespace Helpdesk.usercontroltech
             {
                 cnx.Open();
 
-                using (SqlTransaction transaction = cnx.BeginTransaction())
-                {
+               
 
 
                     SqlCommand insertCommand = new SqlCommand($"INSERT INTO Intervention(TicketID, TechnicienID, DateDebut, DateFin, Commentaires, Evaluation) " +
                                         $"VALUES (@TicketID , @TechnicienID, GETDATE(), NULL, NULL, NULL);update Ticket set Statut ='en cours' where TicketID= @TicketID;" +
-                                        $"Insert Into NotificationLog (TicketID,MessageNotif,Datenotif,IsRead) values (@TicketID,'Votre ticket ID= ' + CAST(@TicketID AS VARCHAR) + ' a été pris en charge par notre technicien ' + @TechName + ' ' + @Prenom,GETDATE(),0)", cnx, transaction);
+                                        $"Insert Into NotificationLog (TicketID,MessageNotif,Datenotif,IsRead) values (@TicketID,'Votre ticket ID= ' + CAST(@TicketID AS VARCHAR) + ' a été pris en charge par notre technicien ' + @TechName + ' ' + @Prenom,GETDATE(),0)", cnx);
 
                     insertCommand.Parameters.AddWithValue("@TicketID", idTicket);
                     insertCommand.Parameters.AddWithValue("@TechnicienID", idTechnicien);
@@ -63,11 +62,11 @@ namespace Helpdesk.usercontroltech
                     insertCommand.ExecuteNonQuery();
 
                   
-                    transaction.Commit();
+                   
 
 
 
-                }
+                
                 // MessageBox.Show("Ticket Acceptées");
                 MessageBox.Show("Ticket Acceptées", "Acceptation", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1); // Default button
 
