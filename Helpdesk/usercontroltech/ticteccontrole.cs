@@ -59,7 +59,8 @@ namespace Helpdesk.usercontroltech
         {
             cnx = Program.GetConnection();
             DataTable local = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT Ticket.TicketID, Employe.ID, Employe.Departement, Employe.N_Service, Employe.Etage, Employe.NUMBureau FROM Ticket INNER JOIN  Employe ON Ticket.EmployeID = Employe.ID;\r\n", cnx);
+            SqlDataAdapter adapter = new SqlDataAdapter("select T.TicketID,E.ID,E.Departement,E.Departement,E.N_Service,Etage,E.NumBureau from Ticket T inner join Intervention I on T.TicketID=I.TicketID inner join Employe E on  T.EmployeID=E.ID where TechnicienID=@technicien and Statut='en cours'", cnx);
+            adapter.SelectCommand.Parameters.AddWithValue("@technicien", Classtech.ID );
             adapter.Fill(local);
             return local;
         }

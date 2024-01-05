@@ -140,7 +140,7 @@
             // 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Resolue", "Ouvert", "Fermée" });
+            comboBox1.Items.AddRange(new object[] { "résolu", "ouvert", "fermé" });
             comboBox1.Location = new Point(592, 41);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(113, 28);
