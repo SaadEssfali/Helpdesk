@@ -17,7 +17,7 @@ namespace Helpdesk.usercontroltech
     public partial class TickControlflow : UserControl
 
     {
-        ticteccontrole ttc = new ticteccontrole();
+       
         public TickControlflow()
 
 
@@ -78,7 +78,11 @@ namespace Helpdesk.usercontroltech
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ttc.RefreshTickets();
+
+            (this.Parent.Parent as ticteccontrole)?.RefreshTickets();
+
+
+
 
             int idTicket = int.Parse(label1.Text);
 
