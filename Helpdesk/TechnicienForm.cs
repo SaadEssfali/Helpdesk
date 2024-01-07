@@ -33,7 +33,7 @@ namespace Helpdesk
             techdash.Dock = DockStyle.Fill;
 
 
-
+            tictec.RefreshTickets();
 
 
 
@@ -171,6 +171,7 @@ namespace Helpdesk
             mainpanel_tech.Controls.Clear();
             mainpanel_tech.Controls.Add(tictec);
             tictec.Dock = DockStyle.Fill;
+            tictec.RefreshTickets();
 
             buttoncontrole.BackColor = Color.Black;
             dashboardButton.BackColor = ColorTranslator.FromHtml("#004AAD");

@@ -41,6 +41,7 @@
             comboBox1 = new ComboBox();
             label8 = new Label();
             button1 = new Button();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -73,6 +74,7 @@
             label2.Size = new Size(50, 20);
             label2.TabIndex = 2;
             label2.Text = "label2";
+            label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -116,7 +118,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(220, 41);
+            textBox1.Location = new Point(212, 41);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(341, 149);
@@ -129,7 +131,7 @@
             label7.BackColor = SystemColors.Control;
             label7.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(220, 9);
+            label7.Location = new Point(307, 7);
             label7.Name = "label7";
             label7.Size = new Size(152, 31);
             label7.TabIndex = 8;
@@ -141,7 +143,7 @@
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "résolu", "ouvert", "fermé" });
-            comboBox1.Location = new Point(592, 41);
+            comboBox1.Location = new Point(595, 72);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(113, 28);
             comboBox1.TabIndex = 10;
@@ -152,7 +154,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(618, 11);
+            label8.Location = new Point(539, 7);
             label8.Name = "label8";
             label8.Size = new Size(74, 31);
             label8.TabIndex = 11;
@@ -160,7 +162,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(611, 121);
+            button1.Location = new Point(604, 121);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 12;
@@ -168,10 +170,23 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(605, 6);
+            label9.Name = "label9";
+            label9.Size = new Size(76, 31);
+            label9.TabIndex = 13;
+            label9.Text = "label9";
+            label9.Click += label9_Click;
+            // 
             // TickControlflow
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label9);
             Controls.Add(button1);
             Controls.Add(label8);
             Controls.Add(comboBox1);
@@ -205,5 +220,6 @@
         private ComboBox comboBox1;
         private Label label8;
         private Button button1;
+        public Label label9;
     }
 }

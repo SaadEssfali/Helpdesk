@@ -15,12 +15,19 @@ using System.Windows.Forms;
 namespace Helpdesk.usercontroltech
 {
     public partial class TickControlflow : UserControl
+
     {
+        ticteccontrole ttc = new ticteccontrole();
         public TickControlflow()
+
+
         {
             InitializeComponent();
             label8.Parent = pictureBox1;
             label8.BackColor = Color.Transparent;
+
+            label9.Parent = pictureBox1;
+            label9.BackColor = Color.Transparent;
 
             label7.Parent = pictureBox1;
             label7.BackColor = Color.Transparent;
@@ -71,10 +78,59 @@ namespace Helpdesk.usercontroltech
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ttc.RefreshTickets();
 
             int idTicket = int.Parse(label1.Text);
 
 
+            string statut = comboBox1.Text.ToLower();
+
+                if (statut == "fermé")
+                {
+                    MessageBox.Show("Ticket fermé ! ", "Fermeture", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                    updatefermer();
+                }
+                else if (statut == "ouvert")
+                {
+                updatestatut();
+
+
+                    MessageBox.Show("Ticket Ouvert ! ", "Ouverture", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                }
+                else if (statut == "résolu")
+                {
+                    MessageBox.Show("Ticket résolu ! ", "Resolution", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                updatestatut();
+                }
+                else
+                {
+                    MessageBox.Show("Aucun statut choisie! ", "veuiller choisir le statut", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                    
+                }
+
+
+
+            
+        }
+
+        private void updatefermer()
+        {
+            SqlConnection cnx = GetConnection();
+            int idTicket = int.Parse(label1.Text);
+
+            SqlCommand datefin = new SqlCommand($"UPDATE Intervention SET DateFin = GETDATE() WHERE TicketID = @TicketID;" +
+                                                             $"UPDATE Ticket SET DateCloture = GETDATE() WHERE TicketID = @TicketID;", cnx);
+            datefin.Parameters.AddWithValue("@TicketID", idTicket);
+            datefin.ExecuteNonQuery();
+
+
+
+        }
+
+
+        private void updatestatut()
+        {
+            int idTicket = int.Parse(label1.Text);
 
             using (SqlConnection cnx = GetConnection())
             {
@@ -91,19 +147,30 @@ namespace Helpdesk.usercontroltech
 
 
 
-                // exécuter les requêtes
-                UpdateCommand.ExecuteNonQuery();
+
+
+
+
+                          // exécuter les requêtes
+                                UpdateCommand.ExecuteNonQuery();
+
+
             }
-
-
-
-
-
+          
 
 
         }
+       private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

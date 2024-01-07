@@ -28,13 +28,17 @@ namespace Helpdesk.usercontroltech
         {
             tickcontrolflow.Controls.Clear();
             Ticketbox();
+            flowLayoutPanel1.Refresh(); // Rafraîchir le FlowLayoutPanel
+
         }
 
+      
         public void Ticketbox()
         {
             DataTable ticontrol = new DataTable();
             ticontrol = datat();
-            
+            flowLayoutPanel1.Controls.Clear();
+
 
 
             foreach (DataRow row in ticontrol.Rows)
@@ -48,6 +52,7 @@ namespace Helpdesk.usercontroltech
                 flowt.label4.Text = row["N_Service"].ToString();
                 flowt.label5.Text = row["Etage"].ToString();
                 flowt.label6.Text = row["NumBureau"].ToString();
+                flowt.label9.Text = row["Statut"].ToString();
 
 
                 flowLayoutPanel1.Controls.Add(flowt);
@@ -59,7 +64,7 @@ namespace Helpdesk.usercontroltech
         {
             cnx = Program.GetConnection();
             DataTable local = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter("select T.TicketID,E.ID,E.Departement,E.Departement,E.N_Service,Etage,E.NumBureau from Ticket T inner join Intervention I on T.TicketID=I.TicketID inner join Employe E on  T.EmployeID=E.ID where TechnicienID=@technicien and Statut='en cours'", cnx);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT T.TicketID,T.Statut, E.ID, E.Departement, E.N_Service, E.Etage, E.NumBureau FROM Ticket T INNER JOIN Intervention I ON T.TicketID = I.TicketID INNER JOIN Employe E ON T.EmployeID = E.ID WHERE TechnicienID = 1   AND Statut IN ('en cours', 'résolu', 'ouvert');", cnx);
             adapter.SelectCommand.Parameters.AddWithValue("@technicien", Classtech.ID );
             adapter.Fill(local);
             return local;
