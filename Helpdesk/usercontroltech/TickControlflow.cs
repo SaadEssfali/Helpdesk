@@ -124,7 +124,7 @@ namespace Helpdesk.usercontroltech
             int idTicket = int.Parse(label1.Text);
 
             SqlCommand datefin = new SqlCommand($"UPDATE Intervention SET DateFin = GETDATE() WHERE TicketID = @TicketID;" +
-                                                             $"UPDATE Ticket SET DateCloture = GETDATE() WHERE TicketID = @TicketID;", cnx);
+                                                             $"UPDATE Ticket SET DateCloture = GETDATE(), Statut = 'fermé' WHERE TicketID = @TicketID;", cnx);
             datefin.Parameters.AddWithValue("@TicketID", idTicket);
             datefin.ExecuteNonQuery();
 
