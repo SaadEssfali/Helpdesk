@@ -56,9 +56,8 @@
             panel1.Dock = DockStyle.Left;
             panel1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(271, 443);
+            panel1.Size = new Size(310, 591);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -70,10 +69,9 @@
             LoginButton.FlatAppearance.MouseOverBackColor = SystemColors.ActiveCaption;
             LoginButton.FlatStyle = FlatStyle.Flat;
             LoginButton.ForeColor = SystemColors.ControlLight;
-            LoginButton.Location = new Point(32, 262);
-            LoginButton.Margin = new Padding(3, 2, 3, 2);
+            LoginButton.Location = new Point(37, 349);
             LoginButton.Name = "LoginButton";
-            LoginButton.Size = new Size(197, 38);
+            LoginButton.Size = new Size(225, 51);
             LoginButton.TabIndex = 6;
             LoginButton.Text = "Login";
             LoginButton.UseVisualStyleBackColor = false;
@@ -84,9 +82,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Roboto Condensed", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ButtonFace;
-            label2.Location = new Point(32, 196);
+            label2.Location = new Point(37, 261);
             label2.Name = "label2";
-            label2.Size = new Size(54, 14);
+            label2.Size = new Size(67, 18);
             label2.TabIndex = 5;
             label2.Text = "Password";
             // 
@@ -95,9 +93,9 @@
             username.AutoSize = true;
             username.Font = new Font("Roboto Condensed", 9F, FontStyle.Bold, GraphicsUnit.Point);
             username.ForeColor = SystemColors.ButtonFace;
-            username.Location = new Point(32, 136);
+            username.Location = new Point(37, 181);
             username.Name = "username";
-            username.Size = new Size(56, 14);
+            username.Size = new Size(68, 18);
             username.TabIndex = 4;
             username.Text = "Username";
             // 
@@ -105,12 +103,11 @@
             // 
             txtPass.BorderStyle = BorderStyle.FixedSingle;
             txtPass.ForeColor = SystemColors.Desktop;
-            txtPass.Location = new Point(32, 211);
-            txtPass.Margin = new Padding(3, 2, 3, 2);
+            txtPass.Location = new Point(37, 281);
             txtPass.Multiline = true;
             txtPass.Name = "txtPass";
             txtPass.PasswordChar = '*';
-            txtPass.Size = new Size(197, 23);
+            txtPass.Size = new Size(225, 30);
             txtPass.TabIndex = 3;
             // 
             // txtUser
@@ -118,21 +115,19 @@
             txtUser.BackColor = SystemColors.Window;
             txtUser.BorderStyle = BorderStyle.FixedSingle;
             txtUser.Font = new Font("Arial Narrow", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            txtUser.Location = new Point(32, 152);
-            txtUser.Margin = new Padding(3, 2, 3, 2);
+            txtUser.Location = new Point(37, 203);
             txtUser.Multiline = true;
             txtUser.Name = "txtUser";
-            txtUser.Size = new Size(197, 23);
+            txtUser.Size = new Size(225, 30);
             txtUser.TabIndex = 2;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(10, -48);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(11, -64);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(249, 292);
+            pictureBox1.Size = new Size(285, 389);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -143,9 +138,9 @@
             label1.AutoSize = true;
             label1.BackColor = Color.DarkBlue;
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(54, 38);
+            label1.Location = new Point(62, 51);
             label1.Name = "label1";
-            label1.Size = new Size(0, 19);
+            label1.Size = new Size(0, 23);
             label1.TabIndex = 0;
             label1.Click += label1_Click;
             // 
@@ -153,10 +148,9 @@
             // 
             pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(274, -2);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
+            pictureBox2.Location = new Point(313, -3);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(581, 439);
+            pictureBox2.Size = new Size(664, 585);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
@@ -164,13 +158,12 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(828, 443);
+            ClientSize = new Size(946, 591);
             Controls.Add(panel1);
             Controls.Add(pictureBox2);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";

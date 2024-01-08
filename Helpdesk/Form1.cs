@@ -58,7 +58,7 @@ namespace Helpdesk
             }
             else if (txtPass.Text == "")
             {
-                MessageBox.Show("Veuillez saisir votre mot de passe.", "Connexion requise", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Veuillez saisir votre mot de passe.", "Connexion requise", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
