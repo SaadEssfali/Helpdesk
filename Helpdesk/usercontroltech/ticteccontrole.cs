@@ -60,11 +60,11 @@ namespace Helpdesk.usercontroltech
             }
         }
 
-        public static DataTable datat()
+        public  DataTable datat()
         {
             cnx = Program.GetConnection();
             DataTable local = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT T.TicketID,T.Statut, E.ID, E.Departement, E.N_Service, E.Etage, E.NumBureau FROM Ticket T INNER JOIN Intervention I ON T.TicketID = I.TicketID INNER JOIN Employe E ON T.EmployeID = E.ID WHERE TechnicienID = 1   AND Statut IN ('en cours', 'résolu', 'ouvert');", cnx);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT T.TicketID,T.Statut, E.ID, E.Departement, E.N_Service, E.Etage, E.NumBureau FROM Ticket T INNER JOIN Intervention I ON T.TicketID = I.TicketID INNER JOIN Employe E ON T.EmployeID = E.ID WHERE TechnicienID = @technicien   AND Statut IN ('en cours', 'résolu', 'ouvert');", cnx);
             adapter.SelectCommand.Parameters.AddWithValue("@technicien", Classtech.ID );
             adapter.Fill(local);
             return local;

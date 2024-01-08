@@ -67,19 +67,16 @@ namespace Helpdesk.usercontroltech
         }
 
 
-        public static SqlConnection GetConnection()
-        {
-            string strCnx = @"server=.\SQLEXPRESS;database=helpdesk_db;Integrated Security=true";
-            SqlConnection cnx = new SqlConnection(strCnx);
-            return cnx;
-        }
-
+       
 
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            (this.Parent.Parent as ticteccontrole)?.RefreshTickets();
+          
+
+         
+
 
 
 
@@ -119,7 +116,7 @@ namespace Helpdesk.usercontroltech
 
         private void updatefermer()
         {
-            SqlConnection cnx = GetConnection();
+            SqlConnection cnx = Program.GetConnection();
             cnx.Open();
             int idTicket = int.Parse(label1.Text);
 
@@ -127,6 +124,7 @@ namespace Helpdesk.usercontroltech
                                                              $"UPDATE Ticket SET DateCloture = GETDATE(), Statut = 'fermé' WHERE TicketID = @TicketID;", cnx);
             datefin.Parameters.AddWithValue("@TicketID", idTicket);
             datefin.ExecuteNonQuery();
+            (this.Parent.Parent as ticteccontrole)?.Ticketbox();
 
 
 
@@ -137,7 +135,7 @@ namespace Helpdesk.usercontroltech
         {
             int idTicket = int.Parse(label1.Text);
 
-            using (SqlConnection cnx = GetConnection())
+            using (SqlConnection cnx = Program.GetConnection())
             {
                 cnx.Open();
                 SqlCommand UpdateCommand = new SqlCommand(
@@ -158,7 +156,7 @@ namespace Helpdesk.usercontroltech
 
                           // exécuter les requêtes
                                 UpdateCommand.ExecuteNonQuery();
-
+                (this.Parent.Parent as ticteccontrole)?.Ticketbox();
 
             }
           
