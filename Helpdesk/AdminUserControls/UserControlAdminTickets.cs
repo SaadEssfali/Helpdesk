@@ -77,6 +77,7 @@ namespace Helpdesk.AdminUserControls
             cmd.Parameters.Add(new SqlParameter("@Statut", txtstatut.Text));
             cmd.Parameters.Add(new SqlParameter("@Priorité", txtpriorite.Text));
             cmd.ExecuteNonQuery();
+            cnx.Close();
         }
         public static DataTable dataticket()
         {
@@ -149,14 +150,27 @@ namespace Helpdesk.AdminUserControls
 
         private void btnmettreajour_Click(object sender, EventArgs e)
         {
+            notificationupdate();
             updateticket();
             actualiserticket();
+         
         }
 
         private void btnsupprimer_Click(object sender, EventArgs e)
         {
             deleteticket();
             actualiserticket();
+        }
+        private void notificationupdate()
+        {
+            cnx.Open();
+            int id = (int)datagridviewticket.SelectedRows[0].Cells["TicketID"].Value;
+
+            SqlCommand cmd = new SqlCommand("INSERT INTO NotificationLog(TicketID,MessageNotif,Datenotif,IsRead) Values(@TicketID,'Un admin a mis a jour votre ticket de ID='+cast(@TicketID as varchar)+'',GETDATE(),0)",cnx
+                );
+            cmd.Parameters.AddWithValue("@TicketID", id);
+            cmd.ExecuteNonQuery();
+            cnx.Close();
         }
 
         private void datagridviewticket_CellContentClick(object sender, DataGridViewCellEventArgs e)
