@@ -120,6 +120,7 @@ namespace Helpdesk.usercontroltech
         private void updatefermer()
         {
             SqlConnection cnx = GetConnection();
+            cnx.Open();
             int idTicket = int.Parse(label1.Text);
 
             SqlCommand datefin = new SqlCommand($"UPDATE Intervention SET DateFin = GETDATE() WHERE TicketID = @TicketID;" +
