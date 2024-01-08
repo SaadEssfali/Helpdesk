@@ -121,8 +121,11 @@ namespace Helpdesk.usercontroltech
             int idTicket = int.Parse(label1.Text);
 
             SqlCommand datefin = new SqlCommand($"UPDATE Intervention SET DateFin = GETDATE() WHERE TicketID = @TicketID;" +
-                                                             $"UPDATE Ticket SET DateCloture = GETDATE(), Statut = 'fermé' WHERE TicketID = @TicketID;", cnx);
+                                                             $"UPDATE Ticket SET DateCloture = GETDATE(), Statut = 'fermé' WHERE TicketID = @TicketID;" +
+                                                             $"INSERT INTO NotificationLog (TicketID, MessageNotif, Datenotif, IsRead) " +
+                                                             $"VALUES (@TicketID, 'Votre ticket ID= ' + CAST(@TicketID AS VARCHAR) + ' a été ' + @Statut, GETDATE(), 0)", cnx);
             datefin.Parameters.AddWithValue("@TicketID", idTicket);
+            datefin.Parameters.AddWithValue("@Statut", comboBox1.Text);
             datefin.ExecuteNonQuery();
             (this.Parent.Parent as ticteccontrole)?.Ticketbox();
 
