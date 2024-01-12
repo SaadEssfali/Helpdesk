@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,13 +18,14 @@ namespace Helpdesk.AdminUserControls
 
         public UserControlAdminDash()
         {
-
             InitializeComponent();
 
-            ticketresolut.Text = TicketResolueadmin().ToString();
-            nombretech.Text = nombretech1().ToString();
-            nombreticket.Text = nombreticket1().ToString();
-            nombreemploye.Text = nombreemploye1().ToString();
+
+
+            TicketResolueadmin();
+            nombretech1();
+            nombreticket1();
+            nombreemploye1();
             ticketresolut.Parent = TickResPicture;
             ticketresolut.BackColor = Color.Transparent;
             nombreticket.Parent = pictureBox2;
@@ -44,43 +46,42 @@ namespace Helpdesk.AdminUserControls
         {
 
         }
-        public static int TicketResolueadmin()
+        public  void TicketResolueadmin()
         {
             cnx = Program.GetConnection();
             cnx.Open();
             SqlCommand cmd = new SqlCommand("select count(TicketID) from Ticket where Statut ='résolu';", cnx);
             int nombreTicketsResolus = (int)cmd.ExecuteScalar();
 
-            return nombreTicketsResolus;
+            ticketresolut.Text = nombreTicketsResolus.ToString();
 
 
         }
-        public static int nombretech1()
+        public  void nombretech1()
         {
             cnx = Program.GetConnection();
             cnx.Open();
             SqlCommand cmd = new SqlCommand("select count(Id) from Technicien", cnx);
             int nombreteech = (int)cmd.ExecuteScalar();
-            return nombreteech;
+            nombretech.Text = nombreteech.ToString();
 
         }
-        public static int nombreticket1()
+        public  void nombreticket1()
         {
             cnx = Program.GetConnection();
             cnx.Open();
             SqlCommand cmd = new SqlCommand("select count(TicketID) from Ticket", cnx);
             int nombreticket1 = (int)cmd.ExecuteScalar();
-            return nombreticket1;
+            nombreticket.Text = nombreticket1.ToString();
 
         }
-        public static int nombreemploye1()
+        public  void nombreemploye1()
         {
             cnx = Program.GetConnection();
             cnx.Open();
             SqlCommand cmd = new SqlCommand("select count(ID) from Employe", cnx);
             int nombreemploye1 = (int)cmd.ExecuteScalar();
-            return nombreemploye1;
-
+            nombreemploye.Text = nombreemploye1.ToString();
         }
 
         private void nombretech_Click(object sender, EventArgs e)
