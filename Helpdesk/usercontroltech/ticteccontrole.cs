@@ -38,8 +38,7 @@ namespace Helpdesk.usercontroltech
             DataTable ticontrol = new DataTable();
             ticontrol = datat();
             flowLayoutPanel1.Controls.Clear();
-
-
+          
 
             foreach (DataRow row in ticontrol.Rows)
             {
@@ -64,7 +63,7 @@ namespace Helpdesk.usercontroltech
         {
             cnx = Program.GetConnection();
             DataTable local = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT T.TicketID,T.Statut, E.ID, E.Departement, E.N_Service, E.Etage, E.NumBureau FROM Ticket T INNER JOIN Intervention I ON T.TicketID = I.TicketID INNER JOIN Employe E ON T.EmployeID = E.ID WHERE TechnicienID = @technicien   AND Statut IN ('en cours', 'résolu', 'ouvert');", cnx);
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT T.TicketID,T.Statut, E.ID, E.Departement, E.N_Service, E.Etage, E.NumBureau FROM Ticket T INNER JOIN Intervention I ON T.TicketID = I.TicketID INNER JOIN Employe E ON T.EmployeID = E.ID WHERE TechnicienID = @technicien   AND Statut IN ('en cours', 'résolu') order  by TicketID desc;", cnx);
             adapter.SelectCommand.Parameters.AddWithValue("@technicien", Classtech.ID );
             adapter.Fill(local);
             return local;

@@ -29,12 +29,15 @@ namespace Helpdesk.usercontroltech
         }
         public void RefreshTickets()
         {
+            
             flowLayoutTicket.Controls.Clear();
             Ticketpicbox();
+          
+            
         }
 
 
-        public  void Ticketpicbox()
+        public void Ticketpicbox()
         {
             DataTable TicketTable = new DataTable();
             TicketTable = tic();
@@ -43,10 +46,12 @@ namespace Helpdesk.usercontroltech
             if (TicketTable.Rows.Count == 0)
             {
                 tichinv.Visible = true;
-                return;
+
             }
+            
             else
             {
+                tichinv.Visible = false;
                 foreach (DataRow row in TicketTable.Rows)
                 {
                     ticketflow flowt = new ticketflow();
@@ -65,7 +70,7 @@ namespace Helpdesk.usercontroltech
             }
         }
 
-
+  
         public static DataTable tic()
         {
             cnx = Program.GetConnection();
@@ -74,6 +79,7 @@ namespace Helpdesk.usercontroltech
             adapter.Fill(local);
             return local;
         }
+
 
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
