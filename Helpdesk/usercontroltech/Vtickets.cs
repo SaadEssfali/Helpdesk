@@ -29,11 +29,11 @@ namespace Helpdesk.usercontroltech
         }
         public void RefreshTickets()
         {
-            
+
             flowLayoutTicket.Controls.Clear();
             Ticketpicbox();
-          
-            
+
+
         }
 
 
@@ -48,7 +48,7 @@ namespace Helpdesk.usercontroltech
                 tichinv.Visible = true;
 
             }
-            
+
             else
             {
                 tichinv.Visible = false;
@@ -70,7 +70,7 @@ namespace Helpdesk.usercontroltech
             }
         }
 
-  
+
         public static DataTable tic()
         {
             cnx = Program.GetConnection();
@@ -98,7 +98,7 @@ namespace Helpdesk.usercontroltech
         }
 
 
-       
+
     }
 
 

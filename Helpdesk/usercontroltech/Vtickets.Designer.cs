@@ -46,11 +46,11 @@
             // 
             tichinv.AutoSize = true;
             tichinv.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
-            tichinv.Location = new Point(174, 275);
+            tichinv.Location = new Point(199, 270);
             tichinv.Name = "tichinv";
-            tichinv.Size = new Size(430, 46);
+            tichinv.Size = new Size(386, 46);
             tichinv.TabIndex = 1;
-            tichinv.Text = "Aucun Ticket est disponible";
+            tichinv.Text = "Aucun Ticket  disponible";
             tichinv.Visible = false;
             tichinv.Click += label1_Click;
             // 
@@ -71,6 +71,6 @@
         #endregion
 
         private FlowLayoutPanel flowLayoutTicket;
-        public static Label tichinv;
+        public Label tichinv;
     }
 }

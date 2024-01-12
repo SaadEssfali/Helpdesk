@@ -32,39 +32,49 @@ namespace Helpdesk.usercontroltech
 
         }
 
-      
+
         public void Ticketbox()
         {
             DataTable ticontrol = new DataTable();
             ticontrol = datat();
             flowLayoutPanel1.Controls.Clear();
-          
 
-            foreach (DataRow row in ticontrol.Rows)
+
+            if (ticontrol.Rows.Count == 0)
             {
-                TickControlflow flowt = new TickControlflow();
+                auti.Visible = true;
+
+            }
+
+            else
+            {
+                auti.Visible = false;
+                foreach (DataRow row in ticontrol.Rows)
+                {
+                    TickControlflow flowt = new TickControlflow();
 
 
-                flowt.label1.Text = row["TicketID"].ToString();
-                flowt.label2.Text = row["ID"].ToString();
-                flowt.label3.Text = row["Departement"].ToString();
-                flowt.label4.Text = row["N_Service"].ToString();
-                flowt.label5.Text = row["Etage"].ToString();
-                flowt.label6.Text = row["NumBureau"].ToString();
-                flowt.label9.Text = row["Statut"].ToString();
+                    flowt.label1.Text = row["TicketID"].ToString();
+                    flowt.label2.Text = row["ID"].ToString();
+                    flowt.label3.Text = row["Departement"].ToString();
+                    flowt.label4.Text = row["N_Service"].ToString();
+                    flowt.label5.Text = row["Etage"].ToString();
+                    flowt.label6.Text = row["NumBureau"].ToString();
+                    flowt.label9.Text = row["Statut"].ToString();
 
 
-                flowLayoutPanel1.Controls.Add(flowt);
+                    flowLayoutPanel1.Controls.Add(flowt);
 
+                }
             }
         }
 
-        public  DataTable datat()
+        public DataTable datat()
         {
             cnx = Program.GetConnection();
             DataTable local = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter("SELECT T.TicketID,T.Statut, E.ID, E.Departement, E.N_Service, E.Etage, E.NumBureau FROM Ticket T INNER JOIN Intervention I ON T.TicketID = I.TicketID INNER JOIN Employe E ON T.EmployeID = E.ID WHERE TechnicienID = @technicien   AND Statut IN ('en cours', 'résolu') order  by TicketID desc;", cnx);
-            adapter.SelectCommand.Parameters.AddWithValue("@technicien", Classtech.ID );
+            adapter.SelectCommand.Parameters.AddWithValue("@technicien", Classtech.ID);
             adapter.Fill(local);
             return local;
         }
