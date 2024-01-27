@@ -303,7 +303,7 @@
             // searchboxcombo
             // 
             searchboxcombo.FormattingEnabled = true;
-            searchboxcombo.Items.AddRange(new object[] { "ID", "Nom", "Prenom", "UserName", "Departement", "N_Service", "NumBureau", "NumTel", "Specialite" });
+            searchboxcombo.Items.AddRange(new object[] { "ID", "Nom", "Prenom", "UserName", "Departement", "N_Service", "NumBureau", "NumTel", "Etage" });
             searchboxcombo.Location = new Point(308, 191);
             searchboxcombo.Name = "searchboxcombo";
             searchboxcombo.Size = new Size(196, 28);

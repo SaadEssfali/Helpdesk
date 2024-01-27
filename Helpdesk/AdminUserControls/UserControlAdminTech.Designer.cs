@@ -51,6 +51,9 @@
             dataGridViewtech = new DataGridView();
             txtPass = new TextBox();
             txtspecialite = new TextBox();
+            label1 = new Label();
+            comboBox1 = new ComboBox();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridViewtech).BeginInit();
             SuspendLayout();
             // 
@@ -81,7 +84,7 @@
             btnajouter.FlatAppearance.BorderSize = 0;
             btnajouter.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnajouter.ForeColor = Color.White;
-            btnajouter.Location = new Point(36, 225);
+            btnajouter.Location = new Point(21, 270);
             btnajouter.Name = "btnajouter";
             btnajouter.Size = new Size(168, 58);
             btnajouter.TabIndex = 21;
@@ -94,7 +97,7 @@
             btnsupprimer.BackColor = Color.FromArgb(240, 30, 44);
             btnsupprimer.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnsupprimer.ForeColor = Color.White;
-            btnsupprimer.Location = new Point(240, 225);
+            btnsupprimer.Location = new Point(225, 270);
             btnsupprimer.Name = "btnsupprimer";
             btnsupprimer.Size = new Size(168, 58);
             btnsupprimer.TabIndex = 22;
@@ -107,7 +110,7 @@
             btnmettreajour.BackColor = Color.White;
             btnmettreajour.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnmettreajour.ForeColor = Color.Black;
-            btnmettreajour.Location = new Point(443, 225);
+            btnmettreajour.Location = new Point(426, 270);
             btnmettreajour.Name = "btnmettreajour";
             btnmettreajour.Size = new Size(168, 58);
             btnmettreajour.TabIndex = 23;
@@ -120,7 +123,7 @@
             btnvider.BackColor = Color.Black;
             btnvider.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnvider.ForeColor = Color.OldLace;
-            btnvider.Location = new Point(643, 225);
+            btnvider.Location = new Point(632, 270);
             btnvider.Name = "btnvider";
             btnvider.Size = new Size(168, 58);
             btnvider.TabIndex = 24;
@@ -276,14 +279,14 @@
             dataGridViewtech.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewtech.BackgroundColor = Color.FromArgb(11, 29, 36);
             dataGridViewtech.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewtech.Location = new Point(12, 310);
+            dataGridViewtech.Location = new Point(12, 345);
             dataGridViewtech.Name = "dataGridViewtech";
             dataGridViewtech.ReadOnly = true;
             dataGridViewtech.RowHeadersVisible = false;
             dataGridViewtech.RowHeadersWidth = 51;
             dataGridViewtech.RowTemplate.Height = 29;
             dataGridViewtech.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewtech.Size = new Size(1015, 341);
+            dataGridViewtech.Size = new Size(1015, 306);
             dataGridViewtech.TabIndex = 41;
             dataGridViewtech.CellContentClick += dataGridViewtech_CellContentClick;
             // 
@@ -304,11 +307,42 @@
             txtspecialite.TabIndex = 42;
             txtspecialite.TextChanged += txtspecialite_TextChanged;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.HighlightText;
+            label1.Location = new Point(150, 221);
+            label1.Name = "label1";
+            label1.Size = new Size(70, 23);
+            label1.TabIndex = 43;
+            label1.Text = "Search :";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "ID", "Nom", "Prenom", "UserName", "Departement", "N_Service", "NumBureau", "NumTel", "Specialite" });
+            comboBox1.Location = new Point(240, 220);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(196, 28);
+            comboBox1.TabIndex = 44;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(492, 221);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(196, 27);
+            textBox1.TabIndex = 45;
+            textBox1.TextChanged += textBox1_TextChanged_1;
+            // 
             // UserControlAdminTech
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(11, 29, 36);
+            Controls.Add(textBox1);
+            Controls.Add(comboBox1);
+            Controls.Add(label1);
             Controls.Add(txtspecialite);
             Controls.Add(dataGridViewtech);
             Controls.Add(Bureau);
@@ -365,5 +399,8 @@
         private TextBox txtBureau;
         private TextBox txtPass;
         private TextBox txtspecialite;
+        private Label label1;
+        private ComboBox comboBox1;
+        private TextBox textBox1;
     }
 }

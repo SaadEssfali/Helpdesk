@@ -68,7 +68,7 @@ namespace Helpdesk.AdminUserControls
         {
             cnx = Program.GetConnection();
             cnx.Open();
-            SqlCommand cmd = new SqlCommand("insert into Ticket(CategorieID, Description, EmployeID, DateOuverture, DateCloture, Statut, Priorité) values(@CategorieID,@Description, @EmployeID, @DateOuverture, @DateCloture, @Statut, @Priorité)", cnx);
+            SqlCommand cmd = new SqlCommand("insert into Ticket(CategorieID, Description, EmployeID, DateOuverture, DateCloture, Statut, Priorite) values(@CategorieID,@Description, @EmployeID, @DateOuverture, @DateCloture, @Statut, @Priorité)", cnx);
             cmd.Parameters.Add(new SqlParameter("@CategorieID", txtcategorie.Text));
             cmd.Parameters.Add(new SqlParameter("@Description", txtdescription.Text));
             cmd.Parameters.Add(new SqlParameter("@EmployeID", txtemploye.Text));
@@ -185,7 +185,7 @@ namespace Helpdesk.AdminUserControls
                 txtstatut.Text = row.Cells["Statut"].Value.ToString();
                 txtstatut.Text = row.Cells["Statut"].Value.ToString();
                 txtdescription.Text = row.Cells["Description"].Value.ToString();
-                txtpriorite.Text = row.Cells["Priorité"].Value.ToString();
+                txtpriorite.Text = row.Cells["Priorite"].Value.ToString();
                 txtouvert.Text = row.Cells["DateOuverture"].Value.ToString();
                 txtcloture.Text = row.Cells["DateCloture"].Value.ToString();
 

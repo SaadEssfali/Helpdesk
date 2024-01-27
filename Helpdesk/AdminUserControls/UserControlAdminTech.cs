@@ -20,6 +20,8 @@ namespace Helpdesk.AdminUserControls
         {
             InitializeComponent();
             actualisertech(dataGridViewtech);
+            textBox1.TextChanged += searchfunction;
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -186,6 +188,34 @@ namespace Helpdesk.AdminUserControls
             txtPass.Clear();
 
         }
+        private void searchfunction(object sender, EventArgs e)
+        {
+            DataView dv = new DataView(datatech());
+            if (!string.IsNullOrEmpty(comboBox1.Text))
+            {
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    try
+                    {
+                        dv.RowFilter = $"ID = {textBox1.Text}";
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Veuillez entrer un nombre valide comme ID.", "Erreur de saisie", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+
+                else
+                {
+                    dv.RowFilter = $"{comboBox1.SelectedItem} LIKE '%{textBox1.Text}%'";
+                }
+
+
+            }
+            dataGridViewtech.DataSource = dv;
+
+        }
+
 
         private void btnmettreajour_Click(object sender, EventArgs e)
         {
@@ -210,20 +240,26 @@ namespace Helpdesk.AdminUserControls
 
         private void dataGridViewtech_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0) {
+            if (e.RowIndex >= 0)
+            {
                 DataGridViewRow row = this.dataGridViewtech.Rows[e.RowIndex];
                 txtName.Text = row.Cells["Nom"].Value.ToString();
                 txtPrenom.Text = row.Cells["Prenom"].Value.ToString();
                 txtUsername.Text = row.Cells["UserName"].Value.ToString();
                 txtPass.Text = row.Cells["MotDepasse"].Value.ToString();
                 txtTelephone.Text = row.Cells["NumTel"].Value.ToString();
-                txtDepartement.Text = row.Cells["Departement"].Value.ToString(); 
+                txtDepartement.Text = row.Cells["Departement"].Value.ToString();
                 txtspecialite.Text = row.Cells["specialite"].Value.ToString();
                 txtService.Text = row.Cells["N_service"].Value.ToString();
                 txtBureau.Text = row.Cells["NumBureau"].Value.ToString();
 
 
             }
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
