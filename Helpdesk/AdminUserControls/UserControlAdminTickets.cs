@@ -99,7 +99,9 @@ namespace Helpdesk.AdminUserControls
             {
                 cnx.Open();
                 int id = (int)datagridviewticket.SelectedRows[0].Cells["TicketID"].Value;
-                SqlCommand cmd = new SqlCommand(" delete from Ticket where TicketID =@id", cnx);
+                SqlCommand cmd = new SqlCommand("delete from NotificationLog  where TicketID =@id;" +
+                    "delete from Intervention where TicketID =@id;" +
+                    "delete from Ticket where TicketID =@id", cnx);
                 cmd.Parameters.Add(new SqlParameter("@id", id));
                 cmd.ExecuteNonQuery();
             }

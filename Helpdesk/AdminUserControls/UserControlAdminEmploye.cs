@@ -98,7 +98,8 @@ namespace Helpdesk.AdminUserControls
             }
             else
             {
-                SqlCommand cmd = new SqlCommand("insert into Employe(Nom,Prenom,UserName,MotDePasse,Departement,N_Service,NumBureau,NumTel,Etage) values(@Nom,@Prenom,@UserName,@MotDePasse,@Departement,@N_Service,@NumBureau,@NumTel,@Etage)", cnx);
+                SqlCommand cmd = new SqlCommand("InsertEmployee", cnx);
+                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@Nom", txtName.Text));
                 cmd.Parameters.Add(new SqlParameter("@Prenom", txtPrenom.Text));
                 cmd.Parameters.Add(new SqlParameter("@UserName", txtUsername.Text));

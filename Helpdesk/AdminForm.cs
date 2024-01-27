@@ -31,8 +31,13 @@ namespace Helpdesk
 
         private void btndash_Click(object sender, EventArgs e)
         {
+            
             MAINpanel.Controls.Clear();
             MAINpanel.Controls.Add(dash);
+            dash.TicketResolueadmin();
+            dash.nombretech1();
+            dash.nombreticket1();
+            dash.nombreemploye1();
             btnemploye.BackColor = ColorTranslator.FromHtml("#004AAD");
             btndash.BackColor = Color.Black;
             btntechnicien.BackColor = ColorTranslator.FromHtml("#004AAD");
