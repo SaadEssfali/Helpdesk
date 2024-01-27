@@ -142,10 +142,15 @@ namespace Helpdesk
             ficheBtn.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             buttoncontrole.BackColor = ColorTranslator.FromHtml("#004AAD");
+           
+
+           
 
 
             mainpanel_tech.Controls.Clear();
+            VT.RefreshTickets();
             mainpanel_tech.Controls.Add(VT);
+            
             VT.Dock = DockStyle.Fill;
 
         }

@@ -73,12 +73,6 @@ namespace Helpdesk.usercontroltech
         private void button1_Click(object sender, EventArgs e)
         {
 
-          
-
-         
-
-
-
 
 
             int idTicket = int.Parse(label1.Text);
@@ -94,7 +88,7 @@ namespace Helpdesk.usercontroltech
                 else if (statut == "ouvert")
                 {
                 updatestatut();
-
+                delete();
 
                     MessageBox.Show("Ticket Ouvert ! ", "Ouverture", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                 }
@@ -106,13 +100,28 @@ namespace Helpdesk.usercontroltech
                 else
                 {
                     MessageBox.Show("Aucun statut choisie! ", "veuiller choisir le statut", MessageBoxButtons.OK, MessageBoxIcon.Error );
-                    
+                     
                 }
 
 
 
             
         }
+
+        private void delete()
+        {
+            SqlConnection cnx = Program.GetConnection();
+            cnx.Open();
+            int idTicket = int.Parse(label1.Text);
+
+            SqlCommand delete = new SqlCommand("DELETE FROM Intervention WHERE TicketID = @TicketID", cnx);
+            delete.Parameters.AddWithValue("@TicketID", idTicket);
+
+            delete.ExecuteNonQuery();
+
+            cnx.Close(); 
+        }
+
 
         private void updatefermer()
         {

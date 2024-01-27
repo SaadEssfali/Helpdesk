@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             flowLayoutPanel1 = new FlowLayoutPanel();
+            auti = new Label();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -41,11 +42,23 @@
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
+            // auti
+            // 
+            auti.AutoSize = true;
+            auti.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point);
+            auti.Location = new Point(209, 268);
+            auti.Name = "auti";
+            auti.Size = new Size(386, 46);
+            auti.TabIndex = 1;
+            auti.Text = "Aucun Ticket  disponible";
+            auti.Visible = false;
+            // 
             // ticteccontrole
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+            Controls.Add(auti);
             Controls.Add(flowLayoutPanel1);
             Name = "ticteccontrole";
             Size = new Size(800, 583);
@@ -57,5 +70,6 @@
         #endregion
 
         private FlowLayoutPanel flowLayoutPanel1;
+        private Label auti;
     }
 }
