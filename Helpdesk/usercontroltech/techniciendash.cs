@@ -21,10 +21,15 @@ namespace Helpdesk.usercontroltech
 
 
             InitializeComponent();
+
+            //pour que le label soit transparent
             idlabel.Parent = idpicture;
             TickResLabel.Parent = TickResPicture;
             tickOuvLabel.Parent = TIckOuvPicture;
+
+
             idlabel.Text = Classtech.ID.ToString();
+
             idlabel.ForeColor = System.Drawing.Color.White;
             refreshinfo();
             tickOuvLabel.ForeColor = System.Drawing.Color.White;

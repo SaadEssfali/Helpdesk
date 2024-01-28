@@ -91,6 +91,8 @@ namespace Helpdesk
             mainpanel_tech.Controls.Add(techdash);
             techdash.Dock = DockStyle.Fill;
 
+
+
             //changelent de color lors du click sur button 
             dashboardButton.BackColor = Color.Black;
             ficheBtn.BackColor = ColorTranslator.FromHtml("#004AAD");
@@ -127,6 +129,7 @@ namespace Helpdesk
             mainpanel_tech.Controls.Add(mafiche);
             mafiche.Dock = DockStyle.Fill;
 
+            //changelent de color lors du click sur button 
             ficheBtn.BackColor = Color.Black;
             dashboardButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
@@ -137,6 +140,8 @@ namespace Helpdesk
 
         private void ticketsButton_Click_1(object sender, EventArgs e)
         {
+
+            //changelent de color lors du click sur button 
             ticketsButton.BackColor = Color.Black;
             dashboardButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             ficheBtn.BackColor = ColorTranslator.FromHtml("#004AAD");
@@ -150,20 +155,21 @@ namespace Helpdesk
             mainpanel_tech.Controls.Clear();
             VT.RefreshTickets();
             mainpanel_tech.Controls.Add(VT);
-            
             VT.Dock = DockStyle.Fill;
 
         }
 
         private void HistoryButton_Click_3(object sender, EventArgs e)
-
-
         {
+
+            //changelent de color lors du click sur button 
             HistoryButton.BackColor = Color.Black;
             dashboardButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             ficheBtn.BackColor = ColorTranslator.FromHtml("#004AAD");
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             buttoncontrole.BackColor = ColorTranslator.FromHtml("#004AAD");
+
+
             mainpanel_tech.Controls.Clear();
             mainpanel_tech.Controls.Add(HisTick);
             HisTick.Dock = DockStyle.Fill;
@@ -173,16 +179,19 @@ namespace Helpdesk
         private void button1_Click(object sender, EventArgs e)
         {
 
-            mainpanel_tech.Controls.Clear();
-            mainpanel_tech.Controls.Add(tictec);
-            tictec.Dock = DockStyle.Fill;
-            tictec.RefreshTickets();
-
+            //changelent de color lors du click sur button 
             buttoncontrole.BackColor = Color.Black;
             dashboardButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             ficheBtn.BackColor = ColorTranslator.FromHtml("#004AAD");
             ticketsButton.BackColor = ColorTranslator.FromHtml("#004AAD");
             HistoryButton.BackColor = ColorTranslator.FromHtml("#004AAD");
+
+            mainpanel_tech.Controls.Clear();
+            mainpanel_tech.Controls.Add(tictec);
+            tictec.Dock = DockStyle.Fill;
+            tictec.RefreshTickets();
+
+           
         }
     }
 }

@@ -22,6 +22,8 @@ namespace Helpdesk.usercontroltech
 
 
         {
+
+            // pour que les labels soit transparent 
             InitializeComponent();
             label8.Parent = pictureBox1;
             label8.BackColor = Color.Transparent;
