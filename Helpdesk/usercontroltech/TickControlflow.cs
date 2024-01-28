@@ -147,8 +147,8 @@ namespace Helpdesk.usercontroltech
         {
             int idTicket = int.Parse(label1.Text);
 
-            using (SqlConnection cnx = Program.GetConnection())
-            {
+            SqlConnection cnx = Program.GetConnection();
+           
                 cnx.Open();
                 SqlCommand UpdateCommand = new SqlCommand(
                     $"UPDATE Intervention SET Commentaires = @Commentaires WHERE TicketID = @TicketID; " +
@@ -170,7 +170,7 @@ namespace Helpdesk.usercontroltech
                                 UpdateCommand.ExecuteNonQuery();
                 (this.Parent.Parent as ticteccontrole)?.Ticketbox();
 
-            }
+            
           
 
 

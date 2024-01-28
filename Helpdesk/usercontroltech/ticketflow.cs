@@ -39,7 +39,7 @@ namespace Helpdesk.usercontroltech
             String NameTech = Classtech.Nom;
             String prenomTech = Classtech.Prenom;
 
-            using (SqlConnection cnx = GetConnection())
+            SqlConnection cnx = GetConnection();
             {
                 cnx.Open();
 
